@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HawksBuziness</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="busines_app">businez App</string>
+    <string name="referal_code">Referal code</string>
+    <string name="location">Location</string>
+    <string name="language">Language</string>
+    <string name="terms"><![CDATA[Terms & Conditions]]></string>
+    <string name="home">Home</string>
+    <string name="setting">Settings</string>
+    <string name="business">My business</string>
+    <string name="profile">Me</string>
+    <string name="support">Support</string>
+    <string name="raise">Raise a ticket</string>
+    <string name="subject">Subject</string>
+    <string name="description">Description</string>
+    <string name="hi">Hi,how can i help?</string>
+</resources>
