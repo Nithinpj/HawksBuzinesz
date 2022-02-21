@@ -10,6 +10,7 @@ import dagger.hilt.components.SingletonComponent
 @Module
 @InstallIn(SingletonComponent::class)
 object Networkmodule {
+    //module injection
     @Provides
     fun provideService(remoteDatasource: RemoteDatasource):AuthApi{
         return remoteDatasource.buildApi(AuthApi::class.java)
