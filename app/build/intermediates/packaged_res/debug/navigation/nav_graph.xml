@@ -24,10 +24,19 @@
         android:id="@+id/businessFragment"
         android:name="com.nithi.hawksbuziness.BusinessFragment"
         android:label="fragment_business"
-        tools:layout="@layout/fragment_business" />
+        tools:layout="@layout/fragment_business" >
+        <action
+            android:id="@+id/action_businessFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.nithi.hawksbuziness.ui.profile.ProfileFragment"
         android:label="fragment_profile_fragment"
         tools:layout="@layout/fragment_profile_fragment" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.nithi.hawksbuziness.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
 </navigation>

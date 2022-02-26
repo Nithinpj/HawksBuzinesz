@@ -5,7 +5,7 @@ import javax.inject.Inject
 
 class PreferenceManger @Inject constructor(val sharedPreferences: SharedPreferences) {
     companion object{
-        const val NAME="NAME"
+        const val URL="URL"
     }
     private fun setPreferenceData(key:String,value:String){
         val editor=sharedPreferences.edit()
@@ -13,6 +13,6 @@ class PreferenceManger @Inject constructor(val sharedPreferences: SharedPreferen
         editor.apply()
     }
 
-    fun saveName(value:String){setPreferenceData(NAME,value)}
-    fun  getName():String=sharedPreferences.getString(NAME,"").toString()
+    fun saveUrl(value:String){setPreferenceData(URL,value)}
+    fun  getUrl():String=sharedPreferences.getString(URL,"").toString()
 }

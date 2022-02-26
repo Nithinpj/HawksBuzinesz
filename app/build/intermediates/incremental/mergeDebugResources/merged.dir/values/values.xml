@@ -588,7 +588,8 @@
     <color name="accent_material_light">@color/material_deep_teal_500</color>
     <color name="androidx_core_ripple_material_light">#1f000000</color>
     <color name="androidx_core_secondary_text_default_material_light">#8a000000</color>
-    <color name="app_color">#3696f8</color>
+    <color name="app_color">#3FDD8F</color>
+    <color name="app_color_">#4B82DA</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
@@ -1363,6 +1364,7 @@
     <dimen name="dp200">200dp</dimen>
     <dimen name="dp300">300dp</dimen>
     <dimen name="dp35">35dp</dimen>
+    <dimen name="dp5">5dp</dimen>
     <dimen name="dp50">50dp</dimen>
     <dimen name="dp60">60dp</dimen>
     <dimen name="dp70">70dp</dimen>
@@ -8365,6 +8367,12 @@
   </style>
     <style name="Widget.Support.CoordinatorLayout" parent="android:Widget">
         <item name="statusBarBackground">#000000</item>
+    </style>
+    <style name="outline_button" parent="Widget.Material3.Button.TextButton">
+
+
+        <item name="strokeColor">@color/app_color</item>
+        <item name="strokeWidth">@dimen/m3_btn_stroke_size</item>
     </style>
     <declare-styleable name="ActionBar">
         

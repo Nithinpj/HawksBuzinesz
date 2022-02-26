@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import com.nithi.hawksbuziness.databinding.ActivityMainBindingImpl;
 import com.nithi.hawksbuziness.databinding.ActivityReferalBindingImpl;
+import com.nithi.hawksbuziness.databinding.FragmentSignUpBindingImpl;
 import com.nithi.hawksbuziness.databinding.FragmentSupportBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
@@ -24,13 +25,16 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ACTIVITYREFERAL = 2;
 
-  private static final int LAYOUT_FRAGMENTSUPPORT = 3;
+  private static final int LAYOUT_FRAGMENTSIGNUP = 3;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(3);
+  private static final int LAYOUT_FRAGMENTSUPPORT = 4;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(4);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nithi.hawksbuziness.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nithi.hawksbuziness.R.layout.activity_referal, LAYOUT_ACTIVITYREFERAL);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.nithi.hawksbuziness.R.layout.fragment_sign_up, LAYOUT_FRAGMENTSIGNUP);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.nithi.hawksbuziness.R.layout.fragment_support, LAYOUT_FRAGMENTSUPPORT);
   }
 
@@ -54,6 +58,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivityReferalBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_referal is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTSIGNUP: {
+          if ("layout/fragment_sign_up_0".equals(tag)) {
+            return new FragmentSignUpBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_sign_up is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTSUPPORT: {
           if ("layout/fragment_support_0".equals(tag)) {
@@ -106,19 +116,21 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(1);
+    static final SparseArray<String> sKeys = new SparseArray<String>(2);
 
     static {
       sKeys.put(0, "_all");
+      sKeys.put(1, "adapter");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(3);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(4);
 
     static {
       sKeys.put("layout/activity_main_0", com.nithi.hawksbuziness.R.layout.activity_main);
       sKeys.put("layout/activity_referal_0", com.nithi.hawksbuziness.R.layout.activity_referal);
+      sKeys.put("layout/fragment_sign_up_0", com.nithi.hawksbuziness.R.layout.fragment_sign_up);
       sKeys.put("layout/fragment_support_0", com.nithi.hawksbuziness.R.layout.fragment_support);
     }
   }

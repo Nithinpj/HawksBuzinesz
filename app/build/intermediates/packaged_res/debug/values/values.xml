@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
-    <color name="app_color">#3696f8</color>
+    <color name="app_color">#3FDD8F</color>
+    <color name="app_color_">#4B82DA</color>
     <color name="black">#FF000000</color>
     <color name="editext_color">#e6f2ff</color>
     <color name="purple_200">#FFBB86FC</color>
@@ -16,6 +17,7 @@
     <dimen name="dp200">200dp</dimen>
     <dimen name="dp300">300dp</dimen>
     <dimen name="dp35">35dp</dimen>
+    <dimen name="dp5">5dp</dimen>
     <dimen name="dp50">50dp</dimen>
     <dimen name="dp60">60dp</dimen>
     <dimen name="dp70">70dp</dimen>
@@ -47,5 +49,11 @@
         
         <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
         
+    </style>
+    <style name="outline_button" parent="Widget.Material3.Button.TextButton">
+
+
+        <item name="strokeColor">@color/app_color</item>
+        <item name="strokeWidth">@dimen/m3_btn_stroke_size</item>
     </style>
 </resources>

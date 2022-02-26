@@ -21,6 +21,10 @@ class RemoteDatasource @Inject constructor(){
             this.connectTimeout(30, TimeUnit.SECONDS)
             this.readTimeout(30, TimeUnit.SECONDS)
             this.writeTimeout(30, TimeUnit.SECONDS)
+                .addInterceptor {chain->
+                    val request = chain.request().newBuilder().addHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik5pZ2hpbCIsImlhdCI6MTUxNjIzOTAyMn0.bIs9yMJTc868M9paBXwMEwCNsykhAYo7yYp_DA7BlnM").build()
+                    chain.proceed(request)
+                }
         }.build()
 
     fun<API>buildApi(api:Class<API>):API{

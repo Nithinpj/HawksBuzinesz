@@ -18,6 +18,9 @@ import com.nithi.hawksbuziness.repositarory.BusinessRepository;
 import com.nithi.hawksbuziness.services.AuthApi;
 import com.nithi.hawksbuziness.services.RemoteDatasource;
 import com.nithi.hawksbuziness.ui.activity.MainActivity;
+import com.nithi.hawksbuziness.ui.activity.ReferalActivity;
+import com.nithi.hawksbuziness.ui.activity.ReferenceViewModel;
+import com.nithi.hawksbuziness.ui.activity.ReferenceViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.nithi.hawksbuziness.ui.home.HomeFragment;
 import com.nithi.hawksbuziness.ui.home.HomeFragment_MembersInjector;
 import com.nithi.hawksbuziness.ui.home.HomeViemodel;
@@ -39,7 +42,9 @@ import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideAppl
 import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideContextFactory;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.DoubleCheck;
+import dagger.internal.MapBuilder;
 import dagger.internal.Preconditions;
+import dagger.internal.SetBuilder;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
@@ -425,13 +430,17 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
     }
 
     @Override
+    public void injectReferalActivity(ReferalActivity arg0) {
+    }
+
+    @Override
     public DefaultViewModelFactories.InternalFactoryFactory getHiltInternalFactoryFactory() {
       return DefaultViewModelFactories_InternalFactoryFactory_Factory.newInstance(ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonC.applicationContextModule), getViewModelKeys(), new ViewModelCBuilder(singletonC, activityRetainedCImpl));
     }
 
     @Override
     public Set<String> getViewModelKeys() {
-      return Collections.<String>singleton(HomeViemodel_HiltModules_KeyModule_ProvideFactory.provide());
+      return SetBuilder.<String>newSetBuilder(2).add(HomeViemodel_HiltModules_KeyModule_ProvideFactory.provide()).add(ReferenceViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -459,6 +468,8 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
 
     private Provider<HomeViemodel> homeViemodelProvider;
 
+    private Provider<ReferenceViewModel> referenceViewModelProvider;
+
     private ViewModelCImpl(DaggerBuzinessApplication_HiltComponents_SingletonC singletonC,
         ActivityRetainedCImpl activityRetainedCImpl, SavedStateHandle savedStateHandleParam) {
       this.singletonC = singletonC;
@@ -475,11 +486,12 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
     @SuppressWarnings("unchecked")
     private void initialize(final SavedStateHandle savedStateHandleParam) {
       this.homeViemodelProvider = new SwitchingProvider<>(singletonC, activityRetainedCImpl, viewModelCImpl, 0);
+      this.referenceViewModelProvider = new SwitchingProvider<>(singletonC, activityRetainedCImpl, viewModelCImpl, 1);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return Collections.<String, Provider<ViewModel>>singletonMap("com.nithi.hawksbuziness.ui.home.HomeViemodel", ((Provider) homeViemodelProvider));
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(2).put("com.nithi.hawksbuziness.ui.home.HomeViemodel", ((Provider) homeViemodelProvider)).put("com.nithi.hawksbuziness.ui.activity.ReferenceViewModel", ((Provider) referenceViewModelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -505,6 +517,9 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
         switch (id) {
           case 0: // com.nithi.hawksbuziness.ui.home.HomeViemodel 
           return (T) new HomeViemodel(viewModelCImpl.businessRepository());
+
+          case 1: // com.nithi.hawksbuziness.ui.activity.ReferenceViewModel 
+          return (T) new ReferenceViewModel(viewModelCImpl.businessRepository());
 
           default: throw new AssertionError(id);
         }

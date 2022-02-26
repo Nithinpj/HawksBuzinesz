@@ -4,8 +4,12 @@ package com.nithi.hawksbuziness.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.google.android.material.button.MaterialButton;
@@ -15,12 +19,30 @@ import java.lang.Object;
 
 public abstract class ActivityReferalBinding extends ViewDataBinding {
   @NonNull
+  public final Spinner country;
+
+  @NonNull
+  public final TextView language;
+
+  @NonNull
   public final MaterialButton submit;
 
+  @Bindable
+  protected ArrayAdapter mAdapter;
+
   protected ActivityReferalBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      MaterialButton submit) {
+      Spinner country, TextView language, MaterialButton submit) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.country = country;
+    this.language = language;
     this.submit = submit;
+  }
+
+  public abstract void setAdapter(@Nullable ArrayAdapter adapter);
+
+  @Nullable
+  public ArrayAdapter getAdapter() {
+    return mAdapter;
   }
 
   @NonNull

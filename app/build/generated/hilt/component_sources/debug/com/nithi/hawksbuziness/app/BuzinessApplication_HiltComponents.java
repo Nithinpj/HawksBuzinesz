@@ -3,6 +3,8 @@ package com.nithi.hawksbuziness.app;
 import com.nithi.hawksbuziness.di.Networkmodule;
 import com.nithi.hawksbuziness.di.SharedPreferenceModule;
 import com.nithi.hawksbuziness.ui.activity.MainActivity_GeneratedInjector;
+import com.nithi.hawksbuziness.ui.activity.ReferalActivity_GeneratedInjector;
+import com.nithi.hawksbuziness.ui.activity.ReferenceViewModel_HiltModules;
 import com.nithi.hawksbuziness.ui.home.HomeFragment_GeneratedInjector;
 import com.nithi.hawksbuziness.ui.home.HomeViemodel_HiltModules;
 import dagger.Binds;
@@ -150,7 +152,8 @@ public final class BuzinessApplication_HiltComponents {
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
-          HomeViemodel_HiltModules.KeyModule.class
+          HomeViemodel_HiltModules.KeyModule.class,
+          ReferenceViewModel_HiltModules.KeyModule.class
       }
   )
   @ActivityRetainedScoped
@@ -173,6 +176,7 @@ public final class BuzinessApplication_HiltComponents {
   )
   @ActivityScoped
   public abstract static class ActivityC implements MainActivity_GeneratedInjector,
+      ReferalActivity_GeneratedInjector,
       ActivityComponent,
       DefaultViewModelFactories.ActivityEntryPoint,
       HiltWrapper_HiltViewModelFactory_ActivityCreatorEntryPoint,
@@ -187,7 +191,8 @@ public final class BuzinessApplication_HiltComponents {
   @Subcomponent(
       modules = {
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
-          HomeViemodel_HiltModules.BindsModule.class
+          HomeViemodel_HiltModules.BindsModule.class,
+          ReferenceViewModel_HiltModules.BindsModule.class
       }
   )
   @ViewModelScoped

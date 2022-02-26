@@ -13,6 +13,7 @@ public final class ProfileFragment extends androidx.fragment.app.Fragment {
     private java.lang.String param2;
     @org.jetbrains.annotations.NotNull()
     public static final com.nithi.hawksbuziness.ui.profile.ProfileFragment.Companion Companion = null;
+    private java.util.HashMap _$_findViewCache;
     
     public ProfileFragment() {
         super();

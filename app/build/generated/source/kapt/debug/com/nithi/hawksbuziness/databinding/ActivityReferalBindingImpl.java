@@ -14,7 +14,8 @@ public class ActivityReferalBindingImpl extends ActivityReferalBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.submit, 1);
+        sViewsWithIds.put(R.id.language, 2);
+        sViewsWithIds.put(R.id.submit, 3);
     }
     // views
     @NonNull
@@ -25,12 +26,15 @@ public class ActivityReferalBindingImpl extends ActivityReferalBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityReferalBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 2, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private ActivityReferalBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (com.google.android.material.button.MaterialButton) bindings[1]
+            , (android.widget.Spinner) bindings[1]
+            , (android.widget.TextView) bindings[2]
+            , (com.google.android.material.button.MaterialButton) bindings[3]
             );
+        this.country.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
@@ -41,7 +45,7 @@ public class ActivityReferalBindingImpl extends ActivityReferalBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x1L;
+                mDirtyFlags = 0x2L;
         }
         requestRebind();
     }
@@ -59,7 +63,22 @@ public class ActivityReferalBindingImpl extends ActivityReferalBinding  {
     @Override
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
+        if (BR.adapter == variableId) {
+            setAdapter((android.widget.ArrayAdapter) variable);
+        }
+        else {
+            variableSet = false;
+        }
             return variableSet;
+    }
+
+    public void setAdapter(@Nullable android.widget.ArrayAdapter Adapter) {
+        this.mAdapter = Adapter;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.adapter);
+        super.requestRebind();
     }
 
     @Override
@@ -76,14 +95,24 @@ public class ActivityReferalBindingImpl extends ActivityReferalBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        android.widget.ArrayAdapter<?> adapter = mAdapter;
+
+        if ((dirtyFlags & 0x3L) != 0) {
+        }
         // batch finished
+        if ((dirtyFlags & 0x3L) != 0) {
+            // api target 1
+
+            this.country.setAdapter(adapter);
+        }
     }
     // Listener Stub Implementations
     // callback impls
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): null
+        flag 0 (0x1L): adapter
+        flag 1 (0x2L): null
     flag mapping end*/
     //end
 }

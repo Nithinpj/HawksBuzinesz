@@ -10,15 +10,15 @@
 9        android:targetSdkVersion="31" />
 9-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
 10
-11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-11-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:9:5-79
-11-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:9:22-76
-12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-12-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:10:5-76
-12-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:10:22-73
-13    <uses-permission android:name="android.permission.INTERNET" /> <!-- Include required permissions for Google Maps API to run. -->
-13-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:11:5-67
-13-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:11:22-64
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:4:5-66
+11-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:9:5-79
+12-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:9:22-76
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Include required permissions for Google Maps API to run. -->
+13-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:10:5-76
+13-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:10:22-73
 14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 14-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/e30fc1f5f6eff9adfdeac3d7af550586/transformed/play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
 14-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/e30fc1f5f6eff9adfdeac3d7af550586/transformed/play-services-maps-17.0.0/AndroidManifest.xml:23:22-76
@@ -31,54 +31,54 @@
 18-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/e30fc1f5f6eff9adfdeac3d7af550586/transformed/play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
 19
 20    <application
-20-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:5:5-30:19
+20-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:6:5-31:19
 21        android:name="com.nithi.hawksbuziness.app.BuzinessApplication"
-21-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:6:9-48
+21-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:7:9-48
 22        android:allowBackup="true"
-22-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:7:9-35
+22-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:8:9-35
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 23-->[androidx.core:core:1.7.0] /home/nithin/.gradle/caches/transforms-3/e8b96a8ee772b8bdd559d8672f3ac71e/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
 24        android:debuggable="true"
 25        android:icon="@mipmap/ic_launcher"
-25-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:8:9-43
+25-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:9:9-43
 26        android:label="@string/app_name"
-26-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:9:9-41
+26-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:10:9-41
 27        android:roundIcon="@mipmap/ic_launcher_round"
-27-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:10:9-54
+27-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:11:9-54
 28        android:supportsRtl="true"
-28-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:11:9-35
+28-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:12:9-35
 29        android:testOnly="true"
 30        android:theme="@style/Theme.HawksBuziness" >
-30-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:12:9-51
+30-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:13:9-51
 31        <activity
-31-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:13:9-15:40
+31-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:14:9-16:40
 32            android:name="com.nithi.hawksbuziness.ui.activity.ReferalActivity"
-32-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:14:13-56
+32-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:15:13-56
 33            android:exported="false" />
-33-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:15:13-37
+33-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:16:13-37
 34        <activity
-34-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:16:9-24:20
+34-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:17:9-25:20
 35            android:name="com.nithi.hawksbuziness.ui.splash.Splash"
-35-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:17:13-45
+35-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:18:13-45
 36            android:exported="true" >
-36-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:18:13-36
+36-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:19:13-36
 37            <intent-filter>
-37-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:19:13-23:29
+37-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:20:13-24:29
 38                <action android:name="android.intent.action.MAIN" />
-38-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:20:17-69
-38-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:20:25-66
+38-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:21:17-69
+38-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:21:25-66
 39
 40                <category android:name="android.intent.category.LAUNCHER" />
-40-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:22:17-77
-40-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:22:27-74
+40-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:23:17-77
+40-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:23:27-74
 41            </intent-filter>
 42        </activity>
 43        <activity
-43-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:25:9-29:20
+43-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:26:9-30:20
 44            android:name="com.nithi.hawksbuziness.ui.activity.MainActivity"
-44-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:26:13-53
+44-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:27:13-53
 45            android:exported="true" >
-45-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:27:13-36
+45-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:28:13-36
 46        </activity>
 47
 48        <uses-library

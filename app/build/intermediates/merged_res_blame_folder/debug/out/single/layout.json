@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sign_up.xml",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/fragment_sign_up.xml"
+    },
+    {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_referal.xml",
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/activity_referal.xml"
     },

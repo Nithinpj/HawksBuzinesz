@@ -21,6 +21,9 @@ import hilt_aggregated_deps._com_nithi_hawksbuziness_app_BuzinessApplication_Gen
 import hilt_aggregated_deps._com_nithi_hawksbuziness_di_Networkmodule;
 import hilt_aggregated_deps._com_nithi_hawksbuziness_di_SharedPreferenceModule;
 import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_activity_MainActivity_GeneratedInjector;
+import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_activity_ReferalActivity_GeneratedInjector;
+import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_activity_ReferenceViewModel_HiltModules_BindsModule;
+import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_activity_ReferenceViewModel_HiltModules_KeyModule;
 import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_home_HomeFragment_GeneratedInjector;
 import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_home_HomeViemodel_HiltModules_BindsModule;
 import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_home_HomeViemodel_HiltModules_KeyModule;
@@ -67,6 +70,9 @@ import hilt_aggregated_deps._dagger_hilt_android_internal_modules_HiltWrapper_Ac
         _com_nithi_hawksbuziness_di_Networkmodule.class,
         _com_nithi_hawksbuziness_di_SharedPreferenceModule.class,
         _com_nithi_hawksbuziness_ui_activity_MainActivity_GeneratedInjector.class,
+        _com_nithi_hawksbuziness_ui_activity_ReferalActivity_GeneratedInjector.class,
+        _com_nithi_hawksbuziness_ui_activity_ReferenceViewModel_HiltModules_BindsModule.class,
+        _com_nithi_hawksbuziness_ui_activity_ReferenceViewModel_HiltModules_KeyModule.class,
         _com_nithi_hawksbuziness_ui_home_HomeFragment_GeneratedInjector.class,
         _com_nithi_hawksbuziness_ui_home_HomeViemodel_HiltModules_BindsModule.class,
         _com_nithi_hawksbuziness_ui_home_HomeViemodel_HiltModules_KeyModule.class,

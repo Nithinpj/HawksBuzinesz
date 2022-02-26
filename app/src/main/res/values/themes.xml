@@ -13,4 +13,13 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="outline_button" parent="Widget.Material3.Button.TextButton">
+<!--        <item name="android:paddingLeft">@dimen/dp5</item>-->
+<!--        <item name="android:paddingRight">@dimen/dp5</item>-->
+        <item name="strokeColor">@color/app_color</item>
+        <item name="strokeWidth">@dimen/m3_btn_stroke_size</item>
+    </style>
+
+    <dimen name="dp5">5dp</dimen>
 </resources>

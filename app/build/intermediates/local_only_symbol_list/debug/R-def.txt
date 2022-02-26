@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color app_color
+color app_color_
 color black
 color editext_color
 color purple_200
@@ -16,9 +17,11 @@ dimen dp20
 dimen dp200
 dimen dp300
 dimen dp35
+dimen dp5
 dimen dp50
 dimen dp60
 dimen dp70
+drawable border_blue
 drawable customer_service
 drawable editor_background
 drawable home
@@ -31,21 +34,27 @@ drawable plus
 drawable round_card
 drawable round_white
 drawable user
+id action_businessFragment_to_signUpFragment
 id bottom_nav_view
 id businessFragment
 id call
 id container
+id country
 id description
 id email
 id homeFragment
 id img_homebtn
+id language
 id nav_graph
 id nav_host_fragment
 id profileFragment
+id progress_circular
 id settingsFragment
+id signUpFragment
 id subject
 id submit
 id supportFragment
+id webView
 id whatsapp
 layout activity_main
 layout activity_referal
@@ -54,6 +63,7 @@ layout fragment_business
 layout fragment_home
 layout fragment_profile_fragment
 layout fragment_settings
+layout fragment_sign_up
 layout fragment_support
 menu nav_items
 mipmap ic_launcher
@@ -76,3 +86,4 @@ string subject
 string support
 string terms
 style Theme.HawksBuziness
+style outline_button
