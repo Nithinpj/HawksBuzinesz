@@ -1,33 +1,31 @@
 package com.nithi.hawksbuziness.ui.profile
 
+import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
+import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.nithi.hawksbuziness.R
+import com.nithi.hawksbuziness.databinding.FragmentProfileFragmentBinding
+import com.nithi.hawksbuziness.model.profile.Auth
+import com.nithi.hawksbuziness.model.profile.profile
+import com.nithi.hawksbuziness.utill.ResponceState
+import dagger.hilt.android.AndroidEntryPoint
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ProfileFragmentFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+@AndroidEntryPoint
 class ProfileFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private val profileViewModel:ProfileViewModel by viewModels<ProfileViewModel> ()
+    private lateinit var binding:FragmentProfileFragmentBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
@@ -35,19 +33,54 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile_fragment, container, false)
+        binding= FragmentProfileFragmentBinding.inflate(inflater)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ProfileFragmentFragment.
-         */
-        // TODO: Rename and change types and number of parameters
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+//        profileViewModel.getProfile()
+
+        profileViewModel.response.observe(requireActivity(), Observer {
+            when(it){
+                is ResponceState.Failiure -> {
+                    Toast.makeText(requireContext(), "Failed", Toast.LENGTH_SHORT).show()
+                }
+                is ResponceState.Loading -> {
+                    Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
+                }
+                is ResponceState.Succes -> {
+                    saveToLocal(it.result.auth)
+
+                }
+            }
+        })
+        profileViewModel.getProfileData()
+        profileViewModel.dbresponses.observe(requireActivity(), Observer {
+
+            Log.e("TAG", "onViewCreated: $it")
+            if (it==null){
+                profileViewModel.getProfile()
+            }else{
+                saveData(it)
+            }
+        })
+    }
+
+    private fun saveToLocal(auth: Auth) {
+        profileViewModel.saveData(auth)
+    }
+
+    private fun saveData(result: Auth) {
+        binding.data=result
 
     }
+
+    override fun onGetLayoutInflater(savedInstanceState: Bundle?): LayoutInflater {
+        val inflater = super.onGetLayoutInflater(savedInstanceState)
+        val contextThemeWrapper: Context = ContextThemeWrapper(requireContext(), R.style.profile_page_theme)
+        return inflater.cloneInContext(contextThemeWrapper)
+    }
+
+
 }

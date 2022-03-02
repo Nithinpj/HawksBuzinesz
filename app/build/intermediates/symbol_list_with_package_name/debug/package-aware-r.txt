@@ -276,6 +276,10 @@ attr circularflow_defaultAngle
 attr circularflow_defaultRadius
 attr circularflow_radiusInDP
 attr circularflow_viewCenter
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
 attr clearTop
 attr clearsTag
 attr clickAction
@@ -1362,6 +1366,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -2376,6 +2381,7 @@ dimen dp20
 dimen dp200
 dimen dp300
 dimen dp35
+dimen dp45
 dimen dp5
 dimen dp50
 dimen dp60
@@ -2918,6 +2924,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable border_blue
+drawable bottom_bar
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2952,13 +2959,14 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable editor_background
+drawable fill_blue
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable home
+drawable ic_baseline_account_circle_24
 drawable ic_baseline_settings_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
-drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
@@ -2977,6 +2985,7 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
+drawable mail
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -3020,11 +3029,15 @@ drawable quantum_ic_cloud_off_vd_theme_24
 drawable quantum_ic_search_grey600_24
 drawable round_card
 drawable round_white
+drawable share
+drawable telephone
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable under_line
 drawable user
+font robotobold
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3105,6 +3118,7 @@ id aligned
 id all
 id allStates
 id always
+id androidx_compose_ui_view_composition_context
 id androidx_window_activity_scope
 id animateToEnd
 id animateToStart
@@ -3136,6 +3150,7 @@ id call
 id callMeasure
 id cancel_action
 id cancel_button
+id cardView
 id carryVelocity
 id center
 id center_horizontal
@@ -3157,7 +3172,9 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id closest
+id coil_request_manager
 id collapseActionView
+id compose_view_saveable_id_tag
 id compress
 id confirm_button
 id constraint
@@ -3243,6 +3260,7 @@ id grouping
 id groups
 id guideline
 id header_title
+id hide_in_inspector_tag
 id hideable
 id home
 id homeAsUp
@@ -3261,6 +3279,7 @@ id img_homebtn
 id immediateStop
 id included
 id info
+id inspection_slot_table_set
 id invisible
 id inward
 id italic
@@ -3369,6 +3388,7 @@ id on
 id onAttachStateChangeListener
 id onDateChanged
 id onInterceptTouchReturnSwipe
+id otp
 id outline
 id outward
 id overshoot
@@ -3405,6 +3425,7 @@ id places_autocomplete_try_again_progress
 id position
 id postLayout
 id profileFragment
+id profile_image
 id progress_circular
 id progress_horizontal
 id radio
@@ -3445,6 +3466,8 @@ id selection_type
 id settingsFragment
 id sharedValueSet
 id sharedValueUnset
+id shop_recycler
+id shopfragment
 id shortcut
 id showCustom
 id showHome
@@ -3562,6 +3585,7 @@ id withinBounds
 id wrap
 id wrap_content
 id wrap_content_constrained
+id wrapped_composition_tag
 id x_left
 id x_right
 id zero_corner_chip
@@ -3677,6 +3701,7 @@ layout fragment_profile_fragment
 layout fragment_settings
 layout fragment_sign_up
 layout fragment_support
+layout layout_shops
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3746,9 +3771,11 @@ layout places_autocomplete_impl_fragment_overlay
 layout places_autocomplete_impl_powered_by_google
 layout places_autocomplete_impl_search_bar
 layout places_autocomplete_prediction
+layout profile_items
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout shop_fragment
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -3769,6 +3796,7 @@ menu example_menu
 menu example_menu2
 menu nav_items
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation nav_graph
 plurals mtrl_badge_content_description
@@ -3812,6 +3840,8 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string close_drawer
+string close_sheet
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -3830,6 +3860,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string default_error_message
 string description
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
@@ -3840,6 +3871,8 @@ string hi
 string hide_bottom_view_on_scroll_behavior
 string home
 string icon_content_description
+string in_progress
+string indeterminate
 string item_view_role_description
 string language
 string location
@@ -3926,6 +3959,10 @@ string mtrl_picker_toggle_to_year_selection
 string mtrl_timepicker_confirm
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string navigation_menu
+string not_selected
+string off
+string on
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -3943,10 +3980,14 @@ string profile
 string raise
 string referal_code
 string search_menu_title
+string selected
 string setting
+string shops
 string status_bar_notification_info_overflow
 string subject
 string support
+string tab
+string template_percent
 string terms
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -4224,6 +4265,7 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style DialogWindowTheme
 style EmptyTheme
 style MaterialAlertDialog_Material3
 style MaterialAlertDialog_Material3_Body_Text
@@ -4978,6 +5020,7 @@ style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
 style outline_button
+style profile_page_theme
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
@@ -5012,6 +5055,7 @@ styleable Carousel carousel_backwardTransition carousel_emptyViewsBehavior carou
 styleable CheckedTextView android_checkMark checkMarkCompat checkMarkTint checkMarkTintMode
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color
 styleable CircularProgressIndicator indicatorDirectionCircular indicatorInset indicatorSize
 styleable ClockFaceView clockFaceBackgroundColor clockNumberTextColor
 styleable ClockHandView clockHandColor materialCircleRadius selectorSize

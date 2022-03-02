@@ -10,4 +10,5 @@
     <dimen name="dp35">35dp</dimen>
     <dimen name="dp0">0dp</dimen>
     <dimen name="dp60">60dp</dimen>
+    <dimen name="dp45">45dp</dimen>
 </resources>

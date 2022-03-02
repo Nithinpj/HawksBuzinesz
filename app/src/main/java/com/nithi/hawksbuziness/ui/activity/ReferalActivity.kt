@@ -23,6 +23,7 @@ class ReferalActivity : AppCompatActivity() {
        binding= DataBindingUtil.setContentView(this,R.layout.activity_referal)
         binding.submit.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
         viewModel.getCountries()
 

@@ -39,4 +39,9 @@
         android:name="com.nithi.hawksbuziness.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/shopfragment"
+        android:name="com.nithi.hawksbuziness.ui.shops.ShopFragment"
+        android:label="fragment_"
+        tools:layout="@layout/shop_fragment" />
 </navigation>

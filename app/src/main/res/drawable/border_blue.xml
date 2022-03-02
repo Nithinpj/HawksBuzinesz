@@ -6,11 +6,5 @@
         android:color="@color/app_color"
         android:width="0.8dp"/>
     <corners
-        android:radius="@dimen/dp10"/>
-    <padding
-        android:top="@dimen/dp10"
-        android:bottom="@dimen/dp10"
-        android:left="@dimen/dp10"
-        android:right="@dimen/dp10"/>
-
+        android:radius="@dimen/dp50"/>
 </shape>

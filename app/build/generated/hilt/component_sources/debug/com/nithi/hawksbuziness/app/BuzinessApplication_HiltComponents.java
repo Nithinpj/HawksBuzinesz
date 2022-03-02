@@ -1,5 +1,6 @@
 package com.nithi.hawksbuziness.app;
 
+import com.nithi.hawksbuziness.di.DataBaseModule;
 import com.nithi.hawksbuziness.di.Networkmodule;
 import com.nithi.hawksbuziness.di.SharedPreferenceModule;
 import com.nithi.hawksbuziness.ui.activity.MainActivity_GeneratedInjector;
@@ -7,6 +8,12 @@ import com.nithi.hawksbuziness.ui.activity.ReferalActivity_GeneratedInjector;
 import com.nithi.hawksbuziness.ui.activity.ReferenceViewModel_HiltModules;
 import com.nithi.hawksbuziness.ui.home.HomeFragment_GeneratedInjector;
 import com.nithi.hawksbuziness.ui.home.HomeViemodel_HiltModules;
+import com.nithi.hawksbuziness.ui.profile.ProfileFragment_GeneratedInjector;
+import com.nithi.hawksbuziness.ui.profile.ProfileViewModel_HiltModules;
+import com.nithi.hawksbuziness.ui.shops.ShopFragment_GeneratedInjector;
+import com.nithi.hawksbuziness.ui.shops.ShopViewmodel_HiltModules;
+import com.nithi.hawksbuziness.ui.support.SupportFragment_GeneratedInjector;
+import com.nithi.hawksbuziness.ui.support.SupportViewmodel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -124,6 +131,7 @@ public final class BuzinessApplication_HiltComponents {
           ApplicationContextModule.class,
           ActivityRetainedCBuilderModule.class,
           ServiceCBuilderModule.class,
+          DataBaseModule.class,
           HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule.class,
           Networkmodule.class,
           SharedPreferenceModule.class
@@ -153,7 +161,10 @@ public final class BuzinessApplication_HiltComponents {
           ViewModelCBuilderModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           HomeViemodel_HiltModules.KeyModule.class,
-          ReferenceViewModel_HiltModules.KeyModule.class
+          ProfileViewModel_HiltModules.KeyModule.class,
+          ReferenceViewModel_HiltModules.KeyModule.class,
+          ShopViewmodel_HiltModules.KeyModule.class,
+          SupportViewmodel_HiltModules.KeyModule.class
       }
   )
   @ActivityRetainedScoped
@@ -192,7 +203,10 @@ public final class BuzinessApplication_HiltComponents {
       modules = {
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           HomeViemodel_HiltModules.BindsModule.class,
-          ReferenceViewModel_HiltModules.BindsModule.class
+          ProfileViewModel_HiltModules.BindsModule.class,
+          ReferenceViewModel_HiltModules.BindsModule.class,
+          ShopViewmodel_HiltModules.BindsModule.class,
+          SupportViewmodel_HiltModules.BindsModule.class
       }
   )
   @ViewModelScoped
@@ -218,6 +232,9 @@ public final class BuzinessApplication_HiltComponents {
   )
   @FragmentScoped
   public abstract static class FragmentC implements HomeFragment_GeneratedInjector,
+      ProfileFragment_GeneratedInjector,
+      ShopFragment_GeneratedInjector,
+      SupportFragment_GeneratedInjector,
       FragmentComponent,
       DefaultViewModelFactories.FragmentEntryPoint,
       ViewComponentManager.ViewWithFragmentComponentBuilderEntryPoint,

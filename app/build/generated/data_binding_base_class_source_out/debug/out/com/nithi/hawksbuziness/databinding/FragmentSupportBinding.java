@@ -6,9 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.nithi.hawksbuziness.R;
 import java.lang.Deprecated;
@@ -19,10 +21,16 @@ public abstract class FragmentSupportBinding extends ViewDataBinding {
   public final MaterialButton call;
 
   @NonNull
+  public final ConstraintLayout coordinator;
+
+  @NonNull
   public final TextInputLayout description;
 
   @NonNull
   public final MaterialButton email;
+
+  @NonNull
+  public final TextInputEditText message;
 
   @NonNull
   public final TextInputLayout subject;
@@ -31,17 +39,24 @@ public abstract class FragmentSupportBinding extends ViewDataBinding {
   public final MaterialButton submit;
 
   @NonNull
+  public final TextInputEditText title;
+
+  @NonNull
   public final MaterialButton whatsapp;
 
   protected FragmentSupportBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      MaterialButton call, TextInputLayout description, MaterialButton email,
-      TextInputLayout subject, MaterialButton submit, MaterialButton whatsapp) {
+      MaterialButton call, ConstraintLayout coordinator, TextInputLayout description,
+      MaterialButton email, TextInputEditText message, TextInputLayout subject,
+      MaterialButton submit, TextInputEditText title, MaterialButton whatsapp) {
     super(_bindingComponent, _root, _localFieldCount);
     this.call = call;
+    this.coordinator = coordinator;
     this.description = description;
     this.email = email;
+    this.message = message;
     this.subject = subject;
     this.submit = submit;
+    this.title = title;
     this.whatsapp = whatsapp;
   }
 

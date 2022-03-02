@@ -8,16 +8,22 @@ import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
+import com.nithi.hawksbuziness.di.DataBaseModule;
+import com.nithi.hawksbuziness.di.DataBaseModule_ProvideDatabaseFactory;
+import com.nithi.hawksbuziness.di.DataBaseModule_ProvideProfileDaoFactory;
 import com.nithi.hawksbuziness.di.Networkmodule;
 import com.nithi.hawksbuziness.di.Networkmodule_ProvideServiceFactory;
 import com.nithi.hawksbuziness.di.SharedPreferenceModule;
 import com.nithi.hawksbuziness.di.SharedPreferenceModule_ProvideSessionManagerFactory;
 import com.nithi.hawksbuziness.di.SharedPreferenceModule_ProvideSharedPreferenceFactory;
+import com.nithi.hawksbuziness.local.HawksDatabase;
+import com.nithi.hawksbuziness.local.dao.ProfileDao;
 import com.nithi.hawksbuziness.preferences.PreferenceManger;
 import com.nithi.hawksbuziness.repositarory.BusinessRepository;
 import com.nithi.hawksbuziness.services.AuthApi;
 import com.nithi.hawksbuziness.services.RemoteDatasource;
 import com.nithi.hawksbuziness.ui.activity.MainActivity;
+import com.nithi.hawksbuziness.ui.activity.MainActivity_MembersInjector;
 import com.nithi.hawksbuziness.ui.activity.ReferalActivity;
 import com.nithi.hawksbuziness.ui.activity.ReferenceViewModel;
 import com.nithi.hawksbuziness.ui.activity.ReferenceViewModel_HiltModules_KeyModule_ProvideFactory;
@@ -25,6 +31,15 @@ import com.nithi.hawksbuziness.ui.home.HomeFragment;
 import com.nithi.hawksbuziness.ui.home.HomeFragment_MembersInjector;
 import com.nithi.hawksbuziness.ui.home.HomeViemodel;
 import com.nithi.hawksbuziness.ui.home.HomeViemodel_HiltModules_KeyModule_ProvideFactory;
+import com.nithi.hawksbuziness.ui.profile.ProfileFragment;
+import com.nithi.hawksbuziness.ui.profile.ProfileViewModel;
+import com.nithi.hawksbuziness.ui.profile.ProfileViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.nithi.hawksbuziness.ui.shops.ShopFragment;
+import com.nithi.hawksbuziness.ui.shops.ShopViewmodel;
+import com.nithi.hawksbuziness.ui.shops.ShopViewmodel_HiltModules_KeyModule_ProvideFactory;
+import com.nithi.hawksbuziness.ui.support.SupportFragment;
+import com.nithi.hawksbuziness.ui.support.SupportViewmodel;
+import com.nithi.hawksbuziness.ui.support.SupportViewmodel_HiltModules_KeyModule_ProvideFactory;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.flags.HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule;
 import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
@@ -64,6 +79,10 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
 
   private Provider<PreferenceManger> provideSessionManagerProvider;
 
+  private Provider<HawksDatabase> provideDatabaseProvider;
+
+  private Provider<ProfileDao> provideProfileDaoProvider;
+
   private DaggerBuzinessApplication_HiltComponents_SingletonC(
       ApplicationContextModule applicationContextModuleParam) {
     this.applicationContextModule = applicationContextModuleParam;
@@ -83,10 +102,12 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
   private void initialize(final ApplicationContextModule applicationContextModuleParam) {
     this.provideSharedPreferenceProvider = DoubleCheck.provider(new SwitchingProvider<SharedPreferences>(singletonC, 1));
     this.provideSessionManagerProvider = DoubleCheck.provider(new SwitchingProvider<PreferenceManger>(singletonC, 0));
+    this.provideDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<HawksDatabase>(singletonC, 3));
+    this.provideProfileDaoProvider = DoubleCheck.provider(new SwitchingProvider<ProfileDao>(singletonC, 2));
   }
 
   @Override
-  public void injectBuzinessApplication(BuzinessApplication arg0) {
+  public void injectBuzinessApplication(BuzinessApplication buzinessApplication) {
   }
 
   @Override
@@ -112,6 +133,15 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
 
     public Builder applicationContextModule(ApplicationContextModule applicationContextModule) {
       this.applicationContextModule = Preconditions.checkNotNull(applicationContextModule);
+      return this;
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder dataBaseModule(DataBaseModule dataBaseModule) {
+      Preconditions.checkNotNull(dataBaseModule);
       return this;
     }
 
@@ -371,8 +401,20 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
     }
 
     @Override
-    public void injectHomeFragment(HomeFragment arg0) {
-      injectHomeFragment2(arg0);
+    public void injectHomeFragment(HomeFragment homeFragment) {
+      injectHomeFragment2(homeFragment);
+    }
+
+    @Override
+    public void injectProfileFragment(ProfileFragment profileFragment) {
+    }
+
+    @Override
+    public void injectShopFragment(ShopFragment shopFragment) {
+    }
+
+    @Override
+    public void injectSupportFragment(SupportFragment supportFragment) {
     }
 
     @Override
@@ -426,11 +468,12 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
     }
 
     @Override
-    public void injectMainActivity(MainActivity arg0) {
+    public void injectMainActivity(MainActivity mainActivity) {
+      injectMainActivity2(mainActivity);
     }
 
     @Override
-    public void injectReferalActivity(ReferalActivity arg0) {
+    public void injectReferalActivity(ReferalActivity referalActivity) {
     }
 
     @Override
@@ -440,7 +483,7 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
 
     @Override
     public Set<String> getViewModelKeys() {
-      return SetBuilder.<String>newSetBuilder(2).add(HomeViemodel_HiltModules_KeyModule_ProvideFactory.provide()).add(ReferenceViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      return SetBuilder.<String>newSetBuilder(5).add(HomeViemodel_HiltModules_KeyModule_ProvideFactory.provide()).add(ProfileViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ReferenceViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ShopViewmodel_HiltModules_KeyModule_ProvideFactory.provide()).add(SupportViewmodel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -457,6 +500,11 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
     public ViewComponentBuilder viewComponentBuilder() {
       return new ViewCBuilder(singletonC, activityRetainedCImpl, activityCImpl);
     }
+
+    private MainActivity injectMainActivity2(MainActivity instance) {
+      MainActivity_MembersInjector.injectPreferenceManger(instance, singletonC.provideSessionManagerProvider.get());
+      return instance;
+    }
   }
 
   private static final class ViewModelCImpl extends BuzinessApplication_HiltComponents.ViewModelC {
@@ -468,7 +516,13 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
 
     private Provider<HomeViemodel> homeViemodelProvider;
 
+    private Provider<ProfileViewModel> profileViewModelProvider;
+
     private Provider<ReferenceViewModel> referenceViewModelProvider;
+
+    private Provider<ShopViewmodel> shopViewmodelProvider;
+
+    private Provider<SupportViewmodel> supportViewmodelProvider;
 
     private ViewModelCImpl(DaggerBuzinessApplication_HiltComponents_SingletonC singletonC,
         ActivityRetainedCImpl activityRetainedCImpl, SavedStateHandle savedStateHandleParam) {
@@ -486,12 +540,15 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
     @SuppressWarnings("unchecked")
     private void initialize(final SavedStateHandle savedStateHandleParam) {
       this.homeViemodelProvider = new SwitchingProvider<>(singletonC, activityRetainedCImpl, viewModelCImpl, 0);
-      this.referenceViewModelProvider = new SwitchingProvider<>(singletonC, activityRetainedCImpl, viewModelCImpl, 1);
+      this.profileViewModelProvider = new SwitchingProvider<>(singletonC, activityRetainedCImpl, viewModelCImpl, 1);
+      this.referenceViewModelProvider = new SwitchingProvider<>(singletonC, activityRetainedCImpl, viewModelCImpl, 2);
+      this.shopViewmodelProvider = new SwitchingProvider<>(singletonC, activityRetainedCImpl, viewModelCImpl, 3);
+      this.supportViewmodelProvider = new SwitchingProvider<>(singletonC, activityRetainedCImpl, viewModelCImpl, 4);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(2).put("com.nithi.hawksbuziness.ui.home.HomeViemodel", ((Provider) homeViemodelProvider)).put("com.nithi.hawksbuziness.ui.activity.ReferenceViewModel", ((Provider) referenceViewModelProvider)).build();
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(5).put("com.nithi.hawksbuziness.ui.home.HomeViemodel", ((Provider) homeViemodelProvider)).put("com.nithi.hawksbuziness.ui.profile.ProfileViewModel", ((Provider) profileViewModelProvider)).put("com.nithi.hawksbuziness.ui.activity.ReferenceViewModel", ((Provider) referenceViewModelProvider)).put("com.nithi.hawksbuziness.ui.shops.ShopViewmodel", ((Provider) shopViewmodelProvider)).put("com.nithi.hawksbuziness.ui.support.SupportViewmodel", ((Provider) supportViewmodelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -518,8 +575,17 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
           case 0: // com.nithi.hawksbuziness.ui.home.HomeViemodel 
           return (T) new HomeViemodel(viewModelCImpl.businessRepository());
 
-          case 1: // com.nithi.hawksbuziness.ui.activity.ReferenceViewModel 
+          case 1: // com.nithi.hawksbuziness.ui.profile.ProfileViewModel 
+          return (T) new ProfileViewModel(viewModelCImpl.businessRepository(), singletonC.provideSessionManagerProvider.get(), singletonC.provideProfileDaoProvider.get());
+
+          case 2: // com.nithi.hawksbuziness.ui.activity.ReferenceViewModel 
           return (T) new ReferenceViewModel(viewModelCImpl.businessRepository());
+
+          case 3: // com.nithi.hawksbuziness.ui.shops.ShopViewmodel 
+          return (T) new ShopViewmodel(viewModelCImpl.businessRepository(), singletonC.provideSessionManagerProvider.get());
+
+          case 4: // com.nithi.hawksbuziness.ui.support.SupportViewmodel 
+          return (T) new SupportViewmodel(viewModelCImpl.businessRepository(), singletonC.provideSessionManagerProvider.get());
 
           default: throw new AssertionError(id);
         }
@@ -616,6 +682,12 @@ public final class DaggerBuzinessApplication_HiltComponents_SingletonC extends B
 
         case 1: // android.content.SharedPreferences 
         return (T) SharedPreferenceModule_ProvideSharedPreferenceFactory.provideSharedPreference(ApplicationContextModule_ProvideContextFactory.provideContext(singletonC.applicationContextModule));
+
+        case 2: // com.nithi.hawksbuziness.local.dao.ProfileDao 
+        return (T) DataBaseModule_ProvideProfileDaoFactory.provideProfileDao(singletonC.provideDatabaseProvider.get());
+
+        case 3: // com.nithi.hawksbuziness.local.HawksDatabase 
+        return (T) DataBaseModule_ProvideDatabaseFactory.provideDatabase(ApplicationContextModule_ProvideContextFactory.provideContext(singletonC.applicationContextModule));
 
         default: throw new AssertionError(id);
       }

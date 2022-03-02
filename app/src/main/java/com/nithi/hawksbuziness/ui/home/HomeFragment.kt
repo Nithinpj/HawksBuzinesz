@@ -50,15 +50,24 @@ class HomeFragment : Fragment() {
             setData(preferenceManger.getUrl())
         }else viemodel.getWeb()
 
-        viemodel.response.observe(requireActivity(), Observer {
+        viemodel.response.observe(requireActivity(), Observer { it ->
             when(it){
                 is ResponceState.Failiure -> {
-
+                    progress_circular?.let { progress->
+                        progress.visibility=View.GONE
+                    }
+                    Toast.makeText(requireContext(), "Failed", Toast.LENGTH_SHORT).show()
                 }
                 is ResponceState.Loading -> {
-                    Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
+                    progress_circular?.let { progress->
+                        progress.visibility=View.VISIBLE
+                    }
+
                 }
                 is ResponceState.Succes -> {
+                    progress_circular?.let { progress->
+                        progress.visibility=View.GONE
+                    }
                     preferenceManger.saveUrl(it.result.data)
                     setData(it.result.data)
                 }
@@ -75,9 +84,6 @@ class HomeFragment : Fragment() {
         webView.webViewClient=object :WebViewClient(){
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 super.onPageStarted(view, url, favicon)
-                progress_circular?.let {
-                    it.visibility=View.VISIBLE
-                }
             }
 
             override fun shouldOverrideUrlLoading(
@@ -89,9 +95,7 @@ class HomeFragment : Fragment() {
 
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
-                progress_circular?.let {
-                    it.visibility=View.GONE
-                }
+
             }
         }
         webView.loadUrl(data)

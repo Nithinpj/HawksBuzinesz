@@ -19,5 +19,6 @@ class Splash : AppCompatActivity() {
     suspend fun loadNextpage(){
         delay(3000)
         startActivity(Intent(this, ReferalActivity::class.java))
+        finish()
     }
 }

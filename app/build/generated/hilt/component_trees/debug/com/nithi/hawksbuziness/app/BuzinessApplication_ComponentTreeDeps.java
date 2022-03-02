@@ -18,6 +18,7 @@ import dagger.hilt.processor.internal.definecomponent.codegen._dagger_hilt_andro
 import dagger.hilt.processor.internal.definecomponent.codegen._dagger_hilt_android_internal_builders_ViewWithFragmentComponentBuilder;
 import dagger.hilt.processor.internal.definecomponent.codegen._dagger_hilt_components_SingletonComponent;
 import hilt_aggregated_deps._com_nithi_hawksbuziness_app_BuzinessApplication_GeneratedInjector;
+import hilt_aggregated_deps._com_nithi_hawksbuziness_di_DataBaseModule;
 import hilt_aggregated_deps._com_nithi_hawksbuziness_di_Networkmodule;
 import hilt_aggregated_deps._com_nithi_hawksbuziness_di_SharedPreferenceModule;
 import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_activity_MainActivity_GeneratedInjector;
@@ -27,6 +28,15 @@ import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_activity_ReferenceViewMo
 import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_home_HomeFragment_GeneratedInjector;
 import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_home_HomeViemodel_HiltModules_BindsModule;
 import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_home_HomeViemodel_HiltModules_KeyModule;
+import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_profile_ProfileFragment_GeneratedInjector;
+import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_profile_ProfileViewModel_HiltModules_BindsModule;
+import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_profile_ProfileViewModel_HiltModules_KeyModule;
+import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_shops_ShopFragment_GeneratedInjector;
+import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_shops_ShopViewmodel_HiltModules_BindsModule;
+import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_shops_ShopViewmodel_HiltModules_KeyModule;
+import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_support_SupportFragment_GeneratedInjector;
+import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_support_SupportViewmodel_HiltModules_BindsModule;
+import hilt_aggregated_deps._com_nithi_hawksbuziness_ui_support_SupportViewmodel_HiltModules_KeyModule;
 import hilt_aggregated_deps._dagger_hilt_android_flags_FragmentGetContextFix_FragmentGetContextFixEntryPoint;
 import hilt_aggregated_deps._dagger_hilt_android_flags_HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule;
 import hilt_aggregated_deps._dagger_hilt_android_internal_lifecycle_DefaultViewModelFactories_ActivityEntryPoint;
@@ -67,6 +77,7 @@ import hilt_aggregated_deps._dagger_hilt_android_internal_modules_HiltWrapper_Ac
     },
     aggregatedDeps = {
         _com_nithi_hawksbuziness_app_BuzinessApplication_GeneratedInjector.class,
+        _com_nithi_hawksbuziness_di_DataBaseModule.class,
         _com_nithi_hawksbuziness_di_Networkmodule.class,
         _com_nithi_hawksbuziness_di_SharedPreferenceModule.class,
         _com_nithi_hawksbuziness_ui_activity_MainActivity_GeneratedInjector.class,
@@ -76,6 +87,15 @@ import hilt_aggregated_deps._dagger_hilt_android_internal_modules_HiltWrapper_Ac
         _com_nithi_hawksbuziness_ui_home_HomeFragment_GeneratedInjector.class,
         _com_nithi_hawksbuziness_ui_home_HomeViemodel_HiltModules_BindsModule.class,
         _com_nithi_hawksbuziness_ui_home_HomeViemodel_HiltModules_KeyModule.class,
+        _com_nithi_hawksbuziness_ui_profile_ProfileFragment_GeneratedInjector.class,
+        _com_nithi_hawksbuziness_ui_profile_ProfileViewModel_HiltModules_BindsModule.class,
+        _com_nithi_hawksbuziness_ui_profile_ProfileViewModel_HiltModules_KeyModule.class,
+        _com_nithi_hawksbuziness_ui_shops_ShopFragment_GeneratedInjector.class,
+        _com_nithi_hawksbuziness_ui_shops_ShopViewmodel_HiltModules_BindsModule.class,
+        _com_nithi_hawksbuziness_ui_shops_ShopViewmodel_HiltModules_KeyModule.class,
+        _com_nithi_hawksbuziness_ui_support_SupportFragment_GeneratedInjector.class,
+        _com_nithi_hawksbuziness_ui_support_SupportViewmodel_HiltModules_BindsModule.class,
+        _com_nithi_hawksbuziness_ui_support_SupportViewmodel_HiltModules_KeyModule.class,
         _dagger_hilt_android_flags_FragmentGetContextFix_FragmentGetContextFixEntryPoint.class,
         _dagger_hilt_android_flags_HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule.class,
         _dagger_hilt_android_internal_lifecycle_DefaultViewModelFactories_ActivityEntryPoint.class,
