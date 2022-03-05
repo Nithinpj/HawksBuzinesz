@@ -8,11 +8,13 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import com.google.android.material.snackbar.Snackbar
 import com.nithi.hawksbuziness.R
 import com.nithi.hawksbuziness.databinding.FragmentSupportBinding
 import com.nithi.hawksbuziness.utill.ResponceState
 import com.nithi.hawksbuziness.utill.showSnackBar
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_main.*
 
 @AndroidEntryPoint
 class SupportFragment : Fragment() {
@@ -48,13 +50,15 @@ class SupportFragment : Fragment() {
                     }
                     is ResponceState.Succes -> {
 
-                        showSnackBar(binding.coordinator)
+                        showSnackBar(requireActivity().container)
+
                         binding.title.setText("")
                         binding.message.setText("")
                     }
                 }
             })
     }
+
 
 
 }

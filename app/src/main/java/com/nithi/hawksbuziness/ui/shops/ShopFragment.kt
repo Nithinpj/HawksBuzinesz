@@ -7,8 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.nithi.hawksbuziness.R
 import com.nithi.hawksbuziness.databinding.ShopFragmentBinding
 import com.nithi.hawksbuziness.model.shops.Shop
@@ -59,14 +61,16 @@ class ShopFragment : Fragment() {
     }
 
     private fun viewShops(shops: List<Shop>) {
-        Log.e("TAG",shops.toString() )
         val adapter=AllShopAdapter{data->onClicked(data)}
         adapter.bind(shops)
        bindiShopFragmentBinding.adapter=adapter
+        adapter.notifyDataSetChanged()
     }
 
     private fun onClicked(data: Shop) {
-        Toast.makeText(requireContext(), "${data.name}}", Toast.LENGTH_SHORT).show()
+        val bundle=Bundle()
+        bundle.putSerializable("data",data)
+        findNavController().navigate(R.id.action_shopfragment_to_addUpdateFragment)
     }
 
 }

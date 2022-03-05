@@ -6,6 +6,8 @@
     <corners
         android:topRightRadius="@dimen/dp20"
         android:topLeftRadius="@dimen/dp20"/>
-    <solid
-        android:color="@color/app_color"/>
+    <gradient
+        android:endColor="#FFFF"
+        android:startColor="#FFFF"
+        android:angle="90"/>
 </shape>

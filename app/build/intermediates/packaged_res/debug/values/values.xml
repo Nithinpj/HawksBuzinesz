@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
-    <color name="app_color">#4B82DA</color>
+    <color name="app_color">#008080</color>
     <color name="app_color_">#3FDD8F</color>
     <color name="black">#FF000000</color>
     <color name="editext_color">#e6f2ff</color>
@@ -12,10 +12,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="dp0">0dp</dimen>
+    <dimen name="dp1">1dp</dimen>
     <dimen name="dp10">10dp</dimen>
     <dimen name="dp100">100dp</dimen>
     <dimen name="dp20">20dp</dimen>
     <dimen name="dp200">200dp</dimen>
+    <dimen name="dp30">30dp</dimen>
     <dimen name="dp300">300dp</dimen>
     <dimen name="dp35">35dp</dimen>
     <dimen name="dp45">45dp</dimen>

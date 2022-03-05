@@ -35,11 +35,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-      if (navController.graph.startDestinationId!=navController.currentDestination?.id){
-          navController.navigate(R.id.homeFragment)
-      }else{
-          finish()
-      }
+//      if (navController.graph.startDestinationId!=navController.currentDestination?.id){
+//          navController.navigate(R.id.homeFragment)
+//      }else{
+//          finish()
+//      }
+        super.onBackPressed()
 
     }
 

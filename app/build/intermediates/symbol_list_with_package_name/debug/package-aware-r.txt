@@ -2375,10 +2375,12 @@ dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
 dimen dp0
+dimen dp1
 dimen dp10
 dimen dp100
 dimen dp20
 dimen dp200
+dimen dp30
 dimen dp300
 dimen dp35
 dimen dp45
@@ -2921,6 +2923,9 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable animation
+drawable app_colors
+drawable app_prgress_bar
 drawable avd_hide_password
 drawable avd_show_password
 drawable border_blue
@@ -2964,6 +2969,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable home
 drawable ic_baseline_account_circle_24
+drawable ic_baseline_arrow_back_ios_24
 drawable ic_baseline_settings_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
@@ -2977,6 +2983,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable img_white_appname
 drawable logo
+drawable logo_
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -3107,10 +3114,12 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_shopfragment_to_addUpdateFragment
 id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addUpdateFragment
 id adjust_height
 id adjust_width
 id alertTitle
@@ -3124,6 +3133,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id appbar
 id arc
 id asConfigured
 id async
@@ -3303,6 +3313,7 @@ id linear
 id listMode
 id list_item
 id locale
+id logo
 id ltr
 id masked
 id match_constraint
@@ -3464,6 +3475,7 @@ id select_dialog_listview
 id selected
 id selection_type
 id settingsFragment
+id share
 id sharedValueSet
 id sharedValueUnset
 id shop_recycler
@@ -3679,6 +3691,8 @@ layout abc_tooltip
 layout activity_main
 layout activity_referal
 layout activity_splash
+layout app_bar
+layout app_bar_back
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3695,6 +3709,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_add_update
 layout fragment_business
 layout fragment_home
 layout fragment_profile_fragment

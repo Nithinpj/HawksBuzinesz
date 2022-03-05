@@ -18,6 +18,9 @@ import java.lang.Object;
 
 public abstract class FragmentSupportBinding extends ViewDataBinding {
   @NonNull
+  public final View appbar;
+
+  @NonNull
   public final MaterialButton call;
 
   @NonNull
@@ -45,10 +48,11 @@ public abstract class FragmentSupportBinding extends ViewDataBinding {
   public final MaterialButton whatsapp;
 
   protected FragmentSupportBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      MaterialButton call, ConstraintLayout coordinator, TextInputLayout description,
+      View appbar, MaterialButton call, ConstraintLayout coordinator, TextInputLayout description,
       MaterialButton email, TextInputEditText message, TextInputLayout subject,
       MaterialButton submit, TextInputEditText title, MaterialButton whatsapp) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.appbar = appbar;
     this.call = call;
     this.coordinator = coordinator;
     this.description = description;

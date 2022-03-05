@@ -43,5 +43,14 @@
         android:id="@+id/shopfragment"
         android:name="com.nithi.hawksbuziness.ui.shops.ShopFragment"
         android:label="fragment_"
-        tools:layout="@layout/shop_fragment" />
+        tools:layout="@layout/shop_fragment" >
+        <action
+            android:id="@+id/action_shopfragment_to_addUpdateFragment"
+            app:destination="@id/addUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUpdateFragment"
+        android:name="com.nithi.hawksbuziness.AddUpdateFragment"
+        android:label="fragment_add_update"
+        tools:layout="@layout/fragment_add_update" />
 </navigation>

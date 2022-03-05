@@ -12,10 +12,12 @@ color teal_200
 color teal_700
 color white
 dimen dp0
+dimen dp1
 dimen dp10
 dimen dp100
 dimen dp20
 dimen dp200
+dimen dp30
 dimen dp300
 dimen dp35
 dimen dp45
@@ -23,6 +25,9 @@ dimen dp5
 dimen dp50
 dimen dp60
 dimen dp70
+drawable animation
+drawable app_colors
+drawable app_prgress_bar
 drawable border_blue
 drawable bottom_bar
 drawable customer_service
@@ -30,10 +35,12 @@ drawable editor_background
 drawable fill_blue
 drawable home
 drawable ic_baseline_account_circle_24
+drawable ic_baseline_arrow_back_ios_24
 drawable ic_baseline_settings_24
 drawable ic_launcher_foreground
 drawable img_white_appname
 drawable logo
+drawable logo_
 drawable mail
 drawable plus
 drawable round_card
@@ -44,6 +51,9 @@ drawable under_line
 drawable user
 font robotobold
 id action_businessFragment_to_signUpFragment
+id action_shopfragment_to_addUpdateFragment
+id addUpdateFragment
+id appbar
 id bottom_nav_view
 id businessFragment
 id call
@@ -56,6 +66,7 @@ id email
 id homeFragment
 id img_homebtn
 id language
+id logo
 id message
 id nav_graph
 id nav_host_fragment
@@ -64,6 +75,7 @@ id profileFragment
 id profile_image
 id progress_circular
 id settingsFragment
+id share
 id shop_recycler
 id shopfragment
 id signUpFragment
@@ -76,6 +88,9 @@ id whatsapp
 layout activity_main
 layout activity_referal
 layout activity_splash
+layout app_bar
+layout app_bar_back
+layout fragment_add_update
 layout fragment_business
 layout fragment_home
 layout fragment_profile_fragment

@@ -6,4 +6,5 @@ import com.google.android.material.snackbar.Snackbar
 
 fun Fragment.showSnackBar(view:View){
     Snackbar.make(view, "Ticket Raised", Snackbar.LENGTH_SHORT)
-        .show()}
+        .show()
+}

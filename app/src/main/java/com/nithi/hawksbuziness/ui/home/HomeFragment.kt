@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.nithi.hawksbuziness.R
+import com.nithi.hawksbuziness.databinding.FragmentHomeBinding
 import com.nithi.hawksbuziness.preferences.PreferenceManger
 import com.nithi.hawksbuziness.utill.ResponceState
 import dagger.hilt.android.AndroidEntryPoint
@@ -27,6 +28,7 @@ class HomeFragment : Fragment() {
     @Inject
     lateinit var preferenceManger: PreferenceManger
     private val viemodel:HomeViemodel by viewModels<HomeViemodel>()
+    private lateinit var binding:FragmentHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -38,17 +40,19 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        binding= FragmentHomeBinding.inflate(inflater)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        if (preferenceManger.getUrl().isNotEmpty()){
-
-            setData(preferenceManger.getUrl())
-        }else viemodel.getWeb()
+//
+//        if (preferenceManger.getUrl().isNotEmpty()){
+//
+//            setData(preferenceManger.getUrl())
+//        }else viemodel.getWeb()
+        viemodel.getWeb()
 
         viemodel.response.observe(requireActivity(), Observer { it ->
             when(it){
@@ -80,10 +84,11 @@ class HomeFragment : Fragment() {
     @SuppressLint("SetJavaScriptEnabled")
     private fun setData(data: String) {
 
-        webView.settings.javaScriptEnabled=true
-        webView.webViewClient=object :WebViewClient(){
+       binding.webView.settings.javaScriptEnabled=true
+        binding.webView.webViewClient=object :WebViewClient(){
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 super.onPageStarted(view, url, favicon)
+
             }
 
             override fun shouldOverrideUrlLoading(
@@ -98,7 +103,7 @@ class HomeFragment : Fragment() {
 
             }
         }
-        webView.loadUrl(data)
+        binding.webView.loadUrl(data)
     }
 
 

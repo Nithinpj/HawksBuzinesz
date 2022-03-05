@@ -69,7 +69,6 @@ class BusinessRepository @Inject constructor(private val authApi: AuthApi) : Bas
     }
 
     suspend fun getShops(use_id:String):Flow<ResponceState<Shops>>{
-        Log.e("TAG", "getShops: $use_id")
         return flow<ResponceState<Shops>> {
             emit(ResponceState.Loading("Loading"))
             emit(safeApi { authApi.getShops(use_id) })

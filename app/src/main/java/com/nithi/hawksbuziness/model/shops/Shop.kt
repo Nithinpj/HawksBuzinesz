@@ -1,5 +1,7 @@
 package com.nithi.hawksbuziness.model.shops
 
+import java.io.Serializable
+
 data class Shop(
     val auth_id: Int,
     val country: Any,
@@ -30,4 +32,4 @@ data class Shop(
     val updated: String,
     val user_id: Any,
     val username: String
-)
+):Serializable

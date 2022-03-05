@@ -1,0 +1,15 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/logo_" android:duration="20" />
+    <item android:drawable="@drawable/logo_" android:duration="20" />
+    <item android:drawable="@drawable/logo_" android:duration="20" />
+    <rotate
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:drawable="@drawable/logo_"
+        android:pivotX="20%"
+        android:pivotY="20%"
+        android:fromDegrees="0"
+        android:toDegrees="1080"
+        android:repeatCount="0" />
+
+</animation-list>
