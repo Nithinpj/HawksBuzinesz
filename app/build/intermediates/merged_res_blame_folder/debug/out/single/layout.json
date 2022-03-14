@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sign_up.xml",
-        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/fragment_sign_up.xml"
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_settings.xml",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/fragment_settings.xml"
     },
     {
-        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_referal.xml",
-        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/activity_referal.xml"
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sign_up.xml",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/fragment_sign_up.xml"
     },
     {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_profile_fragment.xml",
@@ -20,10 +20,6 @@
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/profile_items.xml"
     },
     {
-        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shop_fragment.xml",
-        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/shop_fragment.xml"
-    },
-    {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_support.xml",
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/fragment_support.xml"
     },
@@ -34,5 +30,29 @@
     {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_signup.xml",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/activity_signup.xml"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/app_bar_back.xml",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/app_bar_back.xml"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/bottomsheet_login.xml",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/bottomsheet_login.xml"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_update.xml",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/fragment_add_update.xml"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_referal.xml",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/activity_referal.xml"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shop_fragment.xml",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/shop_fragment.xml"
     }
 ]

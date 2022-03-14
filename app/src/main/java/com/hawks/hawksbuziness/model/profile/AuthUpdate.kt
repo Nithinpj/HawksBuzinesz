@@ -1,0 +1,33 @@
+package com.hawks.hawksbuziness.model.profile
+
+data class AuthUpdate(
+    val auth_id: Any,
+    val country: String,
+    val created: Any,
+    val delete_status: Int,
+    val deleted_at: Any,
+    val deleted_by: Any,
+    val device_id: Any,
+    val dob: Any,
+    val email: String,
+    val gender: String,
+    val id: Int,
+    val image: Any,
+    val join_method: Any,
+    val mobile: String,
+    val name: String,
+    val nationality: Any,
+    val pass: Any,
+    val password: Any,
+    val place: String,
+    val provider_key: Any,
+    val provider_type: Any,
+    val referer_id: Any,
+    val referral_code: Any,
+    val shop_id: Any,
+    val status: Int,
+    val type: String,
+    val updated: String,
+    val user_id: Any,
+    val username: Any
+)

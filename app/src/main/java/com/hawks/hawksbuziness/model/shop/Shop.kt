@@ -1,0 +1,53 @@
+package com.hawks.hawksbuziness.model.shop
+
+import androidx.room.PrimaryKey
+import java.io.Serializable
+
+data class Shop(
+    var address: String?,
+    var auth_id: Int?,
+    var branch: String?,
+    var card: String?,
+    var category_id: Int?,
+    var contact: String?,
+    var country_id: Int?,
+    var created: String?,
+    var delete_status: Int?,
+//    var deleted_at: Any,
+//    var deleted_by: Any,
+//    var district_id: Any,
+    var domain: String?,
+    var email: String?,
+    var facebook: String?,
+    var gstin: String?,
+    var id: Int?,
+    var instagram: String?,
+    var is_head_office: Int?,
+    var is_multi_store: Int?,
+    var is_pvt_ltd: Int?,
+    var is_tm: Int?,
+    var latitude: String?,
+    var linkedin: String?,
+    var logo: String?,
+//    var longitude: Any,
+//    var map_code: Any,
+    var multi_store_id: Int?,
+    var name: String?,
+    var office_contact: String?,
+    var pan_no: String?,
+    var payment_qr: String?,
+    var payment_qr_head: String?,
+    var person_in_charge: String?,
+    var place_id: Int?,
+    var prime: Int?,
+    var prime_card_type: String?,
+    var prime_end_date: String?,
+//    var state_id: Any,
+    var status: Int?,
+    var sub_category_id: Int?,
+    var updated: String?,
+    var website: String?,
+    var whatsapp: String?,
+    @PrimaryKey
+    var primaryId:Int
+):Serializable

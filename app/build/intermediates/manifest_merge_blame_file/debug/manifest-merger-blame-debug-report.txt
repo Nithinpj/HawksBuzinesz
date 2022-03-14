@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.nithi.hawksbuziness"
+3    package="com.hawks.hawksbuziness"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -11,212 +11,295 @@
 9-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:4:5-66
-11-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:4:22-64
+11-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:5:5-67
+11-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-12-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:9:5-79
-12-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:9:22-76
-13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Include required permissions for Google Maps API to run. -->
-13-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:10:5-76
-13-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:10:22-73
-14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-14-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/e30fc1f5f6eff9adfdeac3d7af550586/transformed/play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
-14-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/e30fc1f5f6eff9adfdeac3d7af550586/transformed/play-services-maps-17.0.0/AndroidManifest.xml:23:22-76
-15
-16    <uses-feature
-16-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/e30fc1f5f6eff9adfdeac3d7af550586/transformed/play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
-17        android:glEsVersion="0x00020000"
-17-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/e30fc1f5f6eff9adfdeac3d7af550586/transformed/play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
-18        android:required="true" />
-18-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/e30fc1f5f6eff9adfdeac3d7af550586/transformed/play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
-19
-20    <application
-20-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:6:5-33:19
-21        android:name="com.nithi.hawksbuziness.app.BuzinessApplication"
-21-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:7:9-48
-22        android:allowBackup="true"
-22-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:8:9-35
-23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-23-->[androidx.core:core:1.7.0] /home/nithin/.gradle/caches/transforms-3/e8b96a8ee772b8bdd559d8672f3ac71e/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
-24        android:debuggable="true"
-25        android:icon="@mipmap/ic_launcher"
-25-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:9:9-43
-26        android:label="@string/app_name"
-26-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:10:9-41
-27        android:roundIcon="@mipmap/ic_launcher_round"
-27-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:11:9-54
-28        android:supportsRtl="true"
+12-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:6:5-79
+12-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:7:5-81
+13-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:7:22-78
+14    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+14-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:8:5-85
+14-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:8:22-82
+15    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Include required permissions for Google Maps API to run. -->
+15-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/644f27884326a9e38d25592ce5b8e6c6/transformed/places-2.5.0/AndroidManifest.xml:10:5-76
+15-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/644f27884326a9e38d25592ce5b8e6c6/transformed/places-2.5.0/AndroidManifest.xml:10:22-73
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/6833b3847c6281c7d0343b6d68c5897a/transformed/play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+16-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/6833b3847c6281c7d0343b6d68c5897a/transformed/play-services-maps-17.0.0/AndroidManifest.xml:23:22-76
+17
+18    <uses-feature
+18-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/6833b3847c6281c7d0343b6d68c5897a/transformed/play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+19        android:glEsVersion="0x00020000"
+19-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/6833b3847c6281c7d0343b6d68c5897a/transformed/play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+20        android:required="true" />
+20-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/6833b3847c6281c7d0343b6d68c5897a/transformed/play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+21
+22    <uses-permission android:name="android.permission.WAKE_LOCK" />
+22-->[com.google.android.gms:play-services-measurement-api:20.1.0] /home/nithin/.gradle/caches/transforms-3/d8bbb464f1e74ff45cfef1443d73dc3a/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:24:5-68
+22-->[com.google.android.gms:play-services-measurement-api:20.1.0] /home/nithin/.gradle/caches/transforms-3/d8bbb464f1e74ff45cfef1443d73dc3a/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:24:22-65
+23    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Include required permissions for Advertising Id -->
+23-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:26:5-110
+23-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:26:22-107
+24    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+24-->[com.google.android.gms:play-services-ads-identifier:18.0.0] /home/nithin/.gradle/caches/transforms-3/e6bdbcb73c12927b7ab89333deef0a16/transformed/play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:5-79
+24-->[com.google.android.gms:play-services-ads-identifier:18.0.0] /home/nithin/.gradle/caches/transforms-3/e6bdbcb73c12927b7ab89333deef0a16/transformed/play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:22-76
+25
+26    <application
+26-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:10:5-37:19
+27        android:name="com.hawks.hawksbuziness.app.BuzinessApplication"
+27-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:11:9-71
+28        android:allowBackup="true"
 28-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:12:9-35
-29        android:testOnly="true"
-30        android:theme="@style/Theme.HawksBuziness" >
-30-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:14:9-51
-31        <activity
-31-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:15:9-17:40
-32            android:name="com.nithi.hawksbuziness.ui.activity.ReferalActivity"
-32-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:16:13-56
-33            android:exported="false" />
-33-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:17:13-37
-34        <activity
-34-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:18:9-26:20
-35            android:name="com.nithi.hawksbuziness.ui.splash.Splash"
-35-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:19:13-45
-36            android:exported="true" >
-36-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:20:13-36
-37            <intent-filter>
-37-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:21:13-25:29
-38                <action android:name="android.intent.action.MAIN" />
-38-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:22:17-69
-38-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:22:25-66
-39
-40                <category android:name="android.intent.category.LAUNCHER" />
-40-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:24:17-77
-40-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:24:27-74
-41            </intent-filter>
-42        </activity>
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.7.0] /home/nithin/.gradle/caches/transforms-3/3b06d0e79b1b3b8b7df06408c495af6d/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+30        android:debuggable="true"
+31        android:icon="@mipmap/ic_launcher"
+31-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:13:9-43
+32        android:label="@string/app_name"
+32-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:14:9-41
+33        android:roundIcon="@mipmap/ic_launcher_round"
+33-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:15:9-54
+34        android:supportsRtl="true"
+34-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:16:9-35
+35        android:testOnly="true"
+36        android:theme="@style/Theme.HawksBuziness" >
+36-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:17:9-51
+37        <activity
+37-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:18:9-20:40
+38            android:name="com.hawks.hawksbuziness.ui.activity.SignupActivity"
+38-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:19:13-78
+39            android:exported="false" />
+39-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:20:13-37
+40        <activity
+40-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:21:9-23:40
+41            android:name="com.hawks.hawksbuziness.ui.activity.ReferalActivity"
+41-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:22:13-79
+42            android:exported="false" />
+42-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:23:13-37
 43        <activity
-43-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:27:9-32:20
-44            android:name="com.nithi.hawksbuziness.ui.activity.MainActivity"
-44-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:28:13-53
-45            android:exported="true"
-45-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:29:13-36
-46            android:windowSoftInputMode="adjustPan" >
-46-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:30:13-52
-47        </activity>
+43-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:24:9-32:20
+44            android:name="com.hawks.hawksbuziness.ui.splash.Splash"
+44-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:25:13-68
+45            android:exported="true" >
+45-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:26:13-36
+46            <intent-filter>
+46-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:27:13-31:29
+47                <action android:name="android.intent.action.MAIN" />
+47-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:28:17-69
+47-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:28:25-66
 48
-49        <uses-library
-49-->[androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/d370ea31eb23bfd07f8e617e11261b10/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
-50            android:name="androidx.window.extensions"
-50-->[androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/d370ea31eb23bfd07f8e617e11261b10/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
-51            android:required="false" />
-51-->[androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/d370ea31eb23bfd07f8e617e11261b10/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
-52        <uses-library
-52-->[androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/d370ea31eb23bfd07f8e617e11261b10/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
-53            android:name="androidx.window.sidecar"
-53-->[androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/d370ea31eb23bfd07f8e617e11261b10/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
-54            android:required="false" />
-54-->[androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/d370ea31eb23bfd07f8e617e11261b10/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
-55
-56        <activity
-56-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:14:9-20:20
-57            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
-57-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:15:13-91
-58            android:exported="false"
-58-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:16:13-37
-59            android:label="@string/places_autocomplete_label"
-59-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:17:13-62
-60            android:theme="@style/PlacesAutocompleteOverlay"
-60-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:18:13-61
-61            android:windowSoftInputMode="adjustResize" >
-61-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/c10283638221244bbbff818891efe41d/transformed/places-2.5.0/AndroidManifest.xml:19:13-55
-62        </activity> <!-- Needs to be explicitly declared on P+ -->
-63        <uses-library
-63-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/e30fc1f5f6eff9adfdeac3d7af550586/transformed/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
-64            android:name="org.apache.http.legacy"
-64-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/e30fc1f5f6eff9adfdeac3d7af550586/transformed/play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
-65            android:required="false" />
-65-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/e30fc1f5f6eff9adfdeac3d7af550586/transformed/play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
-66
-67        <activity
-67-->[com.google.android.gms:play-services-base:17.2.1] /home/nithin/.gradle/caches/transforms-3/e04611d08f515552939991b9eecb776f/transformed/play-services-base-17.2.1/AndroidManifest.xml:23:9-26:75
-68            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-68-->[com.google.android.gms:play-services-base:17.2.1] /home/nithin/.gradle/caches/transforms-3/e04611d08f515552939991b9eecb776f/transformed/play-services-base-17.2.1/AndroidManifest.xml:24:13-79
-69            android:exported="false"
-69-->[com.google.android.gms:play-services-base:17.2.1] /home/nithin/.gradle/caches/transforms-3/e04611d08f515552939991b9eecb776f/transformed/play-services-base-17.2.1/AndroidManifest.xml:25:13-37
-70            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-70-->[com.google.android.gms:play-services-base:17.2.1] /home/nithin/.gradle/caches/transforms-3/e04611d08f515552939991b9eecb776f/transformed/play-services-base-17.2.1/AndroidManifest.xml:26:13-72
-71
-72        <meta-data
-72-->[com.google.android.gms:play-services-basement:17.2.1] /home/nithin/.gradle/caches/transforms-3/f083f96b88fb7c1b51d836e37e208a1e/transformed/play-services-basement-17.2.1/AndroidManifest.xml:23:9-25:69
-73            android:name="com.google.android.gms.version"
-73-->[com.google.android.gms:play-services-basement:17.2.1] /home/nithin/.gradle/caches/transforms-3/f083f96b88fb7c1b51d836e37e208a1e/transformed/play-services-basement-17.2.1/AndroidManifest.xml:24:13-58
-74            android:value="@integer/google_play_services_version" />
-74-->[com.google.android.gms:play-services-basement:17.2.1] /home/nithin/.gradle/caches/transforms-3/f083f96b88fb7c1b51d836e37e208a1e/transformed/play-services-basement-17.2.1/AndroidManifest.xml:25:13-66
-75
-76        <service
-76-->[androidx.room:room-runtime:2.4.2] /home/nithin/.gradle/caches/transforms-3/844c811f856c01ae86ad37aefacf1463/transformed/room-runtime-2.4.2/AndroidManifest.xml:25:9-28:40
-77            android:name="androidx.room.MultiInstanceInvalidationService"
-77-->[androidx.room:room-runtime:2.4.2] /home/nithin/.gradle/caches/transforms-3/844c811f856c01ae86ad37aefacf1463/transformed/room-runtime-2.4.2/AndroidManifest.xml:26:13-74
-78            android:directBootAware="true"
-78-->[androidx.room:room-runtime:2.4.2] /home/nithin/.gradle/caches/transforms-3/844c811f856c01ae86ad37aefacf1463/transformed/room-runtime-2.4.2/AndroidManifest.xml:27:13-43
-79            android:exported="false" />
-79-->[androidx.room:room-runtime:2.4.2] /home/nithin/.gradle/caches/transforms-3/844c811f856c01ae86ad37aefacf1463/transformed/room-runtime-2.4.2/AndroidManifest.xml:28:13-37
-80
-81        <provider
-81-->[androidx.emoji2:emoji2:1.0.0] /home/nithin/.gradle/caches/transforms-3/4437ce4e7a5d9702ca67f7e0bd0cecbd/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-82            android:name="androidx.startup.InitializationProvider"
-82-->[androidx.emoji2:emoji2:1.0.0] /home/nithin/.gradle/caches/transforms-3/4437ce4e7a5d9702ca67f7e0bd0cecbd/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
-83            android:authorities="com.nithi.hawksbuziness.androidx-startup"
-83-->[androidx.emoji2:emoji2:1.0.0] /home/nithin/.gradle/caches/transforms-3/4437ce4e7a5d9702ca67f7e0bd0cecbd/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
-84            android:exported="false" >
-84-->[androidx.emoji2:emoji2:1.0.0] /home/nithin/.gradle/caches/transforms-3/4437ce4e7a5d9702ca67f7e0bd0cecbd/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
-85            <meta-data
-85-->[androidx.emoji2:emoji2:1.0.0] /home/nithin/.gradle/caches/transforms-3/4437ce4e7a5d9702ca67f7e0bd0cecbd/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-86                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-86-->[androidx.emoji2:emoji2:1.0.0] /home/nithin/.gradle/caches/transforms-3/4437ce4e7a5d9702ca67f7e0bd0cecbd/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
-87                android:value="androidx.startup" />
-87-->[androidx.emoji2:emoji2:1.0.0] /home/nithin/.gradle/caches/transforms-3/4437ce4e7a5d9702ca67f7e0bd0cecbd/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
-88            <meta-data
-88-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/nithin/.gradle/caches/transforms-3/ec142cee19520e9b3f140d69f47f202d/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-89                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-89-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/nithin/.gradle/caches/transforms-3/ec142cee19520e9b3f140d69f47f202d/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-90                android:value="androidx.startup" />
-90-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/nithin/.gradle/caches/transforms-3/ec142cee19520e9b3f140d69f47f202d/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-91            <meta-data
-91-->[androidx.profileinstaller:profileinstaller:1.0.3] /home/nithin/.gradle/caches/transforms-3/495cae39e116c7b5eb4da54a9adbe314/transformed/profileinstaller-1.0.3/AndroidManifest.xml:31:13-33:52
-92                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-92-->[androidx.profileinstaller:profileinstaller:1.0.3] /home/nithin/.gradle/caches/transforms-3/495cae39e116c7b5eb4da54a9adbe314/transformed/profileinstaller-1.0.3/AndroidManifest.xml:32:17-85
-93                android:value="androidx.startup" />
-93-->[androidx.profileinstaller:profileinstaller:1.0.3] /home/nithin/.gradle/caches/transforms-3/495cae39e116c7b5eb4da54a9adbe314/transformed/profileinstaller-1.0.3/AndroidManifest.xml:33:17-49
-94        </provider>
-95
-96        <service
-96-->[com.google.android.datatransport:transport-backend-cct:2.3.0] /home/nithin/.gradle/caches/transforms-3/657443307a033a7db643ddceeab07306/transformed/transport-backend-cct-2.3.0/AndroidManifest.xml:29:9-35:19
-97            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-97-->[com.google.android.datatransport:transport-backend-cct:2.3.0] /home/nithin/.gradle/caches/transforms-3/657443307a033a7db643ddceeab07306/transformed/transport-backend-cct-2.3.0/AndroidManifest.xml:30:13-103
-98            android:exported="false" >
-98-->[com.google.android.datatransport:transport-backend-cct:2.3.0] /home/nithin/.gradle/caches/transforms-3/657443307a033a7db643ddceeab07306/transformed/transport-backend-cct-2.3.0/AndroidManifest.xml:31:13-37
+49                <category android:name="android.intent.category.LAUNCHER" />
+49-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:30:17-77
+49-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:30:27-74
+50            </intent-filter>
+51        </activity>
+52        <activity
+52-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:33:9-36:64
+53            android:name="com.hawks.hawksbuziness.ui.activity.MainActivity"
+53-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:34:13-76
+54            android:exported="true"
+54-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:35:13-36
+55            android:windowSoftInputMode="adjustPan" />
+55-->/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:36:13-52
+56
+57        <uses-library
+57-->[androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/9361c9c081d0b9cb3a51e23a3784c2a1/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+58            android:name="androidx.window.extensions"
+58-->[androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/9361c9c081d0b9cb3a51e23a3784c2a1/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+59            android:required="false" />
+59-->[androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/9361c9c081d0b9cb3a51e23a3784c2a1/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+60        <uses-library
+60-->[androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/9361c9c081d0b9cb3a51e23a3784c2a1/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+61            android:name="androidx.window.sidecar"
+61-->[androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/9361c9c081d0b9cb3a51e23a3784c2a1/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+62            android:required="false" />
+62-->[androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/9361c9c081d0b9cb3a51e23a3784c2a1/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+63
+64        <activity
+64-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/644f27884326a9e38d25592ce5b8e6c6/transformed/places-2.5.0/AndroidManifest.xml:14:9-20:20
+65            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
+65-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/644f27884326a9e38d25592ce5b8e6c6/transformed/places-2.5.0/AndroidManifest.xml:15:13-91
+66            android:exported="false"
+66-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/644f27884326a9e38d25592ce5b8e6c6/transformed/places-2.5.0/AndroidManifest.xml:16:13-37
+67            android:label="@string/places_autocomplete_label"
+67-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/644f27884326a9e38d25592ce5b8e6c6/transformed/places-2.5.0/AndroidManifest.xml:17:13-62
+68            android:theme="@style/PlacesAutocompleteOverlay"
+68-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/644f27884326a9e38d25592ce5b8e6c6/transformed/places-2.5.0/AndroidManifest.xml:18:13-61
+69            android:windowSoftInputMode="adjustResize" >
+69-->[com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/644f27884326a9e38d25592ce5b8e6c6/transformed/places-2.5.0/AndroidManifest.xml:19:13-55
+70        </activity> <!-- Needs to be explicitly declared on P+ -->
+71        <uses-library
+71-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/6833b3847c6281c7d0343b6d68c5897a/transformed/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+72            android:name="org.apache.http.legacy"
+72-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/6833b3847c6281c7d0343b6d68c5897a/transformed/play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
+73            android:required="false" />
+73-->[com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/6833b3847c6281c7d0343b6d68c5897a/transformed/play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
+74
+75        <activity
+75-->[com.google.android.gms:play-services-base:17.2.1] /home/nithin/.gradle/caches/transforms-3/779a42e7f23f77de11ad33be86f5ae0f/transformed/play-services-base-17.2.1/AndroidManifest.xml:23:9-26:75
+76            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+76-->[com.google.android.gms:play-services-base:17.2.1] /home/nithin/.gradle/caches/transforms-3/779a42e7f23f77de11ad33be86f5ae0f/transformed/play-services-base-17.2.1/AndroidManifest.xml:24:13-79
+77            android:exported="false"
+77-->[com.google.android.gms:play-services-base:17.2.1] /home/nithin/.gradle/caches/transforms-3/779a42e7f23f77de11ad33be86f5ae0f/transformed/play-services-base-17.2.1/AndroidManifest.xml:25:13-37
+78            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+78-->[com.google.android.gms:play-services-base:17.2.1] /home/nithin/.gradle/caches/transforms-3/779a42e7f23f77de11ad33be86f5ae0f/transformed/play-services-base-17.2.1/AndroidManifest.xml:26:13-72
+79
+80        <service
+80-->[com.google.firebase:firebase-crashlytics-ktx:18.2.9] /home/nithin/.gradle/caches/transforms-3/f4e30b8c3d0a5d1b627bd0ca486020c6/transformed/firebase-crashlytics-ktx-18.2.9/AndroidManifest.xml:24:9-30:19
+81            android:name="com.google.firebase.components.ComponentDiscoveryService"
+81-->[com.google.firebase:firebase-crashlytics-ktx:18.2.9] /home/nithin/.gradle/caches/transforms-3/f4e30b8c3d0a5d1b627bd0ca486020c6/transformed/firebase-crashlytics-ktx-18.2.9/AndroidManifest.xml:25:13-84
+82            android:directBootAware="true"
+82-->[com.google.firebase:firebase-common:20.1.0] /home/nithin/.gradle/caches/transforms-3/1d46a739865b056261721fffae9b120b/transformed/firebase-common-20.1.0/AndroidManifest.xml:35:13-43
+83            android:exported="false" >
+83-->[com.google.firebase:firebase-crashlytics-ktx:18.2.9] /home/nithin/.gradle/caches/transforms-3/f4e30b8c3d0a5d1b627bd0ca486020c6/transformed/firebase-crashlytics-ktx-18.2.9/AndroidManifest.xml:26:13-37
+84            <meta-data
+84-->[com.google.firebase:firebase-crashlytics-ktx:18.2.9] /home/nithin/.gradle/caches/transforms-3/f4e30b8c3d0a5d1b627bd0ca486020c6/transformed/firebase-crashlytics-ktx-18.2.9/AndroidManifest.xml:27:13-29:85
+85                android:name="com.google.firebase.components:com.google.firebase.crashlytics.ktx.FirebaseCrashlyticsKtxRegistrar"
+85-->[com.google.firebase:firebase-crashlytics-ktx:18.2.9] /home/nithin/.gradle/caches/transforms-3/f4e30b8c3d0a5d1b627bd0ca486020c6/transformed/firebase-crashlytics-ktx-18.2.9/AndroidManifest.xml:28:17-130
+86                android:value="com.google.firebase.components.ComponentRegistrar" />
+86-->[com.google.firebase:firebase-crashlytics-ktx:18.2.9] /home/nithin/.gradle/caches/transforms-3/f4e30b8c3d0a5d1b627bd0ca486020c6/transformed/firebase-crashlytics-ktx-18.2.9/AndroidManifest.xml:29:17-82
+87            <meta-data
+87-->[com.google.firebase:firebase-analytics-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/6fca47dcf6241ba4c44b2ec5ee070652/transformed/firebase-analytics-ktx-20.1.0/AndroidManifest.xml:11:13-13:85
+88                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
+88-->[com.google.firebase:firebase-analytics-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/6fca47dcf6241ba4c44b2ec5ee070652/transformed/firebase-analytics-ktx-20.1.0/AndroidManifest.xml:12:17-126
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[com.google.firebase:firebase-analytics-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/6fca47dcf6241ba4c44b2ec5ee070652/transformed/firebase-analytics-ktx-20.1.0/AndroidManifest.xml:13:17-82
+90            <meta-data
+90-->[com.google.firebase:firebase-common-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/c3426f5ee0fbb46170acff0deca56295/transformed/firebase-common-ktx-20.1.0/AndroidManifest.xml:15:13-17:85
+91                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+91-->[com.google.firebase:firebase-common-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/c3426f5ee0fbb46170acff0deca56295/transformed/firebase-common-ktx-20.1.0/AndroidManifest.xml:16:17-113
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.firebase:firebase-common-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/c3426f5ee0fbb46170acff0deca56295/transformed/firebase-common-ktx-20.1.0/AndroidManifest.xml:17:17-82
+93            <meta-data
+93-->[com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradle/caches/transforms-3/69c8a0ca4a5d209baad7867a7882ef9e/transformed/firebase-crashlytics-18.2.9/AndroidManifest.xml:18:13-20:85
+94                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+94-->[com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradle/caches/transforms-3/69c8a0ca4a5d209baad7867a7882ef9e/transformed/firebase-crashlytics-18.2.9/AndroidManifest.xml:19:17-115
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradle/caches/transforms-3/69c8a0ca4a5d209baad7867a7882ef9e/transformed/firebase-crashlytics-18.2.9/AndroidManifest.xml:20:17-82
+96            <meta-data
+96-->[com.google.android.gms:play-services-measurement-api:20.1.0] /home/nithin/.gradle/caches/transforms-3/d8bbb464f1e74ff45cfef1443d73dc3a/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:30:13-32:85
+97                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+97-->[com.google.android.gms:play-services-measurement-api:20.1.0] /home/nithin/.gradle/caches/transforms-3/d8bbb464f1e74ff45cfef1443d73dc3a/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:31:17-139
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[com.google.android.gms:play-services-measurement-api:20.1.0] /home/nithin/.gradle/caches/transforms-3/d8bbb464f1e74ff45cfef1443d73dc3a/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:32:17-82
 99            <meta-data
-99-->[com.google.android.datatransport:transport-backend-cct:2.3.0] /home/nithin/.gradle/caches/transforms-3/657443307a033a7db643ddceeab07306/transformed/transport-backend-cct-2.3.0/AndroidManifest.xml:32:13-34:39
-100                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-100-->[com.google.android.datatransport:transport-backend-cct:2.3.0] /home/nithin/.gradle/caches/transforms-3/657443307a033a7db643ddceeab07306/transformed/transport-backend-cct-2.3.0/AndroidManifest.xml:33:17-94
-101                android:value="cct" />
-101-->[com.google.android.datatransport:transport-backend-cct:2.3.0] /home/nithin/.gradle/caches/transforms-3/657443307a033a7db643ddceeab07306/transformed/transport-backend-cct-2.3.0/AndroidManifest.xml:34:17-36
+99-->[com.google.firebase:firebase-installations:17.0.1] /home/nithin/.gradle/caches/transforms-3/96a883a721371ebd07b2377ecbc1095b/transformed/firebase-installations-17.0.1/AndroidManifest.xml:18:13-20:85
+100                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+100-->[com.google.firebase:firebase-installations:17.0.1] /home/nithin/.gradle/caches/transforms-3/96a883a721371ebd07b2377ecbc1095b/transformed/firebase-installations-17.0.1/AndroidManifest.xml:19:17-127
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[com.google.firebase:firebase-installations:17.0.1] /home/nithin/.gradle/caches/transforms-3/96a883a721371ebd07b2377ecbc1095b/transformed/firebase-installations-17.0.1/AndroidManifest.xml:20:17-82
 102        </service>
-103        <service
-103-->[com.google.android.datatransport:transport-runtime:2.2.3] /home/nithin/.gradle/caches/transforms-3/c80bedbc6ade1b71d8ddaa06b33182dd/transformed/transport-runtime-2.2.3/AndroidManifest.xml:26:9-30:19
-104            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-104-->[com.google.android.datatransport:transport-runtime:2.2.3] /home/nithin/.gradle/caches/transforms-3/c80bedbc6ade1b71d8ddaa06b33182dd/transformed/transport-runtime-2.2.3/AndroidManifest.xml:27:13-117
-105            android:exported="false"
-105-->[com.google.android.datatransport:transport-runtime:2.2.3] /home/nithin/.gradle/caches/transforms-3/c80bedbc6ade1b71d8ddaa06b33182dd/transformed/transport-runtime-2.2.3/AndroidManifest.xml:28:13-37
-106            android:permission="android.permission.BIND_JOB_SERVICE" >
-106-->[com.google.android.datatransport:transport-runtime:2.2.3] /home/nithin/.gradle/caches/transforms-3/c80bedbc6ade1b71d8ddaa06b33182dd/transformed/transport-runtime-2.2.3/AndroidManifest.xml:29:13-69
-107        </service>
-108
-109        <receiver
-109-->[com.google.android.datatransport:transport-runtime:2.2.3] /home/nithin/.gradle/caches/transforms-3/c80bedbc6ade1b71d8ddaa06b33182dd/transformed/transport-runtime-2.2.3/AndroidManifest.xml:32:9-34:40
-110            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-110-->[com.google.android.datatransport:transport-runtime:2.2.3] /home/nithin/.gradle/caches/transforms-3/c80bedbc6ade1b71d8ddaa06b33182dd/transformed/transport-runtime-2.2.3/AndroidManifest.xml:33:13-132
-111            android:exported="false" />
-111-->[com.google.android.datatransport:transport-runtime:2.2.3] /home/nithin/.gradle/caches/transforms-3/c80bedbc6ade1b71d8ddaa06b33182dd/transformed/transport-runtime-2.2.3/AndroidManifest.xml:34:13-37
-112        <receiver
-112-->[androidx.profileinstaller:profileinstaller:1.0.3] /home/nithin/.gradle/caches/transforms-3/495cae39e116c7b5eb4da54a9adbe314/transformed/profileinstaller-1.0.3/AndroidManifest.xml:36:9-45:20
-113            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-113-->[androidx.profileinstaller:profileinstaller:1.0.3] /home/nithin/.gradle/caches/transforms-3/495cae39e116c7b5eb4da54a9adbe314/transformed/profileinstaller-1.0.3/AndroidManifest.xml:37:13-76
-114            android:directBootAware="false"
-114-->[androidx.profileinstaller:profileinstaller:1.0.3] /home/nithin/.gradle/caches/transforms-3/495cae39e116c7b5eb4da54a9adbe314/transformed/profileinstaller-1.0.3/AndroidManifest.xml:38:13-44
-115            android:enabled="true"
-115-->[androidx.profileinstaller:profileinstaller:1.0.3] /home/nithin/.gradle/caches/transforms-3/495cae39e116c7b5eb4da54a9adbe314/transformed/profileinstaller-1.0.3/AndroidManifest.xml:39:13-35
-116            android:exported="true"
-116-->[androidx.profileinstaller:profileinstaller:1.0.3] /home/nithin/.gradle/caches/transforms-3/495cae39e116c7b5eb4da54a9adbe314/transformed/profileinstaller-1.0.3/AndroidManifest.xml:40:13-36
-117            android:permission="android.permission.DUMP" >
-117-->[androidx.profileinstaller:profileinstaller:1.0.3] /home/nithin/.gradle/caches/transforms-3/495cae39e116c7b5eb4da54a9adbe314/transformed/profileinstaller-1.0.3/AndroidManifest.xml:41:13-57
-118            <intent-filter>
-118-->[androidx.profileinstaller:profileinstaller:1.0.3] /home/nithin/.gradle/caches/transforms-3/495cae39e116c7b5eb4da54a9adbe314/transformed/profileinstaller-1.0.3/AndroidManifest.xml:42:13-44:29
-119                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-119-->[androidx.profileinstaller:profileinstaller:1.0.3] /home/nithin/.gradle/caches/transforms-3/495cae39e116c7b5eb4da54a9adbe314/transformed/profileinstaller-1.0.3/AndroidManifest.xml:43:17-91
-119-->[androidx.profileinstaller:profileinstaller:1.0.3] /home/nithin/.gradle/caches/transforms-3/495cae39e116c7b5eb4da54a9adbe314/transformed/profileinstaller-1.0.3/AndroidManifest.xml:43:25-88
-120            </intent-filter>
-121        </receiver>
-122    </application>
-123
-124</manifest>
+103
+104        <provider
+104-->[com.google.firebase:firebase-common:20.1.0] /home/nithin/.gradle/caches/transforms-3/1d46a739865b056261721fffae9b120b/transformed/firebase-common-20.1.0/AndroidManifest.xml:26:9-31:39
+105            android:name="com.google.firebase.provider.FirebaseInitProvider"
+105-->[com.google.firebase:firebase-common:20.1.0] /home/nithin/.gradle/caches/transforms-3/1d46a739865b056261721fffae9b120b/transformed/firebase-common-20.1.0/AndroidManifest.xml:27:13-77
+106            android:authorities="com.hawks.hawksbuziness.firebaseinitprovider"
+106-->[com.google.firebase:firebase-common:20.1.0] /home/nithin/.gradle/caches/transforms-3/1d46a739865b056261721fffae9b120b/transformed/firebase-common-20.1.0/AndroidManifest.xml:28:13-72
+107            android:directBootAware="true"
+107-->[com.google.firebase:firebase-common:20.1.0] /home/nithin/.gradle/caches/transforms-3/1d46a739865b056261721fffae9b120b/transformed/firebase-common-20.1.0/AndroidManifest.xml:29:13-43
+108            android:exported="false"
+108-->[com.google.firebase:firebase-common:20.1.0] /home/nithin/.gradle/caches/transforms-3/1d46a739865b056261721fffae9b120b/transformed/firebase-common-20.1.0/AndroidManifest.xml:30:13-37
+109            android:initOrder="100" />
+109-->[com.google.firebase:firebase-common:20.1.0] /home/nithin/.gradle/caches/transforms-3/1d46a739865b056261721fffae9b120b/transformed/firebase-common-20.1.0/AndroidManifest.xml:31:13-36
+110
+111        <receiver
+111-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:29:9-33:20
+112            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+112-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:30:13-85
+113            android:enabled="true"
+113-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:31:13-35
+114            android:exported="false" >
+114-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:32:13-37
+115        </receiver>
+116
+117        <service
+117-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:35:9-38:40
+118            android:name="com.google.android.gms.measurement.AppMeasurementService"
+118-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:36:13-84
+119            android:enabled="true"
+119-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:37:13-35
+120            android:exported="false" />
+120-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:38:13-37
+121        <service
+121-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:39:9-43:72
+122            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+122-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:40:13-87
+123            android:enabled="true"
+123-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:41:13-35
+124            android:exported="false"
+124-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:42:13-37
+125            android:permission="android.permission.BIND_JOB_SERVICE" />
+125-->[com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:43:13-69
+126
+127        <meta-data
+127-->[com.google.android.gms:play-services-basement:18.0.0] /home/nithin/.gradle/caches/transforms-3/b3fdb6bc07f34abdf04ebd82c607fbb9/transformed/play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+128            android:name="com.google.android.gms.version"
+128-->[com.google.android.gms:play-services-basement:18.0.0] /home/nithin/.gradle/caches/transforms-3/b3fdb6bc07f34abdf04ebd82c607fbb9/transformed/play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+129            android:value="@integer/google_play_services_version" />
+129-->[com.google.android.gms:play-services-basement:18.0.0] /home/nithin/.gradle/caches/transforms-3/b3fdb6bc07f34abdf04ebd82c607fbb9/transformed/play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+130
+131        <service
+131-->[androidx.room:room-runtime:2.4.2] /home/nithin/.gradle/caches/transforms-3/d2d2999876a7b06709698c61f93cdedd/transformed/room-runtime-2.4.2/AndroidManifest.xml:25:9-28:40
+132            android:name="androidx.room.MultiInstanceInvalidationService"
+132-->[androidx.room:room-runtime:2.4.2] /home/nithin/.gradle/caches/transforms-3/d2d2999876a7b06709698c61f93cdedd/transformed/room-runtime-2.4.2/AndroidManifest.xml:26:13-74
+133            android:directBootAware="true"
+133-->[androidx.room:room-runtime:2.4.2] /home/nithin/.gradle/caches/transforms-3/d2d2999876a7b06709698c61f93cdedd/transformed/room-runtime-2.4.2/AndroidManifest.xml:27:13-43
+134            android:exported="false" />
+134-->[androidx.room:room-runtime:2.4.2] /home/nithin/.gradle/caches/transforms-3/d2d2999876a7b06709698c61f93cdedd/transformed/room-runtime-2.4.2/AndroidManifest.xml:28:13-37
+135        <service
+135-->[com.google.android.datatransport:transport-backend-cct:3.1.2] /home/nithin/.gradle/caches/transforms-3/cd4678ea2cfb316428413beeafc1e3b1/transformed/transport-backend-cct-3.1.2/AndroidManifest.xml:29:9-35:19
+136            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+136-->[com.google.android.datatransport:transport-backend-cct:3.1.2] /home/nithin/.gradle/caches/transforms-3/cd4678ea2cfb316428413beeafc1e3b1/transformed/transport-backend-cct-3.1.2/AndroidManifest.xml:30:13-103
+137            android:exported="false" >
+137-->[com.google.android.datatransport:transport-backend-cct:3.1.2] /home/nithin/.gradle/caches/transforms-3/cd4678ea2cfb316428413beeafc1e3b1/transformed/transport-backend-cct-3.1.2/AndroidManifest.xml:31:13-37
+138            <meta-data
+138-->[com.google.android.datatransport:transport-backend-cct:3.1.2] /home/nithin/.gradle/caches/transforms-3/cd4678ea2cfb316428413beeafc1e3b1/transformed/transport-backend-cct-3.1.2/AndroidManifest.xml:32:13-34:39
+139                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+139-->[com.google.android.datatransport:transport-backend-cct:3.1.2] /home/nithin/.gradle/caches/transforms-3/cd4678ea2cfb316428413beeafc1e3b1/transformed/transport-backend-cct-3.1.2/AndroidManifest.xml:33:17-94
+140                android:value="cct" />
+140-->[com.google.android.datatransport:transport-backend-cct:3.1.2] /home/nithin/.gradle/caches/transforms-3/cd4678ea2cfb316428413beeafc1e3b1/transformed/transport-backend-cct-3.1.2/AndroidManifest.xml:34:17-36
+141        </service>
+142        <service
+142-->[com.google.android.datatransport:transport-runtime:3.1.2] /home/nithin/.gradle/caches/transforms-3/70af69439bfc2e0ced6ada92517db9d9/transformed/transport-runtime-3.1.2/AndroidManifest.xml:26:9-30:19
+143            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+143-->[com.google.android.datatransport:transport-runtime:3.1.2] /home/nithin/.gradle/caches/transforms-3/70af69439bfc2e0ced6ada92517db9d9/transformed/transport-runtime-3.1.2/AndroidManifest.xml:27:13-117
+144            android:exported="false"
+144-->[com.google.android.datatransport:transport-runtime:3.1.2] /home/nithin/.gradle/caches/transforms-3/70af69439bfc2e0ced6ada92517db9d9/transformed/transport-runtime-3.1.2/AndroidManifest.xml:28:13-37
+145            android:permission="android.permission.BIND_JOB_SERVICE" >
+145-->[com.google.android.datatransport:transport-runtime:3.1.2] /home/nithin/.gradle/caches/transforms-3/70af69439bfc2e0ced6ada92517db9d9/transformed/transport-runtime-3.1.2/AndroidManifest.xml:29:13-69
+146        </service>
+147
+148        <receiver
+148-->[com.google.android.datatransport:transport-runtime:3.1.2] /home/nithin/.gradle/caches/transforms-3/70af69439bfc2e0ced6ada92517db9d9/transformed/transport-runtime-3.1.2/AndroidManifest.xml:32:9-34:40
+149            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+149-->[com.google.android.datatransport:transport-runtime:3.1.2] /home/nithin/.gradle/caches/transforms-3/70af69439bfc2e0ced6ada92517db9d9/transformed/transport-runtime-3.1.2/AndroidManifest.xml:33:13-132
+150            android:exported="false" />
+150-->[com.google.android.datatransport:transport-runtime:3.1.2] /home/nithin/.gradle/caches/transforms-3/70af69439bfc2e0ced6ada92517db9d9/transformed/transport-runtime-3.1.2/AndroidManifest.xml:34:13-37
+151
+152        <provider
+152-->[androidx.emoji2:emoji2:1.0.0] /home/nithin/.gradle/caches/transforms-3/7cd81e7f880694d8ddd9d2afaf9433da/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+153            android:name="androidx.startup.InitializationProvider"
+153-->[androidx.emoji2:emoji2:1.0.0] /home/nithin/.gradle/caches/transforms-3/7cd81e7f880694d8ddd9d2afaf9433da/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+154            android:authorities="com.hawks.hawksbuziness.androidx-startup"
+154-->[androidx.emoji2:emoji2:1.0.0] /home/nithin/.gradle/caches/transforms-3/7cd81e7f880694d8ddd9d2afaf9433da/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+155            android:exported="false" >
+155-->[androidx.emoji2:emoji2:1.0.0] /home/nithin/.gradle/caches/transforms-3/7cd81e7f880694d8ddd9d2afaf9433da/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+156            <meta-data
+156-->[androidx.emoji2:emoji2:1.0.0] /home/nithin/.gradle/caches/transforms-3/7cd81e7f880694d8ddd9d2afaf9433da/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+157                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+157-->[androidx.emoji2:emoji2:1.0.0] /home/nithin/.gradle/caches/transforms-3/7cd81e7f880694d8ddd9d2afaf9433da/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+158                android:value="androidx.startup" />
+158-->[androidx.emoji2:emoji2:1.0.0] /home/nithin/.gradle/caches/transforms-3/7cd81e7f880694d8ddd9d2afaf9433da/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+159            <meta-data
+159-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/nithin/.gradle/caches/transforms-3/826675d3b6fa6d8c2701a1c07aeaedcd/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+160                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+160-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/nithin/.gradle/caches/transforms-3/826675d3b6fa6d8c2701a1c07aeaedcd/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+161                android:value="androidx.startup" />
+161-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/nithin/.gradle/caches/transforms-3/826675d3b6fa6d8c2701a1c07aeaedcd/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+162        </provider>
+163    </application>
+164
+165</manifest>

@@ -36,12 +36,24 @@
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/share.png"
     },
     {
-        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_app_colors.xml.flat",
-        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/app_colors.xml"
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/layout_activity_signup.xml.flat",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/activity_signup.xml"
     },
     {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_ic_baseline_arrow_back_ios_24.xml.flat",
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_app_colors.xml.flat",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/app_colors.xml"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_location.png.flat",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/location.png"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_accept.png.flat",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/accept.png"
     },
     {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
@@ -50,6 +62,10 @@
     {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/menu_nav_items.xml.flat",
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/menu/nav_items.xml"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_forward.xml.flat",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/forward.xml"
     },
     {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.png.flat",
@@ -76,6 +92,10 @@
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/mail.png"
     },
     {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_logout.png.flat",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/logout.png"
+    },
+    {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/layout_activity_referal.xml.flat",
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/activity_referal.xml"
     },
@@ -90,6 +110,10 @@
     {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/layout_app_bar_back.xml.flat",
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/app_bar_back.xml"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/layout_bottomsheet_login.xml.flat",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/bottomsheet_login.xml"
     },
     {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/layout_shop_fragment.xml.flat",
@@ -140,6 +164,10 @@
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable-v24/home.png"
     },
     {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_update.png.flat",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/update.png"
+    },
+    {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_round_card.xml.flat",
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/round_card.xml"
     },
@@ -172,6 +200,10 @@
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_privacy.png.flat",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/privacy.png"
+    },
+    {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
     },
@@ -180,12 +212,12 @@
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable-v24_customer_service.png.flat",
-        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable-v24/customer_service.png"
-    },
-    {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable-v24_customer_service.png.flat",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable-v24/customer_service.png"
     },
     {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_app_prgress_bar.xml.flat",
@@ -196,6 +228,10 @@
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/fill_blue.xml"
     },
     {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_add_logo.xml.flat",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/add_logo.xml"
+    },
+    {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
@@ -204,12 +240,12 @@
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/mipmap-hdpi/ic_launcher.png"
-    },
-    {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/layout_fragment_add_update.xml.flat",
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/fragment_add_update.xml"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_animation.xml.flat",
@@ -226,6 +262,10 @@
     {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_bottom_bar.xml.flat",
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/bottom_bar.xml"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/drawable_translation.png.flat",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/drawable/translation.png"
     },
     {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",

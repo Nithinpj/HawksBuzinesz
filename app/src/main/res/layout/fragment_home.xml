@@ -22,7 +22,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:indeterminateDrawable="@drawable/app_prgress_bar"
         app:layout_constraintTop_toTopOf="@+id/webView" />
 
 

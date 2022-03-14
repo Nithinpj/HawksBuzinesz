@@ -98,9 +98,11 @@
                 android:layout_height="@dimen/dp35" />
 
             <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/terms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/terms"
+                android:checked="true"
                 android:textColor="@color/app_color"
                 app:buttonTint="@color/app_color" />
 

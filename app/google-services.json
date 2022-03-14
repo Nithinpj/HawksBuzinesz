@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1045437734440",
+    "project_id": "buziness-cb76c",
+    "storage_bucket": "buziness-cb76c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045437734440:android:5ae4f806747fa137f1df1d",
+        "android_client_info": {
+          "package_name": "com.hawks.hawksbuziness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045437734440-12jmr6ngfkmvcutl87sjrbilf3k3f6b7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp6lpHN4-BIDl34knz2GaR7_4wmmtmNNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045437734440-12jmr6ngfkmvcutl87sjrbilf3k3f6b7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

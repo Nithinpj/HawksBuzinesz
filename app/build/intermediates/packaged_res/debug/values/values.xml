@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
-    <color name="app_color">#008080</color>
+    <color name="app_color">#3cbcb4</color>
     <color name="app_color_">#3FDD8F</color>
     <color name="black">#FF000000</color>
     <color name="editext_color">#e6f2ff</color>
@@ -25,16 +25,24 @@
     <dimen name="dp50">50dp</dimen>
     <dimen name="dp60">60dp</dimen>
     <dimen name="dp70">70dp</dimen>
-    <string name="app_name">HawksBuziness</string>
+    <string name="app_name">BusinezApp</string>
     <string name="busines_app">businez App</string>
     <string name="business">My business</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
+    <string name="default_web_client_id" translatable="false">1045437734440-12jmr6ngfkmvcutl87sjrbilf3k3f6b7.apps.googleusercontent.com</string>
     <string name="description">Description</string>
+    <string name="gcm_defaultSenderId" translatable="false">1045437734440</string>
+    <string name="google_api_key" translatable="false">AIzaSyBp6lpHN4-BIDl34knz2GaR7_4wmmtmNNI</string>
+    <string name="google_app_id" translatable="false">1:1045437734440:android:5ae4f806747fa137f1df1d</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBp6lpHN4-BIDl34knz2GaR7_4wmmtmNNI</string>
+    <string name="google_storage_bucket" translatable="false">buziness-cb76c.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hi">Hi,how can i help?</string>
     <string name="home">Home</string>
     <string name="language">Language</string>
     <string name="location">Location</string>
     <string name="profile">Me</string>
+    <string name="project_id" translatable="false">buziness-cb76c</string>
     <string name="raise">Raise a ticket</string>
     <string name="referal_code">Referal code</string>
     <string name="setting">Settings</string>
@@ -42,6 +50,12 @@
     <string name="subject">Subject</string>
     <string name="support">Support</string>
     <string name="terms"><![CDATA[Terms & Conditions]]></string>
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
     <style name="Theme.HawksBuziness" parent="Theme.MaterialComponents.Light.NoActionBar">
         
         <item name="colorPrimary">@color/app_color</item>

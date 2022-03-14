@@ -4,7 +4,7 @@
             "outputFile": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/home/nithin/.gradle/caches/transforms-3/e8b96a8ee772b8bdd559d8672f3ac71e/transformed/core-1.7.0/res/values-v16/values-v16.xml",
+                    "source": "/home/nithin/.gradle/caches/transforms-3/3b06d0e79b1b3b8b7df06408c495af6d/transformed/core-1.7.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/nithin/.gradle/caches/transforms-3/e69eb244b723fbfeec3c0cfdc80c21fb/transformed/appcompat-1.4.1/res/values-v16/values-v16.xml",
+                    "source": "/home/nithin/.gradle/caches/transforms-3/b7e82717a564f7090c536fdc41535cb2/transformed/appcompat-1.4.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

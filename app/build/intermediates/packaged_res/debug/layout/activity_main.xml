@@ -32,10 +32,11 @@
         android:paddingTop="@dimen/dp10"
         android:paddingEnd="@dimen/dp10"
         android:paddingBottom="@dimen/dp10"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/add_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/app_color" />
 
     <fragment
         android:id="@+id/nav_host_fragment"

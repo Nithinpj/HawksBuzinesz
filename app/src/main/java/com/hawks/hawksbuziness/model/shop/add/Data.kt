@@ -1,0 +1,33 @@
+package com.hawks.hawksbuziness.model.shop.add
+
+data class Data(
+    val auth_id: Int,
+    val country: Any,
+    val created: String,
+    val delete_status: Int,
+    val deleted_at: Any,
+    val deleted_by: Any,
+    val device_id: Any,
+    val dob: Any,
+    val email: Any,
+    val gender: Any,
+    val id: Int,
+    val image: Any,
+    val join_method: Any,
+    val mobile: Any,
+    val name: Any,
+    val nationality: Any,
+    val pass: Any,
+    val password: String,
+    val place: Any,
+    val provider_key: Any,
+    val provider_type: Any,
+    val referer_id: Any,
+    val referral_code: String,
+    val shop_id: Int,
+    val status: Int,
+    val type: String,
+    val updated: String,
+    val user_id: Any,
+    val username: String
+)

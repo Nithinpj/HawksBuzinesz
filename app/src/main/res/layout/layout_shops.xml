@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="shop"
-            type="com.nithi.hawksbuziness.model.shops.Shop" />
+            type="com.hawks.hawksbuziness.model.shops.Shop" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,6 +32,7 @@
                     android:layout_width="@dimen/dp100"
                     android:layout_height="@dimen/dp100"
                     android:layout_gravity="center"
+                    bind:logoImage="@{shop.shop.logo}"
                     android:src="@mipmap/ic_launcher" />
 
                 <TextView

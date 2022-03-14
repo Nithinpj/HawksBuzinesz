@@ -6,7 +6,7 @@
     <data>
         <variable
             name="data"
-            type="com.nithi.hawksbuziness.model.profile.Auth" />
+            type="com.hawks.hawksbuziness.model.profile.Auth" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

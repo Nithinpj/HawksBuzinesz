@@ -4,7 +4,17 @@
             "outputFile": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/nithin/.gradle/caches/transforms-3/a66f3d0f6f2ccea34a53697282ac3d88/transformed/material-1.5.0/res/values-v24/values-v24.xml",
+                    "source": "/home/nithin/.gradle/caches/transforms-3/b7e82717a564f7090c536fdc41535cb2/transformed/appcompat-1.4.1/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
+                {
+                    "source": "/home/nithin/.gradle/caches/transforms-3/6ca05a320f8df173dd308a8050d9f408/transformed/material-1.5.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -23,7 +33,7 @@
                     }
                 },
                 {
-                    "source": "/home/nithin/.gradle/caches/transforms-3/e615cf458518e707c04d7284904730af/transformed/media-1.0.0/res/values-v24/values-v24.xml",
+                    "source": "/home/nithin/.gradle/caches/transforms-3/2d97b1dbdbed972380a0f978a7ff35d1/transformed/media-1.0.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -37,16 +47,6 @@
                         "startOffsets": "1547,1613,1674,1740",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "1608,1669,1735,1802"
-                    }
-                },
-                {
-                    "source": "/home/nithin/.gradle/caches/transforms-3/e69eb244b723fbfeec3c0cfdc80c21fb/transformed/appcompat-1.4.1/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
                     }
                 }
             ]

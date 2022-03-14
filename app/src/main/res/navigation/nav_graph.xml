@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.nithi.hawksbuziness.ui.home.HomeFragment"
+        android:name="com.hawks.hawksbuziness.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.nithi.hawksbuziness.ui.settings.SettingsFragment"
+        android:name="com.hawks.hawksbuziness.ui.settings.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/supportFragment"
-        android:name="com.nithi.hawksbuziness.ui.support.SupportFragment"
+        android:name="com.hawks.hawksbuziness.ui.support.SupportFragment"
         android:label="fragment_support"
         tools:layout="@layout/fragment_support" />
     <fragment
         android:id="@+id/businessFragment"
-        android:name="com.nithi.hawksbuziness.BusinessFragment"
+        android:name="com.hawks.hawksbuziness.BusinessFragment"
         android:label="fragment_business"
         tools:layout="@layout/fragment_business" >
         <action
@@ -31,26 +31,29 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.nithi.hawksbuziness.ui.profile.ProfileFragment"
+        android:name="com.hawks.hawksbuziness.ui.profile.ProfileFragment"
         android:label="fragment_profile_fragment"
         tools:layout="@layout/fragment_profile_fragment" />
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.nithi.hawksbuziness.SignUpFragment"
+        android:name="com.hawks.hawksbuziness.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" />
     <fragment
         android:id="@+id/shopfragment"
-        android:name="com.nithi.hawksbuziness.ui.shops.ShopFragment"
+        android:name="com.hawks.hawksbuziness.ui.shops.ShopFragment"
         android:label="fragment_"
         tools:layout="@layout/shop_fragment" >
         <action
             android:id="@+id/action_shopfragment_to_addUpdateFragment"
-            app:destination="@id/addUpdateFragment" />
+            app:destination="@id/addUpdateFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/main_nav_graph"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/addUpdateFragment"
-        android:name="com.nithi.hawksbuziness.AddUpdateFragment"
+        android:name="com.hawks.hawksbuziness.AddUpdateFragment"
         android:label="fragment_add_update"
         tools:layout="@layout/fragment_add_update" />
 </navigation>

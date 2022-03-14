@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.SignupActivity">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="@dimen/dp200"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp70"
+            android:src="@drawable/img_white_appname"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/app_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp200"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@drawable/round_card"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp35" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_blue">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_toLeftOf="@+id/otp"
+                    android:background="@null"
+                    android:hint="Phone number or Email"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:id="@+id/otp"
+                    android:layout_width="95dp"
+                    android:layout_height="@dimen/dp45"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/fill_blue">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="otp"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp35" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/border_blue"
+                android:hint="OTP"
+                android:inputType="number"
+                android:padding="@dimen/dp10"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp35" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/app_color"
+                android:text="Login"
+                android:textColor="@color/white"
+                app:cornerRadius="@dimen/dp10" />
+
+            <Button
+                style="@style/outline_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Skip"
+                android:textAllCaps="true"
+                android:textColor="@color/app_color"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
