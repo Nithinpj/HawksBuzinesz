@@ -110,15 +110,19 @@ class HomeFragment : Fragment() {
                 progress_circular?.let { progress->
                     progress.visibility=View.GONE
                 }
+                binding.swipeRefresh.isRefreshing=false
 
             }
         }
         binding.webView.loadUrl(data)
+
+        binding.swipeRefresh.setOnRefreshListener {
+            binding.webView.reload()
+        }
     }
 
     override fun onResume() {
         super.onResume()
-        Log.e("TAG", "onResume: " )
     }
 
 

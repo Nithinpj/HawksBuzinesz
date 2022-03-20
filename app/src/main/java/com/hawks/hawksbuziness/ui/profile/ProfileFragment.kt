@@ -1,6 +1,7 @@
 package com.hawks.hawksbuziness.ui.profile
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.ContextThemeWrapper
@@ -12,12 +13,15 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.hawks.hawksbuziness.R
 import com.hawks.hawksbuziness.databinding.FragmentProfileFragmentBinding
 import com.hawks.hawksbuziness.model.profile.Auth
 import com.hawks.hawksbuziness.preferences.PreferenceManger
+import com.hawks.hawksbuziness.ui.activity.EditActivity
 import com.hawks.hawksbuziness.ui.activity.MainActivity
+import com.hawks.hawksbuziness.ui.activity.SignupActivity
 import com.hawks.hawksbuziness.utill.ResponceState
 import com.hawks.hawksbuziness.utill.showToast
 import dagger.hilt.android.AndroidEntryPoint
@@ -45,6 +49,8 @@ class ProfileFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentProfileFragmentBinding.inflate(inflater)
+        binding.lifecycleOwner=this
+        binding.viewmodel=profileViewModel
         MainActivity.fragmentName = "PROFILE"
         return binding.root
     }
@@ -52,12 +58,13 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // calling data from local db
-        if (!preferenceManger.getUserId().isNullOrEmpty()) {
-            profileViewModel.getProfileData()
-        } else {
-            showBottomDialog()
+        binding.login.setOnClickListener {
+            startActivity(Intent(requireContext(),SignupActivity::class.java))
         }
+        binding.edit.setOnClickListener {
+            startActivity(Intent(requireContext(),EditActivity::class.java))
+        }
+
 
         observeData()
 
@@ -68,7 +75,18 @@ class ProfileFragment : Fragment() {
     }
 
     private fun saveData(result: Auth) {
-        binding.data = result
+        profileViewModel.dob.value= result.dob ?: ""
+        profileViewModel.email.value= result.email?:""
+        profileViewModel.gender.value= result.gender?:""
+        profileViewModel.image.value= result.image?:""
+        profileViewModel.mobile.value= result.mobile?:""
+        profileViewModel.name.value= result.name?:""
+        profileViewModel.nationality.value= result.nationality?:""
+        profileViewModel.place.value= result.place?:""
+        profileViewModel.country.value= result.country?:""
+        profileViewModel.referal.value= result.referral_code?:""
+
+
 
     }
 
@@ -99,88 +117,34 @@ class ProfileFragment : Fragment() {
                 }
             }
         })
-        /** observing data from local and set to views*/
-        profileViewModel.dbresponses.observe(requireActivity(), Observer {
-            if (it == null) {
-                profileViewModel.getProfile()
-            } else {
-                saveData(it)
-            }
-        })
 
     }
-    private fun showBottomDialog() {
-        dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
-        dialog?.setContentView(com.hawks.hawksbuziness.R.layout.bottomsheet_login)
 
-        val otp = dialog?.findViewById<EditText>(com.hawks.hawksbuziness.R.id.otp)
-        val number_edit = dialog?.findViewById<EditText>(com.hawks.hawksbuziness.R.id.phone)
-        val sendotp = dialog?.findViewById<View>(com.hawks.hawksbuziness.R.id.sendopt)
-        val submit = dialog?.findViewById<View>(com.hawks.hawksbuziness.R.id.submit)
 
-        sendotp?.setOnClickListener {
-            if (!number_edit!!.text!!.isEmpty()) {
-                sendOtp(number_edit.text.toString())
-            } else {
-                showToast("Enter your number")
-            }
-        }
-
-        submit?.setOnClickListener {
-            if (!otp!!.text!!.isEmpty()) {
-                verifyOtp(otp.text.toString())
-            }
-        }
-
-        dialog?.show()
+    override fun onStart() {
+        super.onStart()
+        Log.e("TAG", "onStart: ", )
     }
 
-
-    private fun verifyOtp(otp: String) {
-        profileViewModel.verifyOtp(otp, user_id.toString()).observe(requireActivity(), Observer {
-            when (it) {
-                is ResponceState.Failiure -> {
-                    showToast(it.message)
-
-
-                }
-                is ResponceState.Loading -> {
-                }
-                is ResponceState.Succes -> {
-                    showToast("Login succesfull")
-
-                    preferenceManger.saveId(it.result.data.id.toString())
-
-                    dialog?.let { it ->
-                        it.dismiss()
-                    }
+    override fun onResume() {
+        super.onResume()
+        if (!preferenceManger.getUserId().isNullOrEmpty()) {
+            profileViewModel.getProfileData().observe(requireActivity(), Observer {
+                if (it == null) {
                     profileViewModel.getProfile()
-
+                } else {
+                    saveData(it)
                 }
-            }
-        })
+            })
+            binding.login.visibility=View.GONE
+            binding.edit.visibility=View.VISIBLE
+        }else{
+            binding.login.visibility=View.VISIBLE
+            binding.edit.visibility=View.GONE
+        }
     }
 
-    private fun sendOtp(number: String) {
-        profileViewModel.sendOtp(number)
-        profileViewModel.sendLiveData.observe(requireActivity(), Observer {
-            when (it) {
-                is ResponceState.Failiure -> {
-                    showToast(it.message)
 
-                }
-                is ResponceState.Loading -> {
-
-                }
-                is ResponceState.Succes -> {
-                    showToast("Send otp Succesfull")
-                    user_id = it.result.data.user_id
-
-                }
-            }
-        })
-
-    }
 
 
 }

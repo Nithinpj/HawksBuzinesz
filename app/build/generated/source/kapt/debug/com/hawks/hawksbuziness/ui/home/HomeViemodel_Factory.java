@@ -2,6 +2,7 @@
 package com.hawks.hawksbuziness.ui.home;
 
 import com.hawks.hawksbuziness.local.dao.CategoryDao;
+import com.hawks.hawksbuziness.local.dao.PlaceDao;
 import com.hawks.hawksbuziness.repositarory.BusinessRepository;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
@@ -17,23 +18,27 @@ public final class HomeViemodel_Factory implements Factory<HomeViemodel> {
 
   private final Provider<CategoryDao> daoProvider;
 
+  private final Provider<PlaceDao> placeDaoProvider;
+
   public HomeViemodel_Factory(Provider<BusinessRepository> repositoryProvider,
-      Provider<CategoryDao> daoProvider) {
+      Provider<CategoryDao> daoProvider, Provider<PlaceDao> placeDaoProvider) {
     this.repositoryProvider = repositoryProvider;
     this.daoProvider = daoProvider;
+    this.placeDaoProvider = placeDaoProvider;
   }
 
   @Override
   public HomeViemodel get() {
-    return newInstance(repositoryProvider.get(), daoProvider.get());
+    return newInstance(repositoryProvider.get(), daoProvider.get(), placeDaoProvider.get());
   }
 
   public static HomeViemodel_Factory create(Provider<BusinessRepository> repositoryProvider,
-      Provider<CategoryDao> daoProvider) {
-    return new HomeViemodel_Factory(repositoryProvider, daoProvider);
+      Provider<CategoryDao> daoProvider, Provider<PlaceDao> placeDaoProvider) {
+    return new HomeViemodel_Factory(repositoryProvider, daoProvider, placeDaoProvider);
   }
 
-  public static HomeViemodel newInstance(BusinessRepository repository, CategoryDao dao) {
-    return new HomeViemodel(repository, dao);
+  public static HomeViemodel newInstance(BusinessRepository repository, CategoryDao dao,
+      PlaceDao placeDao) {
+    return new HomeViemodel(repository, dao, placeDao);
   }
 }

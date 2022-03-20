@@ -2,6 +2,12 @@
 
                                                        
                                                    
+    
+                 
+                        
+                                                                                     
+           
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/coordinator"
         android:layout_width="match_parent"
@@ -11,54 +17,48 @@
             android:id="@+id/appbar"
             layout="@layout/app_bar"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:background="@drawable/app_colors"
-            app:layout_constraintTop_toBottomOf="@+id/appbar" />
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
-            android:text="@string/hi"
-            android:textColor="@color/white"
-            android:textSize="20sp"
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/appbar">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp20"
-                android:layout_marginTop="@dimen/dp100"
                 android:layout_marginRight="@dimen/dp20"
                 android:orientation="vertical"
                 android:paddingLeft="@dimen/dp10"
                 android:paddingRight="@dimen/dp10"
                 android:background="@drawable/round_card">
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animationView"
+                    android:layout_width="@dimen/dp200"
+                    android:layout_height="@dimen/dp200"
+                    app:lottie_rawRes="@raw/support"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"/>
 
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dp20" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/raise"
-                    android:textColor="@color/app_color"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:layout_gravity="center"/>
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dp50" />
+
+                <!--                <View-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="@dimen/dp20" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/raise"-->
+<!--                    android:textColor="@color/app_color"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:layout_gravity="center"/>-->
+<!--                <View-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="@dimen/dp50" />-->
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -119,13 +119,12 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/submit"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:backgroundTint="@color/app_color"
                     android:text="Send"
                     android:layout_marginTop="@dimen/dp20"
-                    android:layout_marginRight="@dimen/dp20"
                     android:textColor="@color/white"
                     app:cornerRadius="@dimen/dp10" />
             </LinearLayout>
@@ -144,10 +143,11 @@
                     android:backgroundTint="@color/white"
                     android:textColor="@color/app_color"
                     app:cornerRadius="@dimen/dp10"
-                    app:icon="@drawable/plus"
+                    app:icon="@drawable/ic_whatsapp"
                     app:iconSize="@dimen/dp10"
-                    app:iconTint="@color/black"
+                    app:iconTint="@color/app_color"
                     android:text="Whatsapp"
+                    android:tag="binding_1"             
                     android:textSize="12sp"
                     android:textAllCaps="false"
                     android:layout_margin="5dp"
@@ -167,6 +167,7 @@
                     app:iconSize="@dimen/dp10"
                     app:iconTint="@color/app_color"
                     android:text="Call"
+                    android:tag="binding_2"         
                     android:textSize="12sp"
                     android:textAllCaps="false"
                     android:layout_margin="5dp"
@@ -185,6 +186,7 @@
                     app:iconTint="@color/app_color"
                     app:icon="@drawable/mail"
                     app:iconSize="@dimen/dp10"
+                    android:tag="binding_3"          
                     android:text="Email"
                     android:textSize="12sp"
                     android:textAllCaps="false"

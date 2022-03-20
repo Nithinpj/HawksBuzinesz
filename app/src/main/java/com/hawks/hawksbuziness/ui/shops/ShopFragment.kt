@@ -1,5 +1,6 @@
 package com.hawks.hawksbuziness.ui.shops
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -62,6 +63,7 @@ class ShopFragment : Fragment() {
         }
 
         bindiShopFragmentBinding.appbar.addMore.visibility = View.VISIBLE
+        bindiShopFragmentBinding.appbar.addLogo.visibility = View.VISIBLE
         bindiShopFragmentBinding.appbar.addMore.setOnClickListener {
 
             if (!preferenceManger.getUserId().isNullOrEmpty()) {
@@ -94,6 +96,7 @@ class ShopFragment : Fragment() {
 
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun viewShops(shops: List<Shop>) {
         if (shops.isNotEmpty()){
             bindiShopFragmentBinding.noShop.visibility=View.GONE

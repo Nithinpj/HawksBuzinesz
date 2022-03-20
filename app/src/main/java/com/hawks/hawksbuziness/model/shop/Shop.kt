@@ -19,7 +19,7 @@ data class Shop(
     var domain: String?,
     var email: String?,
     var facebook: String?,
-    var gstin: String?,
+    var gstin: String,
     var id: Int?,
     var instagram: String?,
     var is_head_office: Int?,

@@ -6,6 +6,7 @@ import android.view.View;
 import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
+import com.hawks.hawksbuziness.databinding.ActivityEditBindingImpl;
 import com.hawks.hawksbuziness.databinding.ActivityMainBindingImpl;
 import com.hawks.hawksbuziness.databinding.ActivityReferalBindingImpl;
 import com.hawks.hawksbuziness.databinding.ActivitySignupBindingImpl;
@@ -31,37 +32,40 @@ import java.util.HashMap;
 import java.util.List;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
-  private static final int LAYOUT_ACTIVITYMAIN = 1;
+  private static final int LAYOUT_ACTIVITYEDIT = 1;
 
-  private static final int LAYOUT_ACTIVITYREFERAL = 2;
+  private static final int LAYOUT_ACTIVITYMAIN = 2;
 
-  private static final int LAYOUT_ACTIVITYSIGNUP = 3;
+  private static final int LAYOUT_ACTIVITYREFERAL = 3;
 
-  private static final int LAYOUT_APPBARBACK = 4;
+  private static final int LAYOUT_ACTIVITYSIGNUP = 4;
 
-  private static final int LAYOUT_BOTTOMSHEETLOGIN = 5;
+  private static final int LAYOUT_APPBARBACK = 5;
 
-  private static final int LAYOUT_FRAGMENTADDUPDATE = 6;
+  private static final int LAYOUT_BOTTOMSHEETLOGIN = 6;
 
-  private static final int LAYOUT_FRAGMENTHOME = 7;
+  private static final int LAYOUT_FRAGMENTADDUPDATE = 7;
 
-  private static final int LAYOUT_FRAGMENTPROFILEFRAGMENT = 8;
+  private static final int LAYOUT_FRAGMENTHOME = 8;
 
-  private static final int LAYOUT_FRAGMENTSETTINGS = 9;
+  private static final int LAYOUT_FRAGMENTPROFILEFRAGMENT = 9;
 
-  private static final int LAYOUT_FRAGMENTSIGNUP = 10;
+  private static final int LAYOUT_FRAGMENTSETTINGS = 10;
 
-  private static final int LAYOUT_FRAGMENTSUPPORT = 11;
+  private static final int LAYOUT_FRAGMENTSIGNUP = 11;
 
-  private static final int LAYOUT_LAYOUTSHOPS = 12;
+  private static final int LAYOUT_FRAGMENTSUPPORT = 12;
 
-  private static final int LAYOUT_PROFILEITEMS = 13;
+  private static final int LAYOUT_LAYOUTSHOPS = 13;
 
-  private static final int LAYOUT_SHOPFRAGMENT = 14;
+  private static final int LAYOUT_PROFILEITEMS = 14;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(14);
+  private static final int LAYOUT_SHOPFRAGMENT = 15;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(15);
 
   static {
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.activity_edit, LAYOUT_ACTIVITYEDIT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.activity_referal, LAYOUT_ACTIVITYREFERAL);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.activity_signup, LAYOUT_ACTIVITYSIGNUP);
@@ -87,6 +91,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         throw new RuntimeException("view must have a tag");
       }
       switch(localizedLayoutId) {
+        case  LAYOUT_ACTIVITYEDIT: {
+          if ("layout/activity_edit_0".equals(tag)) {
+            return new ActivityEditBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_edit is invalid. Received: " + tag);
+        }
         case  LAYOUT_ACTIVITYMAIN: {
           if ("layout/activity_main_0".equals(tag)) {
             return new ActivityMainBindingImpl(component, view);
@@ -216,7 +226,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(23);
+    static final SparseArray<String> sKeys = new SparseArray<String>(33);
 
     static {
       sKeys.put(0, "_all");
@@ -225,30 +235,41 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(3, "branch");
       sKeys.put(4, "click");
       sKeys.put(5, "contactNo");
-      sKeys.put(6, "data");
-      sKeys.put(7, "email");
-      sKeys.put(8, "facebook");
-      sKeys.put(9, "gstn");
-      sKeys.put(10, "head_office");
-      sKeys.put(11, "instagram");
-      sKeys.put(12, "linkedin");
-      sKeys.put(13, "multistore");
-      sKeys.put(14, "multistore_name");
-      sKeys.put(15, "office_contact");
-      sKeys.put(16, "person_incharge");
-      sKeys.put(17, "private_limited");
-      sKeys.put(18, "shop");
-      sKeys.put(19, "shop_name");
-      sKeys.put(20, "trade_mark");
-      sKeys.put(21, "webisite");
-      sKeys.put(22, "whatsapp");
+      sKeys.put(6, "country");
+      sKeys.put(7, "data");
+      sKeys.put(8, "dob");
+      sKeys.put(9, "email");
+      sKeys.put(10, "facebook");
+      sKeys.put(11, "gender");
+      sKeys.put(12, "gstn");
+      sKeys.put(13, "head_office");
+      sKeys.put(14, "image");
+      sKeys.put(15, "instagram");
+      sKeys.put(16, "linkedin");
+      sKeys.put(17, "mobile");
+      sKeys.put(18, "multistore");
+      sKeys.put(19, "multistore_name");
+      sKeys.put(20, "name");
+      sKeys.put(21, "nationality");
+      sKeys.put(22, "office_contact");
+      sKeys.put(23, "person_incharge");
+      sKeys.put(24, "place");
+      sKeys.put(25, "private_limited");
+      sKeys.put(26, "referal");
+      sKeys.put(27, "shop");
+      sKeys.put(28, "shop_name");
+      sKeys.put(29, "trade_mark");
+      sKeys.put(30, "viewmodel");
+      sKeys.put(31, "webisite");
+      sKeys.put(32, "whatsapp");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(14);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(15);
 
     static {
+      sKeys.put("layout/activity_edit_0", com.hawks.hawksbuziness.R.layout.activity_edit);
       sKeys.put("layout/activity_main_0", com.hawks.hawksbuziness.R.layout.activity_main);
       sKeys.put("layout/activity_referal_0", com.hawks.hawksbuziness.R.layout.activity_referal);
       sKeys.put("layout/activity_signup_0", com.hawks.hawksbuziness.R.layout.activity_signup);

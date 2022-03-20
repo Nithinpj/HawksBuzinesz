@@ -2,6 +2,7 @@ package com.hawks.hawksbuziness
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.ContextThemeWrapper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -30,6 +31,7 @@ class AddUpdateFragment : Fragment() {
     private val viemodel:ShopViewmodel by viewModels<ShopViewmodel>()
     private var categoryid:Int?=null
     private var cat_id:Int?=null
+    private var place_id:Int?=null
     lateinit var data:Data
     var trademark:String?=null
     var privateLimited:String?=null
@@ -64,26 +66,28 @@ class AddUpdateFragment : Fragment() {
         arguments?.containsKey("type")?.let {
             if (arguments?.getString("type").equals("update")){
                 updatType="update"
-                viemodel.data?.value=arguments?.getSerializable("data") as Shop?
-                viemodel.shop_name.value=viemodel.data?.value?.name
-                viemodel.address.value=viemodel.data?.value?.address
-                viemodel.contactNo.value=viemodel.data?.value?.contact
-                viemodel.branch.value=viemodel.data?.value?.branch
-                viemodel.email.value=viemodel.data?.value?.email
-                viemodel.person_incharge.value=viemodel.data?.value?.person_in_charge
-                viemodel.office_contact.value=viemodel.data?.value?.office_contact
-                viemodel.gstn.value=viemodel.data?.value?.gstin
-                viemodel.trade_mark.value=viemodel.data?.value?.is_tm==1
-                viemodel.private_limited.value=viemodel.data?.value?.is_pvt_ltd==1
-                viemodel.whatsapp.value=viemodel.data?.value?.whatsapp
-                viemodel.facebook.value=viemodel.data?.value?.facebook
-                viemodel.instagram.value=viemodel.data?.value?.instagram
-                viemodel.linkedin.value=viemodel.data?.value?.linkedin
-                viemodel.head_office.value=viemodel.data?.value?.is_head_office==1
-                viemodel.multistore.value=viemodel.data?.value?.is_multi_store==1
-                viemodel.webisite.value=viemodel.data?.value?.website
-                shop_id=viemodel?.data?.value?.id.toString()
-                categoryid=viemodel.data?.value?.category_id
+
+                val data =arguments?.getSerializable("data") as Shop?
+                Log.e("TAG", "onViewCreated: "+data?.gstin )
+                viemodel.shop_name.value=if(data?.name.equals("null")) "" else data?.name
+                viemodel.address.value=if(data?.address.equals("null")) "" else data?.address
+                viemodel.contactNo.value=if(data?.contact.equals("null")) "" else data?.contact
+                viemodel.branch.value=if(data?.branch.equals("null")) "" else data?.branch
+                viemodel.email.value=if(data?.email.equals("null")) "" else data?.email
+                viemodel.person_incharge.value=if(data?.person_in_charge.equals("null")) "" else data?.person_in_charge
+                viemodel.office_contact.value=if(data?.office_contact.equals("null")) "" else data?.office_contact
+                viemodel.gstn.value=if (data?.gstin.equals("null"))"" else data?.gstin
+                viemodel.trade_mark.value=data?.is_tm==1
+                viemodel.private_limited.value=data?.is_pvt_ltd==1
+                viemodel.whatsapp.value=if(data?.whatsapp.equals("null")) "" else data?.whatsapp
+                viemodel.facebook.value=if(data?.facebook.equals("null")) "" else data?.facebook
+                viemodel.instagram.value=if(data?.instagram.equals("null")) "" else data?.instagram
+                viemodel.linkedin.value=if(data?.linkedin.equals("null")) "" else data?.linkedin
+                viemodel.head_office.value=data?.is_head_office==1
+                viemodel.multistore.value=data?.is_multi_store==1
+                viemodel.webisite.value=if(data?.website.equals("null")) "" else data?.website
+                shop_id=data?.id.toString()
+                categoryid=data?.category_id
             }else{
                 updatType="add"
             }
@@ -97,6 +101,10 @@ class AddUpdateFragment : Fragment() {
     private fun observeData(){
         viemodel.getAllCategories().observe(requireActivity(), Observer {
             setData(it)
+        })
+
+        viemodel.getAllPlces().observe(requireActivity(), Observer {
+            setPlaceData(it)
         })
 
         viemodel.addLiveData.observe(requireActivity(), Observer {
@@ -124,10 +132,14 @@ class AddUpdateFragment : Fragment() {
 
     }
 
+    private fun setPlaceData(it: List<com.hawks.hawksbuziness.model.places.Data>?) {
+        val  list= it as ArrayList<com.hawks.hawksbuziness.model.places.Data>
+        val  adapter=ArrayAdapter(requireContext(), com.google.android.material.R.layout.support_simple_spinner_dropdown_item,list)
+        binding.placeData.adapter=adapter
+    }
+
     private fun setData(it: List<Data>?) {
         val list=it as ArrayList<Data>
-
-
         if (categoryid!=null){
             for (i in list){
                if (i.id.equals(categoryid)){
@@ -182,6 +194,13 @@ class AddUpdateFragment : Fragment() {
             cat_id = item.id
 
         }
+
+        fun placeClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            val item = parent!!.selectedItem as com.hawks.hawksbuziness.model.places.Data
+            place_id = item.id
+
+        }
+
         fun submit(view: View){
             if (isValidate()){
                 trademark = if (viemodel.trade_mark.value == true) "1" else "0"
@@ -196,11 +215,12 @@ class AddUpdateFragment : Fragment() {
                 hashMap["contact"]=viemodel.contactNo.value.toString().trim()
                 hashMap["email"]=viemodel.email.value.toString().trim()
                 hashMap["person_in_charge"]=viemodel.person_incharge.value.toString().trim()
-                hashMap["latlong"]=preferenceManger.getLat()+preferenceManger.getLon()
+                hashMap["latitude"]=preferenceManger.getLat()
+                hashMap["longitude"]=preferenceManger.getLon()
                 hashMap["office_contact"]=viemodel.office_contact.value.toString().trim()
                 hashMap["category_id"]=cat_id.toString()
 //                hashMap["sub_category_id"]=""
-//                hashMap["place_id"]=""
+                hashMap["place_id"]=place_id.toString()
 //                hashMap["country_id"]=""
                 hashMap["gstin"]=viemodel.gstn.value.toString().trim()
                 hashMap["is_tm"]=trademark.toString()

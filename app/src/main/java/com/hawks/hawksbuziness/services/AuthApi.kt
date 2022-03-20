@@ -5,6 +5,8 @@ import com.hawks.hawksbuziness.model.country.Country
 import com.hawks.hawksbuziness.model.languages.Language
 import com.hawks.hawksbuziness.model.otp.send.Sendotp
 import com.hawks.hawksbuziness.model.otp.verify.VerifyOtp
+import com.hawks.hawksbuziness.model.places.Places
+import com.hawks.hawksbuziness.model.profile.UpdateProfile
 import com.hawks.hawksbuziness.model.profile.profile
 import com.hawks.hawksbuziness.model.shop.ShopDetails
 import com.hawks.hawksbuziness.model.shop.add.AddShop
@@ -47,11 +49,17 @@ interface AuthApi {
     @GET("common/getcategories")
     suspend fun getCategories():Categories
 
+    @GET("common/getplaces")
+    suspend fun getPlaces():Places
+
     @POST("common/addbusiness")
     suspend fun addBusiness(@Body hashMap: HashMap<String,String>):AddShop
 
     @POST("common/updatebusiness")
     suspend fun updateBusiness(@Body hashMap: HashMap<String,String>):UpdateData
+
+    @POST("common/updateprofile")
+    suspend fun updateProfile(@Body hashMap: HashMap<String,String>):profile
 
     @FormUrlEncoded
     @POST("common/sendotp")

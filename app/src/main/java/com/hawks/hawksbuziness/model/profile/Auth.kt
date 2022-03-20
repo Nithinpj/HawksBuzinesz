@@ -16,6 +16,7 @@ data class Auth(
     val dob: String?,
     val email: String?,
     val gender: String?,
+    @PrimaryKey
     val id: Int?,
     val image: String?,
     val join_method: String?,
@@ -36,7 +37,7 @@ data class Auth(
     val user_id: String?,
     val username: String?,
 
-    @PrimaryKey
-    val primaryId:Int?
+//    @PrimaryKey
+//    val primaryId:Int?
 
 )

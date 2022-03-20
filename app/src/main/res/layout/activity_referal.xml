@@ -6,6 +6,9 @@
         <variable
             name="adapter"
             type="android.widget.ArrayAdapter" />
+        <variable
+            name="click"
+            type="com.hawks.hawksbuziness.ui.activity.ReferalActivity.Clickhandler" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -50,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/referal_code"
                 android:background="@null"
+                android:padding="@dimen/dp10"
                 android:singleLine="true" />
 
             <View
@@ -66,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp50"
                 android:hint="@string/location"
+                android:onItemSelected="@{click::click}"
                 android:adapter="@{adapter}" />
             <View
                 android:layout_width="wrap_content"
@@ -85,6 +90,8 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:hint="@string/language"
+                android:paddingLeft="10dp"
+                android:text="English"
                 android:textColor="@color/black"
                 android:singleLine="true" />
             <View

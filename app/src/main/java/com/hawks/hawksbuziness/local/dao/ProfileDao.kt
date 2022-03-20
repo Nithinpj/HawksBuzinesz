@@ -9,6 +9,9 @@ interface ProfileDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertProfole(auth: Auth)
 
+    @Update
+    suspend fun updateProfile(auth: Auth)
+
     @Query("SELECT * FROM Auth")
     fun getProfile():LiveData<Auth>
 

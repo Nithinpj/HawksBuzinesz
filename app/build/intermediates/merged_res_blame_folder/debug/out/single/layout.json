@@ -54,5 +54,9 @@
     {
         "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shop_fragment.xml",
         "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/shop_fragment.xml"
+    },
+    {
+        "merged": "/home/nithin/Nithin/Projects/HawksBuziness/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_edit.xml",
+        "source": "/home/nithin/Nithin/Projects/HawksBuziness/app/src/main/res/layout/activity_edit.xml"
     }
 ]

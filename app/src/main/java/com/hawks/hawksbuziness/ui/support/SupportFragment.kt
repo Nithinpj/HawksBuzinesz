@@ -15,9 +15,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.hawks.hawksbuziness.databinding.FragmentSupportBinding
 import com.hawks.hawksbuziness.preferences.PreferenceManger
 import com.hawks.hawksbuziness.ui.activity.MainActivity
-import com.hawks.hawksbuziness.utill.ResponceState
-import com.hawks.hawksbuziness.utill.showSnackBar
-import com.hawks.hawksbuziness.utill.showToast
+import com.hawks.hawksbuziness.utill.*
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
@@ -41,6 +39,7 @@ class SupportFragment : Fragment() {
         // Inflate the layout for this fragment
         binding= FragmentSupportBinding.inflate(inflater)
         MainActivity.fragmentName="SUPPORT"
+        binding.click=ClickHandler()
         return binding.root
     }
 
@@ -147,6 +146,20 @@ class SupportFragment : Fragment() {
             }
         })
 
+    }
+
+    inner class ClickHandler(){
+        fun whatsapp(view: View){
+            whatsApp()
+        }
+
+        fun dial(view: View){
+            Dial()
+        }
+
+        fun email(view: View){
+            email()
+        }
     }
 
 

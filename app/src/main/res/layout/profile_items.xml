@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
-            name="data"
-            type="com.hawks.hawksbuziness.model.profile.Auth" />
+            name="viewmodel"
+            type="com.hawks.hawksbuziness.ui.profile.ProfileViewModel" />
     </data>
 
 <LinearLayout
@@ -20,11 +20,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp5"
         android:orientation="vertical">
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Name"
-            android:text="@{data.name}"
+            android:text="@{viewmodel.name}"
             android:padding="@dimen/dp10"
             android:background="@null"/>
 
@@ -42,7 +42,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp5"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:baselineAligned="false">
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -50,12 +51,12 @@
             android:layout_marginRight="@dimen/dp10"
             android:layout_height="wrap_content">
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:hint="Date Of Birth"
-                android:text="@{data.dob}"
+                android:text="@{viewmodel.dob}"
                 android:padding="@dimen/dp10" />
             <View
                 android:layout_width="match_parent"
@@ -75,12 +76,12 @@
             android:layout_marginLeft="@dimen/dp10"
             android:gravity="right">
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:hint="Gender"
-                android:text="@{data.gender}"
+                android:text="@={viewmodel.gender}"
                 android:layout_gravity="left"
                 android:padding="@dimen/dp10" />
             <View
@@ -103,12 +104,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp5"
         android:orientation="vertical">
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Phone number"
             android:padding="@dimen/dp10"
-            android:text="@{data.mobile}"
+            android:text="@={viewmodel.mobile}"
             android:background="@null"/>
 
         <View
@@ -127,11 +128,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp5"
         android:orientation="vertical">
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
-            android:text="@{data.email}"
+            android:text="@={viewmodel.email}"
             android:padding="@dimen/dp10"
             android:background="@null"/>
 
@@ -151,11 +152,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp5"
         android:orientation="vertical">
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nationality"
-            android:text="@{data.nationality}"
+            android:text="@={viewmodel.nationality}"
             android:padding="@dimen/dp10"
             android:background="@null"/>
 
@@ -175,11 +176,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp5"
         android:orientation="vertical">
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Country"
-            android:text="@{data.country}"
+            android:text="@={viewmodel.country}"
             android:padding="@dimen/dp10"
             android:background="@null"/>
 
@@ -199,11 +200,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp5"
         android:orientation="vertical">
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Place"
-            android:text="@{data.place}"
+            android:text="@={viewmodel.place}"
             android:padding="@dimen/dp10"
             android:background="@null"/>
 
@@ -227,8 +228,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/dp10"
-            android:text="@{data.referral_code}" />
+            android:text="@{viewmodel.referal}"
+            android:layout_marginLeft="@dimen/dp10" />
         <RelativeLayout
             android:layout_width="130dp"
             android:layout_height="@dimen/dp45"

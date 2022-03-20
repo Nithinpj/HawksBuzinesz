@@ -42,7 +42,6 @@ class SettingsFragment : Fragment() {
             lifecycleScope.launch {
                 dao.clearProfile()
                 preferenceManger.removeAll()
-
             }
 
         }

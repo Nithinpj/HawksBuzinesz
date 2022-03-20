@@ -9,6 +9,7 @@ class PreferenceManger @Inject constructor(val sharedPreferences: SharedPreferen
         const val USER_ID = "USERID"
         const val LATITUDE = "LATITUDE"
         const val LONGITUDE = "LONGITUDE"
+        const val COUNTRY = "COUNTRY"
     }
 
     private fun setPreferenceData(key: String, value: String) {
@@ -40,6 +41,12 @@ class PreferenceManger @Inject constructor(val sharedPreferences: SharedPreferen
     }
 
     fun getLon(): String = sharedPreferences.getString(LONGITUDE, "").toString()
+
+    fun saveCountry(value: String){
+        setPreferenceData(COUNTRY,value)
+    }
+
+    fun getCountry():String?=sharedPreferences.getString(COUNTRY,"").toString()
 
 
     fun removeAll() {

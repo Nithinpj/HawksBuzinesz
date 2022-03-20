@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-39:12
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-43:12
 MERGED from [androidx.databinding:databinding-adapters:7.1.1] /home/nithin/.gradle/caches/transforms-3/ac93132c2faaa0f1f92b22fcd2129777/transformed/databinding-adapters-7.1.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-ktx:7.1.1] /home/nithin/.gradle/caches/transforms-3/d107dae339dc039c9cf77a9d9d90f2a7/transformed/databinding-ktx-7.1.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:7.1.1] /home/nithin/.gradle/caches/transforms-3/ec159db6cc3d46403d1d2de583dfd195/transformed/databinding-runtime-7.1.1/AndroidManifest.xml:17:1-24:12
@@ -26,6 +26,7 @@ MERGED from [androidx.navigation:navigation-common-ktx:2.4.1] /home/nithin/.grad
 MERGED from [androidx.navigation:navigation-common:2.4.1] /home/nithin/.gradle/caches/transforms-3/257ad0eaf3f21ebbb3e5004f25282d24/transformed/navigation-common-2.4.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] /home/nithin/.gradle/caches/transforms-3/0f724825b6060517b869b7dd05f45b6b/transformed/lifecycle-viewmodel-ktx-2.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] /home/nithin/.gradle/caches/transforms-3/1142486678e3fe518437ef8cdf3ceb69/transformed/lifecycle-runtime-ktx-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.airbnb.android:lottie:5.0.3] /home/nithin/.gradle/caches/transforms-3/c598b4bbadbd9b22f575c0f3e748e62b/transformed/lottie-5.0.3/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.5.0] /home/nithin/.gradle/caches/transforms-3/6ca05a320f8df173dd308a8050d9f408/transformed/material-1.5.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /home/nithin/.gradle/caches/transforms-3/707da75e70ae7f498dbc8caec3a60bfb/transformed/constraintlayout-2.1.3/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/644f27884326a9e38d25592ce5b8e6c6/transformed/places-2.5.0/AndroidManifest.xml:2:1-23:12
@@ -111,20 +112,20 @@ MERGED from [com.google.android.datatransport:transport-api:3.0.0] /home/nithin/
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/nithin/.gradle/caches/transforms-3/cc044bb5a7574c1df09ddb8263dab509/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.40.5] /home/nithin/.gradle/caches/transforms-3/67b464f0c19a2a5038d89b257977d4c5/transformed/dagger-lint-aar-2.40.5/AndroidManifest.xml:16:1-19:12
 MERGED from [com.android.volley:volley:1.2.1] /home/nithin/.gradle/caches/transforms-3/c67b7b7a98a504ee0501eb5a93fd7a7f/transformed/volley-1.2.1/AndroidManifest.xml:2:1-7:12
-INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-43:12
 	package
 		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:3:5-38
 		INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
 		INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-39:12
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-43:12
 		INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-39:12
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-43:12
 		INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:11-69
@@ -165,9 +166,11 @@ ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManife
 	android:name
 		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:8:22-82
 application
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:10:5-37:19
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:10:5-41:19
 MERGED from [androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/9361c9c081d0b9cb3a51e23a3784c2a1/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/9361c9c081d0b9cb3a51e23a3784c2a1/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [com.airbnb.android:lottie:5.0.3] /home/nithin/.gradle/caches/transforms-3/c598b4bbadbd9b22f575c0f3e748e62b/transformed/lottie-5.0.3/AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:5.0.3] /home/nithin/.gradle/caches/transforms-3/c598b4bbadbd9b22f575c0f3e748e62b/transformed/lottie-5.0.3/AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.5.0] /home/nithin/.gradle/caches/transforms-3/6ca05a320f8df173dd308a8050d9f408/transformed/material-1.5.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.5.0] /home/nithin/.gradle/caches/transforms-3/6ca05a320f8df173dd308a8050d9f408/transformed/material-1.5.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /home/nithin/.gradle/caches/transforms-3/707da75e70ae7f498dbc8caec3a60bfb/transformed/constraintlayout-2.1.3/AndroidManifest.xml:9:5-20
@@ -251,43 +254,51 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] /home/nithin/.gradle/caches
 	android:theme
 		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:17:9-51
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:11:9-71
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:11:9-48
+activity#com.hawks.hawksbuziness.ui.activity.EditActivity
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:18:9-21:40
+	android:exported
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:21:13-37
+	android:theme
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:20:13-55
+	android:name
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:19:13-53
 activity#com.hawks.hawksbuziness.ui.activity.SignupActivity
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:18:9-20:40
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:22:9-24:40
 	android:exported
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:20:13-37
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:19:13-78
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:23:13-55
 activity#com.hawks.hawksbuziness.ui.activity.ReferalActivity
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:21:9-23:40
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:25:9-27:40
 	android:exported
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:23:13-37
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:22:13-79
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:26:13-56
 activity#com.hawks.hawksbuziness.ui.splash.Splash
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:24:9-32:20
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:28:9-36:20
 	android:exported
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:26:13-36
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:30:13-36
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:25:13-68
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:29:13-45
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:27:13-31:29
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:31:13-35:29
 action#android.intent.action.MAIN
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:28:17-69
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:32:17-69
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:28:25-66
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:32:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:30:17-77
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:34:17-77
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:30:27-74
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:34:27-74
 activity#com.hawks.hawksbuziness.ui.activity.MainActivity
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:33:9-36:64
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:37:9-40:55
 	android:windowSoftInputMode
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:36:13-52
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:40:13-52
 	android:exported
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:35:13-36
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:39:13-36
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:34:13-76
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:38:13-53
 uses-sdk
 INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
@@ -336,6 +347,8 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] /home/nithin/.gra
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] /home/nithin/.gradle/caches/transforms-3/0f724825b6060517b869b7dd05f45b6b/transformed/lifecycle-viewmodel-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] /home/nithin/.gradle/caches/transforms-3/1142486678e3fe518437ef8cdf3ceb69/transformed/lifecycle-runtime-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] /home/nithin/.gradle/caches/transforms-3/1142486678e3fe518437ef8cdf3ceb69/transformed/lifecycle-runtime-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.airbnb.android:lottie:5.0.3] /home/nithin/.gradle/caches/transforms-3/c598b4bbadbd9b22f575c0f3e748e62b/transformed/lottie-5.0.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:5.0.3] /home/nithin/.gradle/caches/transforms-3/c598b4bbadbd9b22f575c0f3e748e62b/transformed/lottie-5.0.3/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.material:material:1.5.0] /home/nithin/.gradle/caches/transforms-3/6ca05a320f8df173dd308a8050d9f408/transformed/material-1.5.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.5.0] /home/nithin/.gradle/caches/transforms-3/6ca05a320f8df173dd308a8050d9f408/transformed/material-1.5.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /home/nithin/.gradle/caches/transforms-3/707da75e70ae7f498dbc8caec3a60bfb/transformed/constraintlayout-2.1.3/AndroidManifest.xml:5:5-7:41

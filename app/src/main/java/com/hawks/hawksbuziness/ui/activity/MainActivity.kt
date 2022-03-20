@@ -66,6 +66,7 @@ class MainActivity : AppCompatActivity() {
 //        preferenceManger.saveId("2")
 
         viewModel.getCategories()
+        viewModel.getPlaces()
         observeData()
 
         initializeLocation()
@@ -150,6 +151,22 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
+        viewModel.placeLiveData.observe(this, Observer {
+            when(it){
+                is ResponceState.Succes -> {
+                    viewModel.insertPlaces(it.result.data)
+                }
+                else -> {
+
+                }
+            }
+        })
+
+        viewModel.getAllPlces().observe(this, Observer {
+            Log.e("TAG", "observeData: $it")
+        })
+
+
     }
 
 

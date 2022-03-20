@@ -7,6 +7,7 @@ import com.hawks.hawksbuziness.model.category.Categories
 import com.hawks.hawksbuziness.model.languages.Language
 import com.hawks.hawksbuziness.model.otp.send.Sendotp
 import com.hawks.hawksbuziness.model.otp.verify.VerifyOtp
+import com.hawks.hawksbuziness.model.places.Places
 import com.hawks.hawksbuziness.model.profile.profile
 import com.hawks.hawksbuziness.model.shop.ShopDetails
 import com.hawks.hawksbuziness.model.shop.add.AddShop
@@ -98,6 +99,15 @@ class BusinessRepository @Inject constructor(private val authApi: AuthApi) : Bas
         }.flowOn(Dispatchers.IO)
     }
 
+    suspend fun getPlaces(): Flow<ResponceState<Places>> {
+
+        return flow<ResponceState<Places>> {
+            emit(ResponceState.Loading("Loading"))
+            emit(safeApi { authApi.getPlaces() })
+
+        }.flowOn(Dispatchers.IO)
+    }
+
     suspend fun addShop(hashMap: HashMap<String, String>): Flow<ResponceState<AddShop>> {
         return flow {
             emit(ResponceState.Loading("Loading"))
@@ -113,7 +123,7 @@ class BusinessRepository @Inject constructor(private val authApi: AuthApi) : Bas
     }
 
     suspend fun sendOtp(number: String): Flow<ResponceState<Sendotp>> {
-        Log.e("TAG", "sendOtp: "+number )
+        Log.e("TAG", "sendOtp: " + number)
         return flow {
             emit(ResponceState.Loading("Loading"))
             emit(safeApi { authApi.sendOtp(number, "MOBILE") })
@@ -124,6 +134,13 @@ class BusinessRepository @Inject constructor(private val authApi: AuthApi) : Bas
         return flow {
             emit(ResponceState.Loading("Loading"))
             emit(safeApi { authApi.verifyOtp(userId, otp) })
+        }.flowOn(Dispatchers.IO)
+    }
+
+    suspend fun updateProfile(hashMap: HashMap<String, String>): Flow<ResponceState<profile>> {
+        return flow<ResponceState<profile>> {
+            emit(ResponceState.Loading("Loading"))
+            emit(safeApi { authApi.updateProfile(hashMap) })
         }.flowOn(Dispatchers.IO)
     }
 

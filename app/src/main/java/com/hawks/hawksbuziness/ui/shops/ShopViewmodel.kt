@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hawks.hawksbuziness.local.dao.CategoryDao
+import com.hawks.hawksbuziness.local.dao.PlaceDao
 import com.hawks.hawksbuziness.model.category.Data
 import com.hawks.hawksbuziness.model.otp.send.Sendotp
 import com.hawks.hawksbuziness.model.otp.verify.VerifyOtp
@@ -24,7 +25,8 @@ import javax.inject.Inject
 class ShopViewmodel @Inject constructor(
     val repository: BusinessRepository,
     val preferenceManger: PreferenceManger,
-    val dao: CategoryDao
+    val dao: CategoryDao,
+    val placedao:PlaceDao
 ) : ViewModel(), Observable {
 
     private val _shopMutableLiveData: MutableLiveData<ResponceState<Shops>> = MutableLiveData()
@@ -37,8 +39,8 @@ class ShopViewmodel @Inject constructor(
         }
     }
 
-    @Bindable
-    val data: MutableLiveData<com.hawks.hawksbuziness.model.shop.Shop>? = MutableLiveData()
+//    @Bindable
+//    val data: MutableLiveData<com.hawks.hawksbuziness.model.shop.Shop>? = MutableLiveData()
 
     @Bindable
     val shop_name = MutableLiveData<String>()
@@ -96,6 +98,10 @@ class ShopViewmodel @Inject constructor(
 
     fun getAllCategories(): LiveData<List<Data>> {
         return dao.getAllCategories()
+    }
+
+    fun getAllPlces():LiveData<List<com.hawks.hawksbuziness.model.places.Data>>{
+        return placedao.getAllPlaces()
     }
 
     //add business data
