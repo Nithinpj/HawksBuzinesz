@@ -2,9 +2,16 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.hawks.hawksbuziness.ui.shops.ShopViewmodel" />
+    </data>
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomsheetcontainer"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -14,11 +21,10 @@
 
             <ImageView
                 android:layout_width="@dimen/dp200"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/dp100"
                 android:layout_marginTop="@dimen/dp20"
-                android:src="@drawable/img_white_appname"
-                android:layout_gravity="center"
-                app:tint="@color/app_color" />
+                android:src="@drawable/businez_logo"
+                android:layout_gravity="center" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -42,14 +48,16 @@
                     <EditText
                         android:id="@+id/phone"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="@dimen/dp5"
                         android:layout_toLeftOf="@+id/sendopt"
                         android:background="@null"
                         android:hint="Phone number"
                         android:inputType="number"
+                        android:padding="@dimen/dp10"
                         android:singleLine="true"
+                        android:text="@={viewmodel.mobile}"
                         android:textSize="15sp" />
 
                     <RelativeLayout

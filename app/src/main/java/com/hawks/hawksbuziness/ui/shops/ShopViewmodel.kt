@@ -96,6 +96,11 @@ class ShopViewmodel @Inject constructor(
     @Bindable
     val webisite = MutableLiveData<String>()
 
+    @Bindable
+    val mobile=MutableLiveData<String>()
+
+    val phonelivedata: LiveData<String> = mobile
+
     fun getAllCategories(): LiveData<List<Data>> {
         return dao.getAllCategories()
     }

@@ -22,9 +22,10 @@
 
         <ImageView
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/img_white_appname"
-            app:tint="@color/app_color"
+            android:layout_height="@dimen/dp30"
+            android:src="@drawable/businez_logo"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -54,10 +55,12 @@
             app:layout_constraintBottom_toBottomOf="parent" />
         <ImageView
             android:id="@+id/add_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/add_logo"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:src="@drawable/add_new"
             android:visibility="gone"
+            app:tint="@color/app_color"
+            android:layout_marginRight="@dimen/dp10"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

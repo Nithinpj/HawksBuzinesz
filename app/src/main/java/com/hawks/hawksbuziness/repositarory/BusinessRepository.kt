@@ -9,7 +9,7 @@ import com.hawks.hawksbuziness.model.otp.send.Sendotp
 import com.hawks.hawksbuziness.model.otp.verify.VerifyOtp
 import com.hawks.hawksbuziness.model.places.Places
 import com.hawks.hawksbuziness.model.profile.profile
-import com.hawks.hawksbuziness.model.shop.ShopDetails
+import com.hawks.hawksbuziness.model.shops.ShopDetails
 import com.hawks.hawksbuziness.model.shop.add.AddShop
 import com.hawks.hawksbuziness.model.shop.update.UpdateData
 import com.hawks.hawksbuziness.model.shops.Shops

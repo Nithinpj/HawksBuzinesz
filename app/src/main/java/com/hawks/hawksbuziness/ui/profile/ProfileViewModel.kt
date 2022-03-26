@@ -100,6 +100,8 @@ class ProfileViewModel @Inject constructor(
     @Bindable
     val referal = MutableLiveData<String>()
 
+    val phonelivedata: LiveData<String> = mobile
+
     fun updateProfileData(hashMap: HashMap<String, String>) {
         viewModelScope.launch {
             respository.updateProfile(hashMap).collect{
@@ -107,6 +109,8 @@ class ProfileViewModel @Inject constructor(
             }
         }
     }
+
+
 
 
     override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {

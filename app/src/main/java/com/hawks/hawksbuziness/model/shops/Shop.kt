@@ -1,5 +1,6 @@
 package com.hawks.hawksbuziness.model.shops
 
+import com.google.gson.annotations.SerializedName
 import com.hawks.hawksbuziness.model.shop.Shop
 import java.io.Serializable
 
@@ -15,7 +16,7 @@ data class Shop(
     val email: String?,
     val gender: String?,
     val id: Int?,
-    val image: String?,
+//    val image: String?,
     val join_method: String?,
     val mobile: String?,
     val name: String?,
@@ -33,5 +34,6 @@ data class Shop(
     val updated: String?,
     val user_id: String?,
     val username: String?,
-    val shop:Shop?
+    @SerializedName("shop")
+    val shop:ShopCustom?
 ):Serializable

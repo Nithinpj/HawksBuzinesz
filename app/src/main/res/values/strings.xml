@@ -12,4 +12,10 @@
     <string name="support">Support</string>
     <string name="subject">Subject</string>
     <string name="description">Description</string>
+    <string name="logout_title">Logout</string>
+    <string name="title">Logout</string>
+    <string name="exit">Are you sure you want to exit?</string>
+    <string name="logout_description" >Are you sure  you want to logout?</string>
+    <string name="select_places">Select place you want</string>
+    <string name="selecLanguages">Select your language</string>
 </resources>

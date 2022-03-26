@@ -27,4 +27,8 @@ object DataBaseModule {
     @Singleton
     @Provides
     fun providePlaceDao(database: HawksDatabase)=database.placeDao()
+
+    @Singleton
+    @Provides
+    fun provideLanguageDao(database: HawksDatabase)=database.languageDao()
 }

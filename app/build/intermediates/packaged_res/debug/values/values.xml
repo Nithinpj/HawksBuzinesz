@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
     <color name="app_color">#3cbcb4</color>
-    <color name="app_color_">#3FDD8F</color>
     <color name="black">#FF000000</color>
-    <color name="editext_color">#e6f2ff</color>
     <color name="ic_launcher_background">#FFFFFF</color>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
@@ -18,7 +13,6 @@
     <dimen name="dp20">20dp</dimen>
     <dimen name="dp200">200dp</dimen>
     <dimen name="dp30">30dp</dimen>
-    <dimen name="dp300">300dp</dimen>
     <dimen name="dp35">35dp</dimen>
     <dimen name="dp40">40dp</dimen>
     <dimen name="dp45">45dp</dimen>
@@ -27,30 +21,31 @@
     <dimen name="dp60">60dp</dimen>
     <dimen name="dp70">70dp</dimen>
     <string name="app_name">BusinezApp</string>
-    <string name="busines_app">businez App</string>
     <string name="business">My business</string>
     <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
     <string name="default_web_client_id" translatable="false">1045437734440-12jmr6ngfkmvcutl87sjrbilf3k3f6b7.apps.googleusercontent.com</string>
     <string name="description">Description</string>
+    <string name="exit">Are you sure you want to exit?</string>
     <string name="gcm_defaultSenderId" translatable="false">1045437734440</string>
     <string name="google_api_key" translatable="false">AIzaSyBp6lpHN4-BIDl34knz2GaR7_4wmmtmNNI</string>
     <string name="google_app_id" translatable="false">1:1045437734440:android:5ae4f806747fa137f1df1d</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBp6lpHN4-BIDl34knz2GaR7_4wmmtmNNI</string>
     <string name="google_storage_bucket" translatable="false">buziness-cb76c.appspot.com</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hi">Hi,how can i help?</string>
     <string name="home">Home</string>
     <string name="language">Language</string>
     <string name="location">Location</string>
+    <string name="logout_description">Are you sure  you want to logout?</string>
+    <string name="logout_title">Logout</string>
     <string name="profile">Me</string>
     <string name="project_id" translatable="false">buziness-cb76c</string>
-    <string name="raise">Raise a ticket</string>
     <string name="referal_code">Referal code</string>
+    <string name="selecLanguages">Select your language</string>
+    <string name="select_places">Select place you want</string>
     <string name="setting">Settings</string>
-    <string name="shops">Shops</string>
     <string name="subject">Subject</string>
     <string name="support">Support</string>
     <string name="terms"><![CDATA[Terms & Conditions]]></string>
+    <string name="title">Logout</string>
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
     </style>
@@ -58,28 +53,28 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
     <style name="Theme.HawksBuziness" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!-- Primary brand color. -->
+        
         <item name="colorPrimary">@color/app_color</item>
         <item name="colorPrimaryVariant">@color/app_color</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
+        
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:fontFamily">@font/robotobold</item>
+
         <item name="android:windowSoftInputMode">adjustPan</item>
-        <!-- Status bar color. -->
+        
         <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
 
-        <!-- Customize your theme here. -->
+        
     </style>
     <style name="outline_button" parent="Widget.Material3.Button.TextButton">
         <item name="strokeColor">@color/app_color</item>
         <item name="strokeWidth">@dimen/m3_btn_stroke_size</item>
     </style>
     <style name="profile_page_theme">
-        <item name="android:fontFamily">@font/robotobold</item>
+
         <item name="android:textSize">15sp</item>
         <item name="android:windowSoftInputMode">adjustPan</item>
     </style>

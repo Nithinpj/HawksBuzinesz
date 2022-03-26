@@ -18,21 +18,21 @@
             android:id="@+id/constraint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/app_color"
             app:layout_constraintTop_toTopOf="parent">
-            <androidx.cardview.widget.CardView
+            <RelativeLayout
                 android:id="@+id/profile_image"
                 android:layout_width="@dimen/dp100"
                 android:layout_height="@dimen/dp100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="40dp"
-                
+                android:padding="@dimen/dp5"
+                android:background="@drawable/white_border"
                 android:layout_marginLeft="@dimen/dp10"
-                android:background="@drawable/white_border">
+               >
 
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_icon"
                     android:layout_width="@dimen/dp100"
                     android:layout_height="@dimen/dp100"
@@ -50,8 +50,8 @@
                     android:src="@drawable/edit"
                     android:visibility="gone"
                     android:background="@color/white"
-                    android:layout_gravity="right"/>
-            </androidx.cardview.widget.CardView>
+                   android:layout_alignParentRight="true"/>
+            </RelativeLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/login"

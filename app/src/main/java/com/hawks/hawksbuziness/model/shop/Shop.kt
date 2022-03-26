@@ -1,9 +1,11 @@
 package com.hawks.hawksbuziness.model.shop
 
 import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 data class Shop(
+
     var address: String?,
     var auth_id: Int?,
     var branch: String?,
@@ -48,6 +50,4 @@ data class Shop(
     var updated: String?,
     var website: String?,
     var whatsapp: String?,
-    @PrimaryKey
-    var primaryId:Int
 ):Serializable

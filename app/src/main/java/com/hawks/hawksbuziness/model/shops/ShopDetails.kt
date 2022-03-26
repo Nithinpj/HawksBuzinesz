@@ -1,4 +1,6 @@
-package com.hawks.hawksbuziness.model.shop
+package com.hawks.hawksbuziness.model.shops
+
+import com.hawks.hawksbuziness.model.shop.Shop
 
 data class ShopDetails(
     val message: String,

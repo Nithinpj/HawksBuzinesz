@@ -73,6 +73,7 @@
                         android:layout_height="wrap_content"
                         android:background="@null"
                         android:hint="Address"
+                        android:singleLine="true"
                         android:text="@={data.address}"
                         android:padding="@dimen/dp10" />
 
@@ -101,10 +102,11 @@
                         android:layout_height="wrap_content">
 
                         <EditText
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:hint="Contact Number"
+                            android:singleLine="true"
                             android:text="@={data.contactNo}"
 
                             android:padding="@dimen/dp10" />
@@ -128,12 +130,13 @@
                         android:gravity="right">
 
                         <EditText
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:hint="Branch"
                             android:text="@={data.branch}"
                             android:layout_gravity="left"
+                            android:singleLine="true"
                             android:padding="@dimen/dp10" />
                         <View
                             android:layout_width="match_parent"
@@ -162,6 +165,7 @@
                         android:background="@null"
                         android:hint="Email"
                         android:text="@={data.email}"
+                        android:singleLine="true"
                         android:padding="@dimen/dp10" />
 
                     <View
@@ -179,6 +183,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     android:orientation="vertical">
 
                     <EditText
@@ -212,6 +217,7 @@
                         android:background="@null"
                         android:hint="Office contact"
                         android:text="@={data.office_contact}"
+                        android:singleLine="true"
                         android:padding="@dimen/dp10" />
 
                     <View
@@ -239,7 +245,7 @@
                         android:layout_height="wrap_content">
                         <Spinner
                             android:id="@+id/category_data"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:adapter="@{adapter}"
                             android:onItemSelected="@{click::click}"/>
@@ -297,7 +303,7 @@
                         android:layout_height="wrap_content">
                         <Spinner
                             android:id="@+id/place_data"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:onItemSelected="@{click::placeClick}"/>
                         <View
@@ -353,6 +359,7 @@
                         android:background="@null"
                         android:hint="GSTIN"
                         android:text="@={data.gstn}"
+                        android:singleLine="true"
                         android:padding="@dimen/dp10" />
 
                     <View
@@ -371,6 +378,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:visibility="gone"
                     android:baselineAligned="false">
                     <LinearLayout
                         android:layout_width="0dp"
@@ -441,10 +449,11 @@
                         android:layout_height="wrap_content">
 
                         <EditText
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:hint="Whatsapp"
+                            android:singleLine="true"
                             android:text="@={data.whatsapp}"
                             android:padding="@dimen/dp10" />
                         <View
@@ -463,11 +472,12 @@
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
+                        android:visibility="gone"
                         android:layout_marginLeft="@dimen/dp10"
                         android:gravity="right">
 
                         <EditText
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:hint="FaceBook"
@@ -493,6 +503,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:visibility="gone"
                     android:baselineAligned="false">
                     <LinearLayout
                         android:layout_width="0dp"
@@ -502,7 +513,7 @@
                         android:layout_height="wrap_content">
 
                         <EditText
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:hint="Instegram"
@@ -528,7 +539,7 @@
                         android:gravity="right">
 
                         <EditText
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:hint="LinkedIn"
@@ -555,6 +566,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:visibility="gone"
                     android:baselineAligned="false">
                     <LinearLayout
                         android:layout_width="0dp"
@@ -616,6 +628,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     android:orientation="vertical">
 
                     <EditText
@@ -674,6 +687,7 @@
                         android:layout_height="wrap_content"
                         android:background="@null"
                         android:hint="Website"
+                        android:singleLine="true"
                         android:text="@{data.webisite}"
                         android:padding="@dimen/dp10" />
 

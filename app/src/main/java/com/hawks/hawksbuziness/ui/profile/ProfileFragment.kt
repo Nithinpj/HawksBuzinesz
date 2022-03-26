@@ -1,5 +1,6 @@
 package com.hawks.hawksbuziness.ui.profile
 
+import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -32,6 +33,7 @@ class ProfileFragment : Fragment() {
 
     private val profileViewModel: ProfileViewModel by viewModels<ProfileViewModel>()
     private lateinit var binding: FragmentProfileFragmentBinding
+    private lateinit var progressDialog: ProgressDialog
 
 
     @Inject
@@ -52,6 +54,8 @@ class ProfileFragment : Fragment() {
         binding.lifecycleOwner=this
         binding.viewmodel=profileViewModel
         MainActivity.fragmentName = "PROFILE"
+        progressDialog= ProgressDialog(requireActivity())
+
         return binding.root
     }
 
@@ -80,7 +84,7 @@ class ProfileFragment : Fragment() {
         profileViewModel.gender.value= result.gender?:""
         profileViewModel.image.value= result.image?:""
         profileViewModel.mobile.value= result.mobile?:""
-        profileViewModel.name.value= result.name?:""
+        profileViewModel.name.value= result.username?:""
         profileViewModel.nationality.value= result.nationality?:""
         profileViewModel.place.value= result.place?:""
         profileViewModel.country.value= result.country?:""
@@ -89,13 +93,13 @@ class ProfileFragment : Fragment() {
 
 
     }
-
-    override fun onGetLayoutInflater(savedInstanceState: Bundle?): LayoutInflater {
-        val inflater = super.onGetLayoutInflater(savedInstanceState)
-        val contextThemeWrapper: Context =
-            ContextThemeWrapper(requireContext(), R.style.profile_page_theme)
-        return inflater.cloneInContext(contextThemeWrapper)
-    }
+//
+//    override fun onGetLayoutInflater(savedInstanceState: Bundle?): LayoutInflater {
+//        val inflater = super.onGetLayoutInflater(savedInstanceState)
+//        val contextThemeWrapper: Context =
+//            ContextThemeWrapper(requireContext(), R.style.profile_page_theme)
+//        return inflater.cloneInContext(contextThemeWrapper)
+//    }
 
     private fun observeData() {
 
@@ -103,16 +107,19 @@ class ProfileFragment : Fragment() {
         profileViewModel.response.observe(requireActivity(), Observer {
             when (it) {
                 is ResponceState.Failiure -> {
+                    progressDialog.dismiss()
                     Toast.makeText(requireContext(), "Failed", Toast.LENGTH_SHORT).show()
+
                 }
                 is ResponceState.Loading -> {
-                    Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
+                    progressDialog.show()
+
                 }
                 is ResponceState.Succes -> {
+                    progressDialog.dismiss()
                     if (it.result.status != 0) {
                         saveToLocal(it.result.auth)
                     }
-
 
                 }
             }
@@ -123,7 +130,7 @@ class ProfileFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        Log.e("TAG", "onStart: ", )
+
     }
 
     override fun onResume() {

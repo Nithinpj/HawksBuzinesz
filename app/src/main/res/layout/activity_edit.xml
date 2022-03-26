@@ -21,7 +21,6 @@
             android:id="@+id/relative_profile"
             android:layout_width="match_parent"
             android:layout_height="130dp"
-            android:background="@color/app_color"
             app:layout_constraintTop_toTopOf="parent">
 
         </RelativeLayout>
@@ -36,7 +35,7 @@
            android:background="@drawable/white_border">
 
 
-           <ImageView
+           <de.hdodenhof.circleimageview.CircleImageView
                android:id="@+id/profile_icon"
                android:layout_width="@dimen/dp100"
                android:layout_height="@dimen/dp100"
@@ -137,7 +136,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:background="@null"

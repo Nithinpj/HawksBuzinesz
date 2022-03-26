@@ -34,6 +34,15 @@
                 android:paddingLeft="@dimen/dp10"
                 android:paddingRight="@dimen/dp10"
                 android:background="@drawable/round_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hi ! How can i help you ?"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/app_color"
+                    android:layout_marginTop="@dimen/dp20"/>
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/animationView"
                     android:layout_width="@dimen/dp200"

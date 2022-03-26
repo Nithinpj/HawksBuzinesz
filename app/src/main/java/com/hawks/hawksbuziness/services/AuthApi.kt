@@ -6,9 +6,8 @@ import com.hawks.hawksbuziness.model.languages.Language
 import com.hawks.hawksbuziness.model.otp.send.Sendotp
 import com.hawks.hawksbuziness.model.otp.verify.VerifyOtp
 import com.hawks.hawksbuziness.model.places.Places
-import com.hawks.hawksbuziness.model.profile.UpdateProfile
 import com.hawks.hawksbuziness.model.profile.profile
-import com.hawks.hawksbuziness.model.shop.ShopDetails
+import com.hawks.hawksbuziness.model.shops.ShopDetails
 import com.hawks.hawksbuziness.model.shop.add.AddShop
 import com.hawks.hawksbuziness.model.shop.update.UpdateData
 import com.hawks.hawksbuziness.model.shops.Shops
@@ -44,7 +43,7 @@ interface AuthApi {
 
     @FormUrlEncoded
     @POST("common/getshop")
-    suspend fun getShop(@Field("shop_id")user_id:String):ShopDetails
+    suspend fun getShop(@Field("shop_id")user_id:String): ShopDetails
 
     @GET("common/getcategories")
     suspend fun getCategories():Categories

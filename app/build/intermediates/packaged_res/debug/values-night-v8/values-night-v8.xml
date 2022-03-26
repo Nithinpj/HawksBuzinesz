@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
+    <string name="logout_description">Are you sure  you want to logout?</string>
+    <string name="logout_title">Logout</string>
+    <string name="title">Logout</string>
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
     </style>
@@ -17,7 +20,7 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:textSize">15sp</item>
-        <item name="android:fontFamily">@font/robotobold</item>
+<!--        <item name="android:fontFamily">@font/robotobold</item>-->
         <item name="android:windowSoftInputMode">adjustPan</item>
         <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->

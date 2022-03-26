@@ -1,5 +1,6 @@
 package com.hawks.hawksbuziness
 
+import android.app.ProgressDialog
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
@@ -16,6 +17,7 @@ import androidx.navigation.fragment.findNavController
 import com.hawks.hawksbuziness.databinding.FragmentAddUpdateBinding
 import com.hawks.hawksbuziness.model.category.Data
 import com.hawks.hawksbuziness.model.shop.Shop
+import com.hawks.hawksbuziness.model.shops.ShopCustom
 import com.hawks.hawksbuziness.preferences.PreferenceManger
 import com.hawks.hawksbuziness.ui.activity.MainActivity
 import com.hawks.hawksbuziness.ui.shops.ShopViewmodel
@@ -42,6 +44,8 @@ class AddUpdateFragment : Fragment() {
 
     @Inject
     lateinit var preferenceManger: PreferenceManger
+
+    private lateinit var progressDialog: ProgressDialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         MainActivity.fragmentName="UPDATE"
@@ -52,6 +56,7 @@ class AddUpdateFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding= FragmentAddUpdateBinding.inflate(inflater)
+        progressDialog= ProgressDialog(requireActivity())
         binding.lifecycleOwner = this
         return binding.root
     }
@@ -67,7 +72,7 @@ class AddUpdateFragment : Fragment() {
             if (arguments?.getString("type").equals("update")){
                 updatType="update"
 
-                val data =arguments?.getSerializable("data") as Shop?
+                val data =arguments?.getSerializable("data") as ShopCustom?
                 Log.e("TAG", "onViewCreated: "+data?.gstin )
                 viemodel.shop_name.value=if(data?.name.equals("null")) "" else data?.name
                 viemodel.address.value=if(data?.address.equals("null")) "" else data?.address
@@ -76,7 +81,7 @@ class AddUpdateFragment : Fragment() {
                 viemodel.email.value=if(data?.email.equals("null")) "" else data?.email
                 viemodel.person_incharge.value=if(data?.person_in_charge.equals("null")) "" else data?.person_in_charge
                 viemodel.office_contact.value=if(data?.office_contact.equals("null")) "" else data?.office_contact
-                viemodel.gstn.value=if (data?.gstin.equals("null"))"" else data?.gstin
+                viemodel.gstn.value=if (data?.gstin.toString().equals("null"))"" else data?.gstin.toString()
                 viemodel.trade_mark.value=data?.is_tm==1
                 viemodel.private_limited.value=data?.is_pvt_ltd==1
                 viemodel.whatsapp.value=if(data?.whatsapp.equals("null")) "" else data?.whatsapp
@@ -85,7 +90,7 @@ class AddUpdateFragment : Fragment() {
                 viemodel.linkedin.value=if(data?.linkedin.equals("null")) "" else data?.linkedin
                 viemodel.head_office.value=data?.is_head_office==1
                 viemodel.multistore.value=data?.is_multi_store==1
-                viemodel.webisite.value=if(data?.website.equals("null")) "" else data?.website
+                viemodel.webisite.value=if(data?.website.toString().equals("null")) "" else data?.website.toString()
                 shop_id=data?.id.toString()
                 categoryid=data?.category_id
             }else{
@@ -109,9 +114,15 @@ class AddUpdateFragment : Fragment() {
 
         viemodel.addLiveData.observe(requireActivity(), Observer {
             when(it){
-                is ResponceState.Failiure -> showToast("Failed")
-                is ResponceState.Loading -> {}
+                is ResponceState.Failiure ->{
+                    showToast("Failed")
+                    progressDialog.dismiss()
+                }
+                is ResponceState.Loading -> {
+                    progressDialog.show()
+                }
                 is ResponceState.Succes -> {
+                    progressDialog.dismiss()
                     showToast("Success")
                     findNavController().navigateUp()
                 }
@@ -120,10 +131,15 @@ class AddUpdateFragment : Fragment() {
 
         viemodel.updateLiveData.observe(requireActivity(), Observer {
             when(it){
-                is ResponceState.Failiure -> showToast("Failed")
-                is ResponceState.Loading -> {}
+                is ResponceState.Failiure ->{
+                    showToast("Failed")
+                    progressDialog.dismiss()
+                }
+                is ResponceState.Loading -> {
+                    progressDialog.show()
+                }
                 is ResponceState.Succes -> {
-                    showToast("Success")
+                    progressDialog.dismiss()
                     findNavController().navigateUp()
                 }
             }
@@ -214,25 +230,23 @@ class AddUpdateFragment : Fragment() {
                 hashMap["user_id"]=preferenceManger.getUserId().toString()
                 hashMap["contact"]=viemodel.contactNo.value.toString().trim()
                 hashMap["email"]=viemodel.email.value.toString().trim()
-                hashMap["person_in_charge"]=viemodel.person_incharge.value.toString().trim()
+//                hashMap["person_in_charge"]=viemodel.person_incharge.value.toString().trim()
                 hashMap["latitude"]=preferenceManger.getLat()
                 hashMap["longitude"]=preferenceManger.getLon()
                 hashMap["office_contact"]=viemodel.office_contact.value.toString().trim()
                 hashMap["category_id"]=cat_id.toString()
-//                hashMap["sub_category_id"]=""
                 hashMap["place_id"]=place_id.toString()
-//                hashMap["country_id"]=""
                 hashMap["gstin"]=viemodel.gstn.value.toString().trim()
-                hashMap["is_tm"]=trademark.toString()
-                hashMap["is_pvt_ltd"]=privateLimited.toString()
+//                hashMap["is_tm"]=trademark.toString()
+//                hashMap["is_pvt_ltd"]=privateLimited.toString()
                 hashMap["whatsapp"]=viemodel.whatsapp.value.toString().trim()
-                hashMap["facebook"]=viemodel.facebook.value.toString().trim()
-                hashMap["instagram"]=viemodel.instagram.value.toString().trim()
-                hashMap["linkedin"]=viemodel.linkedin.value.toString().trim()
+//                hashMap["facebook"]=viemodel.facebook.value.toString().trim()
+//                hashMap["instagram"]=viemodel.instagram.value.toString().trim()
+//                hashMap["linkedin"]=viemodel.linkedin.value.toString().trim()
                 hashMap["website"]=viemodel.webisite.value.toString().trim()
-                hashMap["is_head_office"]=headOffice.toString()
-                hashMap["is_multi_store"]=mulitstore.toString()
-                hashMap["multi_store_name"]=viemodel.multistore_name.value.toString().trim()
+//                hashMap["is_head_office"]=headOffice.toString()
+//                hashMap["is_multi_store"]=mulitstore.toString()
+//                hashMap["multi_store_name"]=viemodel.multistore_name.value.toString().trim()
                 shop_id?.let {
                     hashMap["shop_id"]=shop_id.toString()
                 }

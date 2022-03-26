@@ -1,6 +1,7 @@
 package com.hawks.hawksbuziness.ui.activity
 
 import android.Manifest
+import android.content.Context
 import android.content.pm.PackageManager
 import android.location.Geocoder
 import java.util.concurrent.TimeUnit
@@ -9,9 +10,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Looper
 import android.util.Log
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
@@ -27,6 +32,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import javax.inject.Inject
 import com.hawks.hawksbuziness.R
+import com.hawks.hawksbuziness.utill.onBackPressedListener
 
 
 @AndroidEntryPoint
@@ -53,6 +59,8 @@ class MainActivity : AppCompatActivity() {
     // This will store current location info
     private var currentLocation: Location? = null
 
+    var callback:onBackPressedListener?=null
+
 
 
     private val viewModel by viewModels<HomeViemodel>()
@@ -61,12 +69,18 @@ class MainActivity : AppCompatActivity() {
         binding=DataBindingUtil.setContentView(this,R.layout.activity_main)
         navController=findNavController(R.id.nav_host_fragment)
         binding.bottomNavView.setupWithNavController(navController)
+        val nav_menu=binding.bottomNavView.menu
+        val home=nav_menu.findItem(R.id.homeFragment)
+        home.setOnMenuItemClickListener {
 
-        // setting user id for testing purpose
-//        preferenceManger.saveId("2")
+            navController.navigate(R.id.homeFragment)
+            false
+        }
+
 
         viewModel.getCategories()
         viewModel.getPlaces()
+        viewModel.getLanguages()
         observeData()
 
         initializeLocation()
@@ -109,9 +123,6 @@ class MainActivity : AppCompatActivity() {
                     val geocode=Geocoder(this@MainActivity)
                     val address=geocode.getFromLocation(latitude!!,longitude!!,10)
 
-
-
-                    Log.e("TAG", "onLocationResult: $latitude $longitude " )
                     // use latitude and longitude as per your need
                 } ?: {
 //                    Log.d(TAG, "Location information isn't available.")
@@ -134,11 +145,7 @@ class MainActivity : AppCompatActivity() {
             fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, Looper.myLooper())
         }
 
-
-
     }
-
-
 
     private fun observeData(){
         viewModel.responseCategory.observe(this, Observer {
@@ -162,12 +169,25 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        viewModel.getAllPlces().observe(this, Observer {
-            Log.e("TAG", "observeData: $it")
+        viewModel.response_language.observe(this, Observer {
+            when(it){
+
+                is ResponceState.Succes->{
+                    viewModel.insertLanguage(it.result.data)
+                }
+                else -> {
+
+                }
+            }
         })
+
+//        viewModel.getAllPlces().observe(this, Observer {
+//            Log.e("TAG", "observeData: $it")
+//        })
 
 
     }
+
 
 
 
@@ -180,24 +200,23 @@ class MainActivity : AppCompatActivity() {
             navController.navigate(R.id.homeFragment);
         }else if (fragmentName.equals("UPDATE")){
             navController.navigateUp()
-        }else {
-            if (backPressedOnce){
-                finish()
-                GlobalScope.launch {
-                    delay(3000)
-                    backPressedOnce=false
-                }
-            }else{
-                Toast.makeText(this, "Press more", Toast.LENGTH_SHORT).show()
-                backPressedOnce=true
-            }
-
+        }else if(fragmentName.equals("HOME")){
+            callback?.onBackPressed()
+        }else{
+            super.onBackPressed()
         }
 
     }
     companion object{
         var fragmentName="HOME"
+
     }
+
+
+    fun setOnBackPressedListenter(onBackPressedListener: onBackPressedListener){
+        this.callback=onBackPressedListener
+    }
+
 
 
 

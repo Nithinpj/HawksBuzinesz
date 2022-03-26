@@ -1,5 +1,6 @@
 package com.hawks.hawksbuziness.preferences
 
+import android.animation.ValueAnimator
 import android.content.SharedPreferences
 import javax.inject.Inject
 
@@ -10,6 +11,8 @@ class PreferenceManger @Inject constructor(val sharedPreferences: SharedPreferen
         const val LATITUDE = "LATITUDE"
         const val LONGITUDE = "LONGITUDE"
         const val COUNTRY = "COUNTRY"
+        const val PLACE="PLACE"
+        const val LANGUGAGE="LANGUAGE"
     }
 
     private fun setPreferenceData(key: String, value: String) {
@@ -47,6 +50,12 @@ class PreferenceManger @Inject constructor(val sharedPreferences: SharedPreferen
     }
 
     fun getCountry():String?=sharedPreferences.getString(COUNTRY,"").toString()
+
+    fun savePlace(value: String) =setPreferenceData(PLACE,value)
+    fun getPlace():String?=sharedPreferences.getString(PLACE,"").toString()
+
+    fun saveLanguage(value: String)=setPreferenceData(LANGUGAGE,value)
+    fun getLangugae():String=sharedPreferences.getString(LANGUGAGE,"").toString()
 
 
     fun removeAll() {

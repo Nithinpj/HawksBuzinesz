@@ -18,9 +18,10 @@
 
         <ImageView
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/img_white_appname"
-            app:tint="@color/app_color"
+            android:layout_height="@dimen/dp30"
+            android:src="@drawable/businez_logo"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>

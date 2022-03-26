@@ -1,10 +1,11 @@
 package com.hawks.hawksbuziness.model.languages
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "language")
 data class Data(
-    val created: String,
-    val delete_status: Int,
-    val deleted_at: Any,
-    val deleted_by: Any,
+    @PrimaryKey
     val id: Int,
     val language: String,
     val status: Int,

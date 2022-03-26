@@ -51,19 +51,23 @@ public class BR {
 
   public static final int place = 24;
 
-  public static final int private_limited = 25;
+  public static final int preference = 25;
 
-  public static final int referal = 26;
+  public static final int private_limited = 26;
 
-  public static final int shop = 27;
+  public static final int referal = 27;
 
-  public static final int shop_name = 28;
+  public static final int shop = 28;
 
-  public static final int trade_mark = 29;
+  public static final int shop_name = 29;
 
-  public static final int viewmodel = 30;
+  public static final int trade_mark = 30;
 
-  public static final int webisite = 31;
+  public static final int viemodel = 31;
 
-  public static final int whatsapp = 32;
+  public static final int viewmodel = 32;
+
+  public static final int webisite = 33;
+
+  public static final int whatsapp = 34;
 }

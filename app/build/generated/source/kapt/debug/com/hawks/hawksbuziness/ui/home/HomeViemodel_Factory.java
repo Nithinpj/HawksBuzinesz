@@ -2,6 +2,7 @@
 package com.hawks.hawksbuziness.ui.home;
 
 import com.hawks.hawksbuziness.local.dao.CategoryDao;
+import com.hawks.hawksbuziness.local.dao.LangugeDao;
 import com.hawks.hawksbuziness.local.dao.PlaceDao;
 import com.hawks.hawksbuziness.repositarory.BusinessRepository;
 import dagger.internal.DaggerGenerated;
@@ -20,25 +21,30 @@ public final class HomeViemodel_Factory implements Factory<HomeViemodel> {
 
   private final Provider<PlaceDao> placeDaoProvider;
 
+  private final Provider<LangugeDao> languageDaoProvider;
+
   public HomeViemodel_Factory(Provider<BusinessRepository> repositoryProvider,
-      Provider<CategoryDao> daoProvider, Provider<PlaceDao> placeDaoProvider) {
+      Provider<CategoryDao> daoProvider, Provider<PlaceDao> placeDaoProvider,
+      Provider<LangugeDao> languageDaoProvider) {
     this.repositoryProvider = repositoryProvider;
     this.daoProvider = daoProvider;
     this.placeDaoProvider = placeDaoProvider;
+    this.languageDaoProvider = languageDaoProvider;
   }
 
   @Override
   public HomeViemodel get() {
-    return newInstance(repositoryProvider.get(), daoProvider.get(), placeDaoProvider.get());
+    return newInstance(repositoryProvider.get(), daoProvider.get(), placeDaoProvider.get(), languageDaoProvider.get());
   }
 
   public static HomeViemodel_Factory create(Provider<BusinessRepository> repositoryProvider,
-      Provider<CategoryDao> daoProvider, Provider<PlaceDao> placeDaoProvider) {
-    return new HomeViemodel_Factory(repositoryProvider, daoProvider, placeDaoProvider);
+      Provider<CategoryDao> daoProvider, Provider<PlaceDao> placeDaoProvider,
+      Provider<LangugeDao> languageDaoProvider) {
+    return new HomeViemodel_Factory(repositoryProvider, daoProvider, placeDaoProvider, languageDaoProvider);
   }
 
   public static HomeViemodel newInstance(BusinessRepository repository, CategoryDao dao,
-      PlaceDao placeDao) {
-    return new HomeViemodel(repository, dao, placeDao);
+      PlaceDao placeDao, LangugeDao languageDao) {
+    return new HomeViemodel(repository, dao, placeDao, languageDao);
   }
 }
