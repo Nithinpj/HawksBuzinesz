@@ -94,7 +94,6 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun sendOtp(number: String) {
-        Log.e("TAG",number)
         profileViewModel.sendOtp(number.trim())
         profileViewModel.sendLiveData.observe(this, Observer {
             when (it) {
@@ -107,9 +106,15 @@ class SignupActivity : AppCompatActivity() {
                     progressDialog.show()
                 }
                 is ResponceState.Succes -> {
+                    if (it.result.status!=0){
+                        Toast.makeText(this, "Send otp Succesfull", Toast.LENGTH_SHORT).show()
+                        user_id = it.result.data.user_id
+                    }else{
+                        Toast.makeText(this, it.result.message, Toast.LENGTH_SHORT).show()
+
+                    }
                     progressDialog.dismiss()
-                    Toast.makeText(this, "Send otp Succesfull", Toast.LENGTH_SHORT).show()
-                    user_id = it.result.data.user_id
+
 
                 }
             }

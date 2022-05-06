@@ -1,8 +1,8 @@
 package com.hawks.hawksbuziness.ui.support
 
-import android.R
+import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,21 +12,25 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.hawks.hawksbuziness.BuildConfig
 import com.hawks.hawksbuziness.databinding.FragmentSupportBinding
 import com.hawks.hawksbuziness.preferences.PreferenceManger
 import com.hawks.hawksbuziness.ui.activity.MainActivity
 import com.hawks.hawksbuziness.utill.*
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.app_bar.view.*
 import javax.inject.Inject
 
 
 @AndroidEntryPoint
 class SupportFragment : Fragment() {
 
-     private val viewmodel:SupportViewmodel by viewModels<SupportViewmodel>()
-    private lateinit var binding:FragmentSupportBinding
-    private  var dialog: BottomSheetDialog?=null
+    private val viewmodel: SupportViewmodel by viewModels<SupportViewmodel>()
+    private lateinit var binding: FragmentSupportBinding
+    private var dialog: BottomSheetDialog? = null
+    private lateinit var progressDialog: ProgressDialog
+
     @Inject
     lateinit var preferenceManger: PreferenceManger
 
@@ -37,9 +41,11 @@ class SupportFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding= FragmentSupportBinding.inflate(inflater)
-        MainActivity.fragmentName="SUPPORT"
-        binding.click=ClickHandler()
+        binding = FragmentSupportBinding.inflate(inflater)
+        MainActivity.fragmentName = "SUPPORT"
+        binding.click = ClickHandler()
+        progressDialog = ProgressDialog(requireActivity())
+        progressDialog.setCanceledOnTouchOutside(false)
         return binding.root
     }
 
@@ -49,36 +55,45 @@ class SupportFragment : Fragment() {
             raiseTicket()
         }
 
+        binding.appbar.share.setOnClickListener {
+            shareApp()
+        }
+
     }
 
     private fun raiseTicket() {
-        if (!preferenceManger.getUserId().isNullOrEmpty()){
-            viewmodel.raiseTicket(binding.title.text.toString(),binding.message.text.toString()).observe(requireActivity(),
-                Observer {
-                    when(it){
-                        is ResponceState.Failiure -> {
+        if (!preferenceManger.getUserId().isNullOrEmpty()) {
+            viewmodel.raiseTicket(binding.title.text.toString(), binding.message.text.toString())
+                .observe(requireActivity(),
+                    Observer {
+                        when (it) {
+                            is ResponceState.Failiure -> {
+                                progressDialog.dismiss()
+                            }
+                            is ResponceState.Loading -> {
+                                progressDialog.show()
+                            }
+                            is ResponceState.Succes -> {
 
-                        }
-                        is ResponceState.Loading -> {
-                            Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
-                        }
-                        is ResponceState.Succes -> {
+                                progressDialog.dismiss()
+                                showSnackBar(requireActivity().container)
 
-                            showSnackBar(requireActivity().container)
-
-                            binding.title.setText("")
-                            binding.message.setText("")
+                                binding.title.setText("")
+                                binding.message.setText("")
+                            }
                         }
-                    }
-                })
-        }else{
+                    })
+        } else {
             showBottomDialog()
         }
 
     }
 
     private fun showBottomDialog() {
-        dialog = BottomSheetDialog(requireContext(), com.hawks.hawksbuziness.R.style.BottomSheetDialogTheme)
+        dialog = BottomSheetDialog(
+            requireContext(),
+            com.hawks.hawksbuziness.R.style.CustomizedBottomDialogStyle
+        )
         dialog?.setContentView(com.hawks.hawksbuziness.R.layout.bottomsheet_login)
 
         val otp = dialog?.findViewById<EditText>(com.hawks.hawksbuziness.R.id.otp)
@@ -87,7 +102,7 @@ class SupportFragment : Fragment() {
         val submit = dialog?.findViewById<View>(com.hawks.hawksbuziness.R.id.submit)
 
         sendotp?.setOnClickListener {
-            if (!number_edit!!.text!!.isEmpty()&& number_edit.text.length==10) {
+            if (!number_edit!!.text!!.isEmpty() && number_edit.text.length == 10) {
                 sendOtp(number_edit.text.toString())
             } else {
                 showToast("Enter a valid number")
@@ -108,12 +123,15 @@ class SupportFragment : Fragment() {
             when (it) {
                 is ResponceState.Failiure -> {
                     showToast(it.message)
+                    progressDialog.dismiss()
 
 
                 }
                 is ResponceState.Loading -> {
+                    progressDialog.show()
                 }
                 is ResponceState.Succes -> {
+                    progressDialog.dismiss()
                     showToast("Login succesfull")
 
                     preferenceManger.saveId(it.result.data.id.toString())
@@ -133,14 +151,21 @@ class SupportFragment : Fragment() {
             when (it) {
                 is ResponceState.Failiure -> {
                     showToast(it.message)
+                    progressDialog.dismiss()
 
                 }
                 is ResponceState.Loading -> {
+                    progressDialog.show()
 
                 }
                 is ResponceState.Succes -> {
-                    showToast("Send otp Succesfull")
-                    user_id = it.result.data.user_id
+                    if (it.result.status != 0) {
+                        showToast("Send otp Succesfull")
+                        user_id = it.result.data.user_id
+                    } else {
+                        showToast(it.result.message)
+                    }
+                    progressDialog.dismiss()
 
                 }
             }
@@ -148,20 +173,34 @@ class SupportFragment : Fragment() {
 
     }
 
-    inner class ClickHandler(){
-        fun whatsapp(view: View){
-            whatsApp()
+    inner class ClickHandler() {
+        fun whatsapp(view: View) {
+            whatsApp(preferenceManger.getWANumber())
         }
 
-        fun dial(view: View){
-            Dial()
+        fun dial(view: View) {
+            Dial(preferenceManger.getNumber())
         }
 
-        fun email(view: View){
-            email()
+        fun email(view: View) {
+            email(preferenceManger.getEmail())
         }
     }
 
+    fun shareApp() {
+        try {
+            val shareIntent = Intent(Intent.ACTION_SEND)
+            shareIntent.type = "text/plain"
+            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "BusinzApp")
+
+            var shareMessage =
+                "https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}"
+            shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage)
+            startActivity(Intent.createChooser(shareIntent, "Select app want to share.."))
+        } catch (e: Exception) {
+
+        }
+    }
 
 
 }

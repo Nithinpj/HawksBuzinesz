@@ -15,6 +15,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.hawks.hawksbuziness.R
+import com.hawks.hawksbuziness.TermsPrivacyFragment
 import com.hawks.hawksbuziness.databinding.FragmentSettingsBinding
 import com.hawks.hawksbuziness.local.dao.ProfileDao
 import com.hawks.hawksbuziness.model.places.Data
@@ -22,6 +23,7 @@ import com.hawks.hawksbuziness.preferences.PreferenceManger
 import com.hawks.hawksbuziness.ui.activity.MainActivity
 import com.hawks.hawksbuziness.ui.activity.SignupActivity
 import com.hawks.hawksbuziness.ui.shops.ShopViewmodel
+import com.hawks.hawksbuziness.utill.RemoteConfigUtils
 import com.hawks.hawksbuziness.utill.showToast
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -88,12 +90,27 @@ class SettingsFragment : Fragment() {
         }
 
         binding.locationSelect.setOnClickListener {
-            PlaceDialogFragment{
+            PlaceDialogFragment(binding.placeData.text.toString()){
                 it->onclicked(it)
             }.show(requireActivity().supportFragmentManager,"placedialog")
         }
         binding.languageSelect.setOnClickListener {
-            LanguageDialogFragment{it->selectLanguage(it)}.show(requireActivity().supportFragmentManager,"languageDailog")
+            LanguageDialogFragment(binding.language.text.toString()){it->selectLanguage(it)}.show(requireActivity().supportFragmentManager,"languageDailog")
+        }
+
+        binding.terms.setOnClickListener {
+            val bundle=Bundle()
+           bundle.putString("value","terms")
+            findNavController().navigate(R.id.termsPrivacyFragment,bundle)
+        }
+        binding.privacy.setOnClickListener {
+            val bundle=Bundle()
+            bundle.putString("value","privacy")
+            findNavController().navigate(R.id.termsPrivacyFragment,bundle)
+        }
+
+        binding.appbar.back.setOnClickListener {
+            findNavController().navigateUp()
         }
 
 
@@ -115,7 +132,6 @@ class SettingsFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        Log.e("TAG", "onResume: " )
         if (preferenceManger.getUserId().isNullOrEmpty()){
             binding.loginLogut.text="Login"
         }else{

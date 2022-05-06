@@ -42,6 +42,10 @@ class ReferalActivity : AppCompatActivity() {
             }
 
         }
+
+        binding.termsText.setOnClickListener {
+            startActivity(Intent(this,TermsAndConditions::class.java))
+        }
 //        viewModel.getCountries()
 //
 //        viewModel.response.observe(this, Observer {
@@ -95,6 +99,7 @@ class ReferalActivity : AppCompatActivity() {
         fun click(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
             val item = parent!!.selectedItem as CountryLocal
             preferenceManger.saveCountry(item.id.toString())
+            preferenceManger.saveLanguage("English")
         }
     }
 

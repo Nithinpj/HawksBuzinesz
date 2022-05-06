@@ -7,15 +7,12 @@
             name="viewmodel"
             type="com.hawks.hawksbuziness.ui.shops.ShopViewmodel" />
     </data>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bottomsheetcontainer"
-        >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:id="@+id/bottomsheetcontainer"
             android:background="@drawable/round_card">
 
 
@@ -28,7 +25,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp20"
                 android:layout_marginRight="@dimen/dp20"
                 android:orientation="vertical"
@@ -48,7 +45,7 @@
                     <EditText
                         android:id="@+id/phone"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="@dimen/dp5"
                         android:layout_toLeftOf="@+id/sendopt"
@@ -92,10 +89,6 @@
                     android:singleLine="true"
                     android:textSize="15sp" />
 
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dp35" />
-
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/submit"
                     android:layout_width="match_parent"
@@ -121,7 +114,6 @@
 
 
         </LinearLayout>
-    </ScrollView>
 
 
 </layout>

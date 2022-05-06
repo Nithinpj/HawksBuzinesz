@@ -18,9 +18,9 @@ class RemoteDatasource @Inject constructor(){
             if (BuildConfig.DEBUG) {
                 this.addInterceptor(loggingInterceptor)
             }
-            this.connectTimeout(30, TimeUnit.SECONDS)
-            this.readTimeout(30, TimeUnit.SECONDS)
-            this.writeTimeout(30, TimeUnit.SECONDS)
+            this.connectTimeout(1, TimeUnit.MINUTES)
+            this.readTimeout(1, TimeUnit.MINUTES)
+            this.writeTimeout(1, TimeUnit.MINUTES)
                 .addInterceptor {chain->
                     val request = chain.request().newBuilder().addHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik5pZ2hpbCIsImlhdCI6MTUxNjIzOTAyMn0.bIs9yMJTc868M9paBXwMEwCNsykhAYo7yYp_DA7BlnM").build()
                     chain.proceed(request)

@@ -10,6 +10,7 @@ import com.hawks.hawksbuziness.databinding.ActivityEditBindingImpl;
 import com.hawks.hawksbuziness.databinding.ActivityMainBindingImpl;
 import com.hawks.hawksbuziness.databinding.ActivityReferalBindingImpl;
 import com.hawks.hawksbuziness.databinding.ActivitySignupBindingImpl;
+import com.hawks.hawksbuziness.databinding.ActivityTermsAndConditionsBindingImpl;
 import com.hawks.hawksbuziness.databinding.AppBarBackBindingImpl;
 import com.hawks.hawksbuziness.databinding.BottomsheetLoginBindingImpl;
 import com.hawks.hawksbuziness.databinding.FragmentAddUpdateBindingImpl;
@@ -19,6 +20,7 @@ import com.hawks.hawksbuziness.databinding.FragmentProfileFragmentBindingImpl;
 import com.hawks.hawksbuziness.databinding.FragmentSettingsBindingImpl;
 import com.hawks.hawksbuziness.databinding.FragmentSignUpBindingImpl;
 import com.hawks.hawksbuziness.databinding.FragmentSupportBindingImpl;
+import com.hawks.hawksbuziness.databinding.FragmentTermsPrivacyBindingImpl;
 import com.hawks.hawksbuziness.databinding.LayoutPlacesBindingImpl;
 import com.hawks.hawksbuziness.databinding.LayoutShopsBindingImpl;
 import com.hawks.hawksbuziness.databinding.ProfileItemsBindingImpl;
@@ -42,39 +44,44 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ACTIVITYSIGNUP = 4;
 
-  private static final int LAYOUT_APPBARBACK = 5;
+  private static final int LAYOUT_ACTIVITYTERMSANDCONDITIONS = 5;
 
-  private static final int LAYOUT_BOTTOMSHEETLOGIN = 6;
+  private static final int LAYOUT_APPBARBACK = 6;
 
-  private static final int LAYOUT_FRAGMENTADDUPDATE = 7;
+  private static final int LAYOUT_BOTTOMSHEETLOGIN = 7;
 
-  private static final int LAYOUT_FRAGMENTHOME = 8;
+  private static final int LAYOUT_FRAGMENTADDUPDATE = 8;
 
-  private static final int LAYOUT_FRAGMENTLANGUAGE = 9;
+  private static final int LAYOUT_FRAGMENTHOME = 9;
 
-  private static final int LAYOUT_FRAGMENTPROFILEFRAGMENT = 10;
+  private static final int LAYOUT_FRAGMENTLANGUAGE = 10;
 
-  private static final int LAYOUT_FRAGMENTSETTINGS = 11;
+  private static final int LAYOUT_FRAGMENTPROFILEFRAGMENT = 11;
 
-  private static final int LAYOUT_FRAGMENTSIGNUP = 12;
+  private static final int LAYOUT_FRAGMENTSETTINGS = 12;
 
-  private static final int LAYOUT_FRAGMENTSUPPORT = 13;
+  private static final int LAYOUT_FRAGMENTSIGNUP = 13;
 
-  private static final int LAYOUT_LAYOUTPLACES = 14;
+  private static final int LAYOUT_FRAGMENTSUPPORT = 14;
 
-  private static final int LAYOUT_LAYOUTSHOPS = 15;
+  private static final int LAYOUT_FRAGMENTTERMSPRIVACY = 15;
 
-  private static final int LAYOUT_PROFILEITEMS = 16;
+  private static final int LAYOUT_LAYOUTPLACES = 16;
 
-  private static final int LAYOUT_SHOPFRAGMENT = 17;
+  private static final int LAYOUT_LAYOUTSHOPS = 17;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(17);
+  private static final int LAYOUT_PROFILEITEMS = 18;
+
+  private static final int LAYOUT_SHOPFRAGMENT = 19;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(19);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.activity_edit, LAYOUT_ACTIVITYEDIT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.activity_referal, LAYOUT_ACTIVITYREFERAL);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.activity_signup, LAYOUT_ACTIVITYSIGNUP);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.activity_terms_and_conditions, LAYOUT_ACTIVITYTERMSANDCONDITIONS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.app_bar_back, LAYOUT_APPBARBACK);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.bottomsheet_login, LAYOUT_BOTTOMSHEETLOGIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.fragment_add_update, LAYOUT_FRAGMENTADDUPDATE);
@@ -84,6 +91,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.fragment_settings, LAYOUT_FRAGMENTSETTINGS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.fragment_sign_up, LAYOUT_FRAGMENTSIGNUP);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.fragment_support, LAYOUT_FRAGMENTSUPPORT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.fragment_terms_privacy, LAYOUT_FRAGMENTTERMSPRIVACY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.layout_places, LAYOUT_LAYOUTPLACES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.layout_shops, LAYOUT_LAYOUTSHOPS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.hawks.hawksbuziness.R.layout.profile_items, LAYOUT_PROFILEITEMS);
@@ -122,6 +130,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivitySignupBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_signup is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYTERMSANDCONDITIONS: {
+          if ("layout/activity_terms_and_conditions_0".equals(tag)) {
+            return new ActivityTermsAndConditionsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_terms_and_conditions is invalid. Received: " + tag);
         }
         case  LAYOUT_APPBARBACK: {
           if ("layout/app_bar_back_0".equals(tag)) {
@@ -176,6 +190,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new FragmentSupportBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_support is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTTERMSPRIVACY: {
+          if ("layout/fragment_terms_privacy_0".equals(tag)) {
+            return new FragmentTermsPrivacyBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_terms_privacy is invalid. Received: " + tag);
         }
         case  LAYOUT_LAYOUTPLACES: {
           if ("layout/layout_places_0".equals(tag)) {
@@ -288,13 +308,14 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(17);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(19);
 
     static {
       sKeys.put("layout/activity_edit_0", com.hawks.hawksbuziness.R.layout.activity_edit);
       sKeys.put("layout/activity_main_0", com.hawks.hawksbuziness.R.layout.activity_main);
       sKeys.put("layout/activity_referal_0", com.hawks.hawksbuziness.R.layout.activity_referal);
       sKeys.put("layout/activity_signup_0", com.hawks.hawksbuziness.R.layout.activity_signup);
+      sKeys.put("layout/activity_terms_and_conditions_0", com.hawks.hawksbuziness.R.layout.activity_terms_and_conditions);
       sKeys.put("layout/app_bar_back_0", com.hawks.hawksbuziness.R.layout.app_bar_back);
       sKeys.put("layout/bottomsheet_login_0", com.hawks.hawksbuziness.R.layout.bottomsheet_login);
       sKeys.put("layout/fragment_add_update_0", com.hawks.hawksbuziness.R.layout.fragment_add_update);
@@ -304,6 +325,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_settings_0", com.hawks.hawksbuziness.R.layout.fragment_settings);
       sKeys.put("layout/fragment_sign_up_0", com.hawks.hawksbuziness.R.layout.fragment_sign_up);
       sKeys.put("layout/fragment_support_0", com.hawks.hawksbuziness.R.layout.fragment_support);
+      sKeys.put("layout/fragment_terms_privacy_0", com.hawks.hawksbuziness.R.layout.fragment_terms_privacy);
       sKeys.put("layout/layout_places_0", com.hawks.hawksbuziness.R.layout.layout_places);
       sKeys.put("layout/layout_shops_0", com.hawks.hawksbuziness.R.layout.layout_shops);
       sKeys.put("layout/profile_items_0", com.hawks.hawksbuziness.R.layout.profile_items);

@@ -36,13 +36,13 @@ public class FragmentSupportBindingImpl extends FragmentSupportBinding  {
         super(bindingComponent, root, 0
             , (com.airbnb.lottie.LottieAnimationView) bindings[5]
             , (android.view.View) bindings[4]
-            , (com.google.android.material.button.MaterialButton) bindings[2]
+            , (androidx.cardview.widget.CardView) bindings[2]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
-            , (com.google.android.material.button.MaterialButton) bindings[3]
+            , (androidx.cardview.widget.CardView) bindings[3]
             , (android.widget.EditText) bindings[7]
             , (com.google.android.material.button.MaterialButton) bindings[8]
             , (android.widget.EditText) bindings[6]
-            , (com.google.android.material.button.MaterialButton) bindings[1]
+            , (androidx.cardview.widget.CardView) bindings[1]
             );
         this.call.setTag(null);
         this.coordinator.setTag(null);

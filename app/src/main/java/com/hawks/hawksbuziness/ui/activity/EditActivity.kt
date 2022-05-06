@@ -25,10 +25,7 @@ import com.hawks.hawksbuziness.databinding.ActivityEditBinding
 import com.hawks.hawksbuziness.model.profile.Auth
 import com.hawks.hawksbuziness.preferences.PreferenceManger
 import com.hawks.hawksbuziness.ui.profile.ProfileViewModel
-import com.hawks.hawksbuziness.utill.ResponceState
-import com.hawks.hawksbuziness.utill.URIPathHelper
-import com.hawks.hawksbuziness.utill.fixRotation
-import com.hawks.hawksbuziness.utill.readWritePermission
+import com.hawks.hawksbuziness.utill.*
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.ByteArrayOutputStream
 import java.text.SimpleDateFormat
@@ -99,7 +96,7 @@ class EditActivity : AppCompatActivity() {
         profileViewModel.gender.value = result.gender ?: ""
         profileViewModel.image.value = result.image ?: ""
         profileViewModel.mobile.value = result.mobile ?: ""
-        profileViewModel.name.value = result.username ?: ""
+        profileViewModel.name.value = result.name ?: ""
         profileViewModel.nationality.value = result.nationality ?: ""
         profileViewModel.place.value = result.place ?: ""
         profileViewModel.country.value = result.country ?: ""
@@ -145,6 +142,7 @@ class EditActivity : AppCompatActivity() {
         val filePath = uriPathHelper.getPath(this,uri)
 
         val rotated=bitmap.fixRotation(filePath!!)
+
 
         binding.profileIcon.setImageBitmap(rotated)
 
@@ -193,7 +191,7 @@ class EditActivity : AppCompatActivity() {
             hashMap["email"]=profileViewModel.email.value.toString()
             hashMap["nationality"]=profileViewModel.nationality.value.toString()
             hashMap["country"]=profileViewModel.country.value.toString()
-            hashMap["username"]=profileViewModel.name.value.toString()
+            hashMap["name"]=profileViewModel.name.value.toString()
             enode_Image?.let {
                 hashMap["image"]=it
             }

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-47:12
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-57:12
 MERGED from [androidx.databinding:databinding-adapters:7.1.1] /home/nithin/.gradle/caches/transforms-3/ac93132c2faaa0f1f92b22fcd2129777/transformed/databinding-adapters-7.1.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-ktx:7.1.1] /home/nithin/.gradle/caches/transforms-3/d107dae339dc039c9cf77a9d9d90f2a7/transformed/databinding-ktx-7.1.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:7.1.1] /home/nithin/.gradle/caches/transforms-3/ec159db6cc3d46403d1d2de583dfd195/transformed/databinding-runtime-7.1.1/AndroidManifest.xml:17:1-24:12
@@ -39,15 +39,17 @@ MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gra
 MERGED from [com.google.android.gms:play-services-base:17.2.1] /home/nithin/.gradle/caches/transforms-3/779a42e7f23f77de11ad33be86f5ae0f/transformed/play-services-base-17.2.1/AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.firebase:firebase-crashlytics-ktx:18.2.9] /home/nithin/.gradle/caches/transforms-3/f4e30b8c3d0a5d1b627bd0ca486020c6/transformed/firebase-crashlytics-ktx-18.2.9/AndroidManifest.xml:15:1-33:12
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/6fca47dcf6241ba4c44b2ec5ee070652/transformed/firebase-analytics-ktx-20.1.0/AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.firebase:firebase-config:21.0.2] /home/nithin/.gradle/caches/transforms-3/5f7c69f8abeab03a009c808639d34782/transformed/firebase-config-21.0.2/AndroidManifest.xml:17:1-38:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/c3426f5ee0fbb46170acff0deca56295/transformed/firebase-common-ktx-20.1.0/AndroidManifest.xml:2:1-21:12
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradle/caches/transforms-3/69c8a0ca4a5d209baad7867a7882ef9e/transformed/firebase-crashlytics-18.2.9/AndroidManifest.xml:2:1-24:12
+MERGED from [com.google.firebase:firebase-abt:21.0.1] /home/nithin/.gradle/caches/transforms-3/1c2c3d4d4c25a8e6242bf31f8a5d601b/transformed/firebase-abt-21.0.1/AndroidManifest.xml:2:1-19:12
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] /home/nithin/.gradle/caches/transforms-3/4913034a2ae274570a8fd95cfcde6bac/transformed/firebase-analytics-20.1.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /home/nithin/.gradle/caches/transforms-3/d8bbb464f1e74ff45cfef1443d73dc3a/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /home/nithin/.gradle/caches/transforms-3/96a883a721371ebd07b2377ecbc1095b/transformed/firebase-installations-17.0.1/AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-common:20.1.0] /home/nithin/.gradle/caches/transforms-3/1d46a739865b056261721fffae9b120b/transformed/firebase-common-20.1.0/AndroidManifest.xml:15:1-40:12
-MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/nithin/.gradle/caches/transforms-3/b52334e735a2ae52a32835baa4321b0d/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-installations-interop:17.0.1] /home/nithin/.gradle/caches/transforms-3/da33b939e9a0a37acf0c41fa2be9fd30/transformed/firebase-installations-interop-17.0.1/AndroidManifest.xml:15:1-23:12
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /home/nithin/.gradle/caches/transforms-3/ef03d591248e45d09526d03e7e024f8b/transformed/play-services-tasks-18.0.1/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/nithin/.gradle/caches/transforms-3/b52334e735a2ae52a32835baa4321b0d/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:17:1-46:12
 MERGED from [com.google.android.gms:play-services-measurement-sdk:20.1.0] /home/nithin/.gradle/caches/transforms-3/b7e5a5ca5c2175838985c5474a9aa9a0/transformed/play-services-measurement-sdk-20.1.0/AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] /home/nithin/.gradle/caches/transforms-3/1aa3154bba8a04c1d7e0e432bcf8b9e4/transformed/play-services-measurement-impl-20.1.0/AndroidManifest.xml:17:1-31:12
@@ -112,20 +114,20 @@ MERGED from [com.google.android.datatransport:transport-api:3.0.0] /home/nithin/
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/nithin/.gradle/caches/transforms-3/cc044bb5a7574c1df09ddb8263dab509/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.40.5] /home/nithin/.gradle/caches/transforms-3/67b464f0c19a2a5038d89b257977d4c5/transformed/dagger-lint-aar-2.40.5/AndroidManifest.xml:16:1-19:12
 MERGED from [com.android.volley:volley:1.2.1] /home/nithin/.gradle/caches/transforms-3/c67b7b7a98a504ee0501eb5a93fd7a7f/transformed/volley-1.2.1/AndroidManifest.xml:2:1-7:12
-INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-57:12
 	package
 		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:3:5-38
 		INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
 		INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-47:12
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-57:12
 		INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-47:12
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:1-57:12
 		INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:2:11-69
@@ -135,6 +137,8 @@ MERGED from [com.google.android.libraries.places:places:2.5.0] /home/nithin/.gra
 MERGED from [com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/644f27884326a9e38d25592ce5b8e6c6/transformed/places-2.5.0/AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/6833b3847c6281c7d0343b6d68c5897a/transformed/play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/6833b3847c6281c7d0343b6d68c5897a/transformed/play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-config:21.0.2] /home/nithin/.gradle/caches/transforms-3/5f7c69f8abeab03a009c808639d34782/transformed/firebase-config-21.0.2/AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-config:21.0.2] /home/nithin/.gradle/caches/transforms-3/5f7c69f8abeab03a009c808639d34782/transformed/firebase-config-21.0.2/AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradle/caches/transforms-3/69c8a0ca4a5d209baad7867a7882ef9e/transformed/firebase-crashlytics-18.2.9/AndroidManifest.xml:10:5-67
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradle/caches/transforms-3/69c8a0ca4a5d209baad7867a7882ef9e/transformed/firebase-crashlytics-18.2.9/AndroidManifest.xml:10:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /home/nithin/.gradle/caches/transforms-3/d8bbb464f1e74ff45cfef1443d73dc3a/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:22:5-67
@@ -161,26 +165,26 @@ uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:7:5-81
 	android:name
 		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:7:22-78
-uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:8:5-85
-	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:8:22-82
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:9:5-75
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:8:5-76
 MERGED from [com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/644f27884326a9e38d25592ce5b8e6c6/transformed/places-2.5.0/AndroidManifest.xml:10:5-76
 MERGED from [com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/644f27884326a9e38d25592ce5b8e6c6/transformed/places-2.5.0/AndroidManifest.xml:10:5-76
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:9:22-73
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:8:22-73
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:10:5-79
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:9:5-80
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:10:22-77
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:9:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:11:5-80
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:10:5-81
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:11:22-78
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:10:22-78
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:11:5-71
+	android:name
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:11:22-69
 application
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:14:5-45:19
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:13:5-55:19
 MERGED from [androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/9361c9c081d0b9cb3a51e23a3784c2a1/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0] /home/nithin/.gradle/caches/transforms-3/9361c9c081d0b9cb3a51e23a3784c2a1/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
 MERGED from [com.airbnb.android:lottie:5.0.3] /home/nithin/.gradle/caches/transforms-3/c598b4bbadbd9b22f575c0f3e748e62b/transformed/lottie-5.0.3/AndroidManifest.xml:9:5-20
@@ -203,10 +207,14 @@ MERGED from [com.google.firebase:firebase-crashlytics-ktx:18.2.9] /home/nithin/.
 MERGED from [com.google.firebase:firebase-crashlytics-ktx:18.2.9] /home/nithin/.gradle/caches/transforms-3/f4e30b8c3d0a5d1b627bd0ca486020c6/transformed/firebase-crashlytics-ktx-18.2.9/AndroidManifest.xml:23:5-31:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/6fca47dcf6241ba4c44b2ec5ee070652/transformed/firebase-analytics-ktx-20.1.0/AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/6fca47dcf6241ba4c44b2ec5ee070652/transformed/firebase-analytics-ktx-20.1.0/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-config:21.0.2] /home/nithin/.gradle/caches/transforms-3/5f7c69f8abeab03a009c808639d34782/transformed/firebase-config-21.0.2/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-config:21.0.2] /home/nithin/.gradle/caches/transforms-3/5f7c69f8abeab03a009c808639d34782/transformed/firebase-config-21.0.2/AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/c3426f5ee0fbb46170acff0deca56295/transformed/firebase-common-ktx-20.1.0/AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/c3426f5ee0fbb46170acff0deca56295/transformed/firebase-common-ktx-20.1.0/AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradle/caches/transforms-3/69c8a0ca4a5d209baad7867a7882ef9e/transformed/firebase-crashlytics-18.2.9/AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradle/caches/transforms-3/69c8a0ca4a5d209baad7867a7882ef9e/transformed/firebase-crashlytics-18.2.9/AndroidManifest.xml:14:5-22:19
+MERGED from [com.google.firebase:firebase-abt:21.0.1] /home/nithin/.gradle/caches/transforms-3/1c2c3d4d4c25a8e6242bf31f8a5d601b/transformed/firebase-abt-21.0.1/AndroidManifest.xml:11:5-17:19
+MERGED from [com.google.firebase:firebase-abt:21.0.1] /home/nithin/.gradle/caches/transforms-3/1c2c3d4d4c25a8e6242bf31f8a5d601b/transformed/firebase-abt-21.0.1/AndroidManifest.xml:11:5-17:19
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] /home/nithin/.gradle/caches/transforms-3/4913034a2ae274570a8fd95cfcde6bac/transformed/firebase-analytics-20.1.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] /home/nithin/.gradle/caches/transforms-3/4913034a2ae274570a8fd95cfcde6bac/transformed/firebase-analytics-20.1.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /home/nithin/.gradle/caches/transforms-3/d8bbb464f1e74ff45cfef1443d73dc3a/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:26:5-34:19
@@ -215,10 +223,10 @@ MERGED from [com.google.firebase:firebase-installations:17.0.1] /home/nithin/.gr
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /home/nithin/.gradle/caches/transforms-3/96a883a721371ebd07b2377ecbc1095b/transformed/firebase-installations-17.0.1/AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-common:20.1.0] /home/nithin/.gradle/caches/transforms-3/1d46a739865b056261721fffae9b120b/transformed/firebase-common-20.1.0/AndroidManifest.xml:25:5-38:19
 MERGED from [com.google.firebase:firebase-common:20.1.0] /home/nithin/.gradle/caches/transforms-3/1d46a739865b056261721fffae9b120b/transformed/firebase-common-20.1.0/AndroidManifest.xml:25:5-38:19
-MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/nithin/.gradle/caches/transforms-3/b52334e735a2ae52a32835baa4321b0d/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/nithin/.gradle/caches/transforms-3/b52334e735a2ae52a32835baa4321b0d/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /home/nithin/.gradle/caches/transforms-3/ef03d591248e45d09526d03e7e024f8b/transformed/play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /home/nithin/.gradle/caches/transforms-3/ef03d591248e45d09526d03e7e024f8b/transformed/play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/nithin/.gradle/caches/transforms-3/b52334e735a2ae52a32835baa4321b0d/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/nithin/.gradle/caches/transforms-3/b52334e735a2ae52a32835baa4321b0d/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:28:5-44:19
 MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:28:5-44:19
 MERGED from [com.google.android.gms:play-services-measurement-sdk:20.1.0] /home/nithin/.gradle/caches/transforms-3/b7e5a5ca5c2175838985c5474a9aa9a0/transformed/play-services-measurement-sdk-20.1.0/AndroidManifest.xml:22:5-23:19
@@ -256,63 +264,85 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] /home/nithin/.gradle/caches
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] /home/nithin/.gradle/caches/transforms-3/3b06d0e79b1b3b8b7df06408c495af6d/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:20:9-35
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:19:9-35
 	android:label
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:18:9-41
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:17:9-41
+	android:hardwareAccelerated
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:21:9-44
 	android:roundIcon
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:19:9-54
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:18:9-54
+	android:largeHeap
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:20:9-33
 	android:icon
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:17:9-43
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:16:9-43
 	android:allowBackup
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:15:9-35
 	android:theme
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:21:9-51
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:22:9-51
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:15:9-48
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:14:9-48
+activity#com.hawks.hawksbuziness.ui.activity.TermsAndConditions
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:23:9-26:40
+	android:screenOrientation
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:25:13-49
+	android:exported
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:24:13-59
 activity#com.hawks.hawksbuziness.ui.activity.EditActivity
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:22:9-25:40
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:27:9-31:58
+	android:screenOrientation
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:29:13-49
 	android:exported
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:25:13-37
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:30:13-37
 	android:theme
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:24:13-55
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:31:13-55
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:23:13-53
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:28:13-53
 activity#com.hawks.hawksbuziness.ui.activity.SignupActivity
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:26:9-28:40
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:32:9-35:40
+	android:screenOrientation
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:34:13-49
 	android:exported
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:28:13-37
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:35:13-37
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:27:13-55
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:33:13-55
 activity#com.hawks.hawksbuziness.ui.activity.ReferalActivity
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:29:9-31:40
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:36:9-39:40
+	android:screenOrientation
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:38:13-49
 	android:exported
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:31:13-37
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:30:13-56
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:37:13-56
 activity#com.hawks.hawksbuziness.ui.splash.Splash
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:32:9-40:20
-	android:exported
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:34:13-36
-	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:33:13-45
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:35:13-39:29
-action#android.intent.action.MAIN
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:36:17-69
-	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:36:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:38:17-77
-	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:38:27-74
-activity#com.hawks.hawksbuziness.ui.activity.MainActivity
-ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:41:9-44:55
-	android:windowSoftInputMode
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:44:13-52
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:40:9-49:20
+	android:screenOrientation
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:42:13-49
 	android:exported
 		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:43:13-36
 	android:name
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:42:13-53
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:41:13-45
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:44:13-48:29
+action#android.intent.action.MAIN
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:45:17-69
+	android:name
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:45:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:47:17-77
+	android:name
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:47:27-74
+activity#com.hawks.hawksbuziness.ui.activity.MainActivity
+ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:50:9-54:55
+	android:screenOrientation
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:52:13-49
+	android:windowSoftInputMode
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:54:13-52
+	android:exported
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:53:13-36
+	android:name
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:51:13-53
 uses-sdk
 INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml
@@ -387,10 +417,14 @@ MERGED from [com.google.firebase:firebase-crashlytics-ktx:18.2.9] /home/nithin/.
 MERGED from [com.google.firebase:firebase-crashlytics-ktx:18.2.9] /home/nithin/.gradle/caches/transforms-3/f4e30b8c3d0a5d1b627bd0ca486020c6/transformed/firebase-crashlytics-ktx-18.2.9/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/6fca47dcf6241ba4c44b2ec5ee070652/transformed/firebase-analytics-ktx-20.1.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/6fca47dcf6241ba4c44b2ec5ee070652/transformed/firebase-analytics-ktx-20.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-config:21.0.2] /home/nithin/.gradle/caches/transforms-3/5f7c69f8abeab03a009c808639d34782/transformed/firebase-config-21.0.2/AndroidManifest.xml:21:5-23:41
+MERGED from [com.google.firebase:firebase-config:21.0.2] /home/nithin/.gradle/caches/transforms-3/5f7c69f8abeab03a009c808639d34782/transformed/firebase-config-21.0.2/AndroidManifest.xml:21:5-23:41
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/c3426f5ee0fbb46170acff0deca56295/transformed/firebase-common-ktx-20.1.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/c3426f5ee0fbb46170acff0deca56295/transformed/firebase-common-ktx-20.1.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradle/caches/transforms-3/69c8a0ca4a5d209baad7867a7882ef9e/transformed/firebase-crashlytics-18.2.9/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradle/caches/transforms-3/69c8a0ca4a5d209baad7867a7882ef9e/transformed/firebase-crashlytics-18.2.9/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-abt:21.0.1] /home/nithin/.gradle/caches/transforms-3/1c2c3d4d4c25a8e6242bf31f8a5d601b/transformed/firebase-abt-21.0.1/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-abt:21.0.1] /home/nithin/.gradle/caches/transforms-3/1c2c3d4d4c25a8e6242bf31f8a5d601b/transformed/firebase-abt-21.0.1/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] /home/nithin/.gradle/caches/transforms-3/4913034a2ae274570a8fd95cfcde6bac/transformed/firebase-analytics-20.1.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] /home/nithin/.gradle/caches/transforms-3/4913034a2ae274570a8fd95cfcde6bac/transformed/firebase-analytics-20.1.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /home/nithin/.gradle/caches/transforms-3/d8bbb464f1e74ff45cfef1443d73dc3a/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:20:5-44
@@ -399,12 +433,12 @@ MERGED from [com.google.firebase:firebase-installations:17.0.1] /home/nithin/.gr
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /home/nithin/.gradle/caches/transforms-3/96a883a721371ebd07b2377ecbc1095b/transformed/firebase-installations-17.0.1/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-common:20.1.0] /home/nithin/.gradle/caches/transforms-3/1d46a739865b056261721fffae9b120b/transformed/firebase-common-20.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-common:20.1.0] /home/nithin/.gradle/caches/transforms-3/1d46a739865b056261721fffae9b120b/transformed/firebase-common-20.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/nithin/.gradle/caches/transforms-3/b52334e735a2ae52a32835baa4321b0d/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/nithin/.gradle/caches/transforms-3/b52334e735a2ae52a32835baa4321b0d/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-installations-interop:17.0.1] /home/nithin/.gradle/caches/transforms-3/da33b939e9a0a37acf0c41fa2be9fd30/transformed/firebase-installations-interop-17.0.1/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-installations-interop:17.0.1] /home/nithin/.gradle/caches/transforms-3/da33b939e9a0a37acf0c41fa2be9fd30/transformed/firebase-installations-interop-17.0.1/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /home/nithin/.gradle/caches/transforms-3/ef03d591248e45d09526d03e7e024f8b/transformed/play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /home/nithin/.gradle/caches/transforms-3/ef03d591248e45d09526d03e7e024f8b/transformed/play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/nithin/.gradle/caches/transforms-3/b52334e735a2ae52a32835baa4321b0d/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/nithin/.gradle/caches/transforms-3/b52334e735a2ae52a32835baa4321b0d/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-sdk:20.1.0] /home/nithin/.gradle/caches/transforms-3/b7e5a5ca5c2175838985c5474a9aa9a0/transformed/play-services-measurement-sdk-20.1.0/AndroidManifest.xml:20:5-44
@@ -569,6 +603,8 @@ ADDED from [com.google.android.libraries.places:places:2.5.0] /home/nithin/.grad
 		ADDED from [com.google.android.libraries.places:places:2.5.0] /home/nithin/.gradle/caches/transforms-3/644f27884326a9e38d25592ce5b8e6c6/transformed/places-2.5.0/AndroidManifest.xml:15:13-91
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.android.gms:play-services-maps:17.0.0] /home/nithin/.gradle/caches/transforms-3/6833b3847c6281c7d0343b6d68c5897a/transformed/play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-config:21.0.2] /home/nithin/.gradle/caches/transforms-3/5f7c69f8abeab03a009c808639d34782/transformed/firebase-config-21.0.2/AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-config:21.0.2] /home/nithin/.gradle/caches/transforms-3/5f7c69f8abeab03a009c808639d34782/transformed/firebase-config-21.0.2/AndroidManifest.xml:25:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /home/nithin/.gradle/caches/transforms-3/d8bbb464f1e74ff45cfef1443d73dc3a/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /home/nithin/.gradle/caches/transforms-3/d8bbb464f1e74ff45cfef1443d73dc3a/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /home/nithin/.gradle/caches/transforms-3/96a883a721371ebd07b2377ecbc1095b/transformed/firebase-installations-17.0.1/AndroidManifest.xml:10:5-79
@@ -609,10 +645,14 @@ service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-crashlytics-ktx:18.2.9] /home/nithin/.gradle/caches/transforms-3/f4e30b8c3d0a5d1b627bd0ca486020c6/transformed/firebase-crashlytics-ktx-18.2.9/AndroidManifest.xml:24:9-30:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/6fca47dcf6241ba4c44b2ec5ee070652/transformed/firebase-analytics-ktx-20.1.0/AndroidManifest.xml:8:9-14:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/6fca47dcf6241ba4c44b2ec5ee070652/transformed/firebase-analytics-ktx-20.1.0/AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.firebase:firebase-config:21.0.2] /home/nithin/.gradle/caches/transforms-3/5f7c69f8abeab03a009c808639d34782/transformed/firebase-config-21.0.2/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-config:21.0.2] /home/nithin/.gradle/caches/transforms-3/5f7c69f8abeab03a009c808639d34782/transformed/firebase-config-21.0.2/AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/c3426f5ee0fbb46170acff0deca56295/transformed/firebase-common-ktx-20.1.0/AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/c3426f5ee0fbb46170acff0deca56295/transformed/firebase-common-ktx-20.1.0/AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradle/caches/transforms-3/69c8a0ca4a5d209baad7867a7882ef9e/transformed/firebase-crashlytics-18.2.9/AndroidManifest.xml:15:9-21:19
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradle/caches/transforms-3/69c8a0ca4a5d209baad7867a7882ef9e/transformed/firebase-crashlytics-18.2.9/AndroidManifest.xml:15:9-21:19
+MERGED from [com.google.firebase:firebase-abt:21.0.1] /home/nithin/.gradle/caches/transforms-3/1c2c3d4d4c25a8e6242bf31f8a5d601b/transformed/firebase-abt-21.0.1/AndroidManifest.xml:12:9-16:19
+MERGED from [com.google.firebase:firebase-abt:21.0.1] /home/nithin/.gradle/caches/transforms-3/1c2c3d4d4c25a8e6242bf31f8a5d601b/transformed/firebase-abt-21.0.1/AndroidManifest.xml:12:9-16:19
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /home/nithin/.gradle/caches/transforms-3/d8bbb464f1e74ff45cfef1443d73dc3a/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:27:9-33:19
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /home/nithin/.gradle/caches/transforms-3/d8bbb464f1e74ff45cfef1443d73dc3a/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:27:9-33:19
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /home/nithin/.gradle/caches/transforms-3/96a883a721371ebd07b2377ecbc1095b/transformed/firebase-installations-17.0.1/AndroidManifest.xml:15:9-21:19
@@ -639,6 +679,12 @@ ADDED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /home/nithin/.gra
 		ADDED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/6fca47dcf6241ba4c44b2ec5ee070652/transformed/firebase-analytics-ktx-20.1.0/AndroidManifest.xml:13:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/6fca47dcf6241ba4c44b2ec5ee070652/transformed/firebase-analytics-ktx-20.1.0/AndroidManifest.xml:12:17-126
+meta-data#com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar
+ADDED from [com.google.firebase:firebase-config:21.0.2] /home/nithin/.gradle/caches/transforms-3/5f7c69f8abeab03a009c808639d34782/transformed/firebase-config-21.0.2/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-config:21.0.2] /home/nithin/.gradle/caches/transforms-3/5f7c69f8abeab03a009c808639d34782/transformed/firebase-config-21.0.2/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-config:21.0.2] /home/nithin/.gradle/caches/transforms-3/5f7c69f8abeab03a009c808639d34782/transformed/firebase-config-21.0.2/AndroidManifest.xml:33:17-117
 meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar
 ADDED from [com.google.firebase:firebase-common-ktx:20.1.0] /home/nithin/.gradle/caches/transforms-3/c3426f5ee0fbb46170acff0deca56295/transformed/firebase-common-ktx-20.1.0/AndroidManifest.xml:15:13-17:85
 	android:value
@@ -651,6 +697,12 @@ ADDED from [com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradl
 		ADDED from [com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradle/caches/transforms-3/69c8a0ca4a5d209baad7867a7882ef9e/transformed/firebase-crashlytics-18.2.9/AndroidManifest.xml:20:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-crashlytics:18.2.9] /home/nithin/.gradle/caches/transforms-3/69c8a0ca4a5d209baad7867a7882ef9e/transformed/firebase-crashlytics-18.2.9/AndroidManifest.xml:19:17-115
+meta-data#com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar
+ADDED from [com.google.firebase:firebase-abt:21.0.1] /home/nithin/.gradle/caches/transforms-3/1c2c3d4d4c25a8e6242bf31f8a5d601b/transformed/firebase-abt-21.0.1/AndroidManifest.xml:13:13-15:85
+	android:value
+		ADDED from [com.google.firebase:firebase-abt:21.0.1] /home/nithin/.gradle/caches/transforms-3/1c2c3d4d4c25a8e6242bf31f8a5d601b/transformed/firebase-abt-21.0.1/AndroidManifest.xml:15:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-abt:21.0.1] /home/nithin/.gradle/caches/transforms-3/1c2c3d4d4c25a8e6242bf31f8a5d601b/transformed/firebase-abt-21.0.1/AndroidManifest.xml:14:17-109
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.android.gms:play-services-measurement-api:20.1.0] /home/nithin/.gradle/caches/transforms-3/d8bbb464f1e74ff45cfef1443d73dc3a/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:24:5-68
 MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /home/nithin/.gradle/caches/transforms-3/d202ece70a36dc8a6f92a1480ae1de9c/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:25:5-68

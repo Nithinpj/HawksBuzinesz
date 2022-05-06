@@ -13,4 +13,5 @@
     <dimen name="dp1">1dp</dimen>
     <dimen name="dp30">30dp</dimen>
     <dimen name="dp40">40dp</dimen>
+    <dimen name="dp24">24dp</dimen>
 </resources>

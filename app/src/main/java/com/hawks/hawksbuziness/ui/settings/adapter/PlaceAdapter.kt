@@ -1,5 +1,6 @@
 package com.hawks.hawksbuziness.ui.settings.adapter
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +13,7 @@ import com.hawks.hawksbuziness.R
 import com.hawks.hawksbuziness.model.places.Data
 import com.hawks.hawksbuziness.model.shops.Shop
 
-class PlaceAdapter(val list: ArrayList<Data>,val click:(Data)->Unit): RecyclerView.Adapter<PlaceAdapter.ViewHolder>() {
+class PlaceAdapter(val name:String,val list: ArrayList<Data>,val click:(Data)->Unit): RecyclerView.Adapter<PlaceAdapter.ViewHolder>() {
 
     class ViewHolder(itemview:View):RecyclerView.ViewHolder(itemview.rootView) {
         var place=itemview.findViewById<TextView>(R.id.place)
@@ -28,6 +29,12 @@ class PlaceAdapter(val list: ArrayList<Data>,val click:(Data)->Unit): RecyclerVi
     override fun onBindViewHolder(holder: PlaceAdapter.ViewHolder, position: Int) {
 
         holder.place.text=list[position].place
+
+        if (!name.isNullOrEmpty()){
+            if (list[position].place.equals(name)){
+                holder.radio_place.isChecked=true
+            }
+        }
         holder.radio_place.setOnClickListener {
             click(list[position])
         }

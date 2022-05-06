@@ -1,6 +1,7 @@
 package com.hawks.hawksbuziness.ui.settings
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
@@ -15,7 +16,7 @@ import com.hawks.hawksbuziness.utill.showToast
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class PlaceDialogFragment(val click:(Data)->Unit) : DialogFragment() {
+class PlaceDialogFragment(val name:String,val click:(Data)->Unit) : DialogFragment() {
     private val viemodel: ShopViewmodel by viewModels<ShopViewmodel>()
     lateinit var binding: LayoutPlacesBinding
     override fun onCreateView(
@@ -33,10 +34,12 @@ class PlaceDialogFragment(val click:(Data)->Unit) : DialogFragment() {
         viemodel.getAllPlces().observe(requireActivity(), Observer {
             setPlaceData(it)
         })
+
+
     }
 
     private fun setPlaceData(it: List<Data>?) {
-        val adapter=PlaceAdapter(it as ArrayList<Data>) { click -> setplaceClick(click) }
+        val adapter=PlaceAdapter(name,it as ArrayList<Data>) { click -> setplaceClick(click) }
         binding.placeList.adapter=adapter
 
     }

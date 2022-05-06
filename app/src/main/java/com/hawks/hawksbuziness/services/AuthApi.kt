@@ -1,7 +1,9 @@
 package com.hawks.hawksbuziness.services
 
 import com.hawks.hawksbuziness.model.category.Categories
+import com.hawks.hawksbuziness.model.contacts.ContactResponse
 import com.hawks.hawksbuziness.model.country.Country
+import com.hawks.hawksbuziness.model.info.Info
 import com.hawks.hawksbuziness.model.languages.Language
 import com.hawks.hawksbuziness.model.otp.send.Sendotp
 import com.hawks.hawksbuziness.model.otp.verify.VerifyOtp
@@ -66,4 +68,11 @@ interface AuthApi {
     @FormUrlEncoded
     @POST("common/verifyotp")
     suspend fun verifyOtp(@Field("user_id")user_id:String,@Field("otp")otp:String):VerifyOtp
+
+    @GET("common/getinfo")
+    suspend fun getInfo():Info
+
+    @FormUrlEncoded
+    @POST("common/synccontact")
+    suspend fun uploadContact(@Field("contacts")data:String,@Field("user")userId:String):ContactResponse
 }

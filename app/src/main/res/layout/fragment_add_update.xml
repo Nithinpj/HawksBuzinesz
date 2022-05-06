@@ -2,13 +2,17 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
+
         <variable
             name="data"
             type="com.hawks.hawksbuziness.ui.shops.ShopViewmodel" />
+
         <variable
             name="adapter"
             type="android.widget.ArrayAdapter" />
+
         <variable
             name="click"
             type="com.hawks.hawksbuziness.AddUpdateFragment.ClickHandler" />
@@ -46,10 +50,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
-                        android:hint="Shop Name"
-                        android:text="@={data.shop_name}"
+                        android:hint="Shop Name *"
                         android:padding="@dimen/dp10"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        android:text="@={data.shop_name}" />
 
                     <View
                         android:layout_width="match_parent"
@@ -61,6 +65,140 @@
                         android:layout_height="1dp"
                         android:layout_marginTop="0.8dp"
                         android:background="@color/app_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/category_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adapter="@{adapter}"
+                            android:onItemSelected="@{click::click}" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/app_color" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="0.8dp"
+                            android:background="@color/app_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:background="@null"
+                            android:hint="Subcategory"
+                            android:padding="@dimen/dp10" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/app_color" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="0.8dp"
+                            android:background="@color/app_color" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="Contact Number *"
+                            android:padding="@dimen/dp10"
+                            android:singleLine="true"
+
+                            android:text="@={data.contactNo}" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/app_color" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="0.8dp"
+                            android:background="@color/app_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:background="@null"
+                            android:hint="Branch *"
+                            android:padding="@dimen/dp10"
+                            android:singleLine="true"
+                            android:text="@={data.branch}" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/app_color" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="0.8dp"
+                            android:background="@color/app_color" />
+
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -72,10 +210,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
-                        android:hint="Address"
+                        android:hint="Address *"
+                        android:padding="@dimen/dp10"
                         android:singleLine="true"
-                        android:text="@={data.address}"
-                        android:padding="@dimen/dp10" />
+                        android:text="@={data.address}" />
 
                     <View
                         android:layout_width="match_parent"
@@ -92,61 +230,61 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:baselineAligned="false">
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="@dimen/dp10"
-                        android:layout_height="wrap_content">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                        <EditText
+                        <Spinner
+                            android:id="@+id/place_data"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@null"
-                            android:hint="Contact Number"
-                            android:singleLine="true"
-                            android:text="@={data.contactNo}"
+                            android:onItemSelected="@{click::placeClick}" />
 
-                            android:padding="@dimen/dp10" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="0.8dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_marginLeft="@dimen/dp10"
-                        android:gravity="right">
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical"
+                        android:visibility="gone">
 
                         <EditText
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@null"
-                            android:hint="Branch"
-                            android:text="@={data.branch}"
                             android:layout_gravity="left"
-                            android:singleLine="true"
+                            android:background="@null"
+                            android:hint="Subcategory"
                             android:padding="@dimen/dp10" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="0.8dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
 
                     </LinearLayout>
 
@@ -164,9 +302,9 @@
                         android:layout_height="wrap_content"
                         android:background="@null"
                         android:hint="Email"
-                        android:text="@={data.email}"
+                        android:padding="@dimen/dp10"
                         android:singleLine="true"
-                        android:padding="@dimen/dp10" />
+                        android:text="@={data.email}" />
 
                     <View
                         android:layout_width="match_parent"
@@ -183,16 +321,16 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
-                        android:text="@={data.person_incharge}"
                         android:hint="Person in chanrge"
-                        android:padding="@dimen/dp10" />
+                        android:padding="@dimen/dp10"
+                        android:text="@={data.person_incharge}" />
 
                     <View
                         android:layout_width="match_parent"
@@ -216,9 +354,9 @@
                         android:layout_height="wrap_content"
                         android:background="@null"
                         android:hint="Office contact"
-                        android:text="@={data.office_contact}"
+                        android:padding="@dimen/dp10"
                         android:singleLine="true"
-                        android:padding="@dimen/dp10" />
+                        android:text="@={data.office_contact}" />
 
                     <View
                         android:layout_width="match_parent"
@@ -232,121 +370,6 @@
                         android:background="@color/app_color" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:baselineAligned="false">
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:layout_marginRight="@dimen/dp10"
-                        android:layout_height="wrap_content">
-                        <Spinner
-                            android:id="@+id/category_data"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:adapter="@{adapter}"
-                            android:onItemSelected="@{click::click}"/>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/app_color"/>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="0.8dp"
-                            android:background="@color/app_color"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginLeft="@dimen/dp10"
-                        android:visibility="gone"
-                        android:gravity="right">
-
-                        <EditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@null"
-                            android:hint="Subcategory"
-                            android:layout_gravity="left"
-                            android:padding="@dimen/dp10" />
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/app_color"/>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="0.8dp"
-                            android:background="@color/app_color"/>
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:baselineAligned="false">
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:layout_marginRight="@dimen/dp10"
-                        android:layout_height="wrap_content">
-                        <Spinner
-                            android:id="@+id/place_data"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:onItemSelected="@{click::placeClick}"/>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/app_color"/>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="0.8dp"
-                            android:background="@color/app_color"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginLeft="@dimen/dp10"
-                        android:visibility="gone"
-                        android:gravity="right">
-
-                        <EditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@null"
-                            android:hint="Subcategory"
-                            android:layout_gravity="left"
-                            android:padding="@dimen/dp10" />
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/app_color"/>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="0.8dp"
-                            android:background="@color/app_color"/>
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -358,9 +381,9 @@
                         android:layout_height="wrap_content"
                         android:background="@null"
                         android:hint="GSTIN"
-                        android:text="@={data.gstn}"
+                        android:padding="@dimen/dp10"
                         android:singleLine="true"
-                        android:padding="@dimen/dp10" />
+                        android:text="@={data.gstn}" />
 
                     <View
                         android:layout_width="match_parent"
@@ -377,59 +400,64 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:baselineAligned="false"
                     android:orientation="horizontal"
-                    android:visibility="gone"
-                    android:baselineAligned="false">
+                    android:visibility="gone">
+
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="@dimen/dp10"
-                        android:layout_height="wrap_content">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@null"
-                            android:text="TradeMark"
                             android:checked="@={data.trade_mark}"
-                            android:padding="@dimen/dp10" />
+                            android:padding="@dimen/dp10"
+                            android:text="TradeMark" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="0.8dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_marginLeft="@dimen/dp10"
-                        android:gravity="right">
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical">
 
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@null"
-                            android:text="Private Limited"
                             android:layout_gravity="left"
+                            android:background="@null"
                             android:checked="@={data.private_limited}"
-                            android:padding="@dimen/dp10" />
+                            android:padding="@dimen/dp10"
+                            android:text="Private Limited" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="0.8dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
 
                     </LinearLayout>
 
@@ -439,123 +467,134 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:baselineAligned="false">
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="@dimen/dp10"
-                        android:layout_height="wrap_content">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:hint="Whatsapp"
+                            android:padding="@dimen/dp10"
                             android:singleLine="true"
-                            android:text="@={data.whatsapp}"
-                            android:padding="@dimen/dp10" />
+                            android:text="@={data.whatsapp}" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="0.8dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility="gone"
                         android:layout_marginLeft="@dimen/dp10"
-                        android:gravity="right">
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical"
+                        android:visibility="gone">
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@null"
-                            android:hint="FaceBook"
-                            android:text="@={data.facebook}"
                             android:layout_gravity="left"
+                            android:background="@null"
                             android:checked="true"
-                            android:padding="@dimen/dp10" />
+                            android:hint="FaceBook"
+                            android:padding="@dimen/dp10"
+                            android:text="@={data.facebook}" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="0.8dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
 
                     </LinearLayout>
 
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:baselineAligned="false"
                     android:orientation="horizontal"
-                    android:visibility="gone"
-                    android:baselineAligned="false">
+                    android:visibility="gone">
+
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="@dimen/dp10"
-                        android:layout_height="wrap_content">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:hint="Instegram"
-                            android:text="@={data.instagram}"
-                            android:padding="@dimen/dp10" />
+                            android:padding="@dimen/dp10"
+                            android:text="@={data.instagram}" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="0.8dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_marginLeft="@dimen/dp10"
-                        android:gravity="right">
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical">
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@null"
-                            android:hint="LinkedIn"
-                            android:text="@={data.linkedin}"
                             android:layout_gravity="left"
+                            android:background="@null"
                             android:checked="true"
-                            android:padding="@dimen/dp10" />
+                            android:hint="LinkedIn"
+                            android:padding="@dimen/dp10"
+                            android:text="@={data.linkedin}" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="0.8dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
 
                     </LinearLayout>
 
@@ -565,60 +604,65 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:baselineAligned="false"
                     android:orientation="horizontal"
-                    android:visibility="gone"
-                    android:baselineAligned="false">
+                    android:visibility="gone">
+
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="@dimen/dp10"
-                        android:layout_height="wrap_content">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@null"
-                            android:text="Head Office"
                             android:checked="@={data.head_office}"
+                            android:padding="@dimen/dp10"
 
-                            android:padding="@dimen/dp10" />
+                            android:text="Head Office" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="0.8dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_marginLeft="@dimen/dp10"
-                        android:gravity="right">
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical">
 
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@null"
-                            android:text="Multistore"
                             android:layout_gravity="left"
+                            android:background="@null"
                             android:checked="@={data.multistore}"
-                            android:padding="@dimen/dp10" />
+                            android:padding="@dimen/dp10"
+                            android:text="Multistore" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="0.8dp"
-                            android:background="@color/app_color"/>
+                            android:background="@color/app_color" />
 
                     </LinearLayout>
 
@@ -628,17 +672,17 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
                         android:hint="Multistore name"
-                        android:text="@={data.multistore_name}"
+                        android:padding="@dimen/dp10"
 
-                        android:padding="@dimen/dp10" />
+                        android:text="@={data.multistore_name}" />
 
                     <View
                         android:layout_width="match_parent"
@@ -652,30 +696,30 @@
                         android:background="@color/app_color" />
                 </LinearLayout>
 
-<!--                <LinearLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:orientation="vertical">-->
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="vertical">-->
 
-<!--                    <EditText-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:background="@null"-->
-<!--                        android:hint="Branch"-->
-<!--                        android:text="@={data.data.branch}"-->
-<!--                        android:padding="@dimen/dp10" />-->
+                <!--                    <EditText-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:background="@null"-->
+                <!--                        android:hint="Branch"-->
+                <!--                        android:text="@={data.data.branch}"-->
+                <!--                        android:padding="@dimen/dp10" />-->
 
-<!--                    <View-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="1dp"-->
-<!--                        android:background="@color/app_color" />-->
+                <!--                    <View-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="1dp"-->
+                <!--                        android:background="@color/app_color" />-->
 
-<!--                    <View-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="1dp"-->
-<!--                        android:layout_marginTop="0.8dp"-->
-<!--                        android:background="@color/app_color" />-->
-<!--                </LinearLayout>-->
+                <!--                    <View-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="1dp"-->
+                <!--                        android:layout_marginTop="0.8dp"-->
+                <!--                        android:background="@color/app_color" />-->
+                <!--                </LinearLayout>-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -687,9 +731,9 @@
                         android:layout_height="wrap_content"
                         android:background="@null"
                         android:hint="Website"
+                        android:padding="@dimen/dp10"
                         android:singleLine="true"
-                        android:text="@{data.webisite}"
-                        android:padding="@dimen/dp10" />
+                        android:text="@{data.webisite}" />
 
                     <View
                         android:layout_width="match_parent"
@@ -708,9 +752,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:text="Save"
                     android:onClick="@{click::submit}"
-                    android:textAllCaps="false"/>
+                    android:text="Save"
+                    android:textAllCaps="false" />
 
 
             </LinearLayout>

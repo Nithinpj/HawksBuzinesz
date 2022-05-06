@@ -6,6 +6,7 @@
     <color name="white">#FFFFFFFF</color>
 <!--    <color name="app_color">#008080</color>-->
     <color name="app_color">#3cbcb4</color>
+    <color name="app_color_light">#1B3CBCB4</color>
 <!--    <color name="app_color">#FFF</color>-->
 <!--    <color name="app_color">#4B82DA</color>-->
 </resources>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/homeFragment"
+        android:id="@+id/testFragment"
         android:title="@string/home"
-        android:icon="@drawable/home"
+        android:icon="@drawable/ic_baseline_home_24"
         android:enabled="true"
         android:menuCategory="secondary"/>
     <item
@@ -17,14 +17,14 @@
         android:title="@string/business"
         android:menuCategory="secondary"/>
     <item
-        android:id="@+id/profileFragment"
+        android:id="@+id/profile"
         android:title="@string/profile"
-        android:icon="@drawable/user"
+        android:icon="@drawable/ic_person"
         android:menuCategory="secondary"/>
     <item
         android:id="@+id/supportFragment"
         android:title="@string/support"
-        android:icon="@drawable/customer_service"
+        android:icon="@drawable/service"
         android:menuCategory="secondary"/>
 
 </menu>

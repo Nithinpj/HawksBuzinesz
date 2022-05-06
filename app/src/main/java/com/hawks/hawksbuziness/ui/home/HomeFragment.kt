@@ -4,15 +4,13 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.JavascriptInterface
-import android.webkit.WebResourceRequest
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.webkit.*
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
@@ -96,6 +94,17 @@ class HomeFragment : Fragment(),onBackPressedListener {
     @SuppressLint("SetJavaScriptEnabled")
     private fun setData(data: String) {
         binding.webView.clearCache(true)
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            binding.webView.settings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW;
+        }
+
+        //FOR WEBPAGE SLOW UI
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            binding.webView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
+        } else {
+            binding.webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+        }
         binding.webView.settings.javaScriptEnabled = true
         binding.webView.addJavascriptInterface(JavaScriptInterface(requireContext()), "Android")
         binding.webView.webViewClient = object : WebViewClient() {

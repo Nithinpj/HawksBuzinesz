@@ -67,6 +67,7 @@ class ProfileFragment : Fragment() {
         }
         binding.edit.setOnClickListener {
             startActivity(Intent(requireContext(),EditActivity::class.java))
+            requireActivity().overridePendingTransition(R.anim.fade_in,R.anim.fade_out)
         }
 
 
@@ -84,7 +85,7 @@ class ProfileFragment : Fragment() {
         profileViewModel.gender.value= result.gender?:""
         profileViewModel.image.value= result.image?:""
         profileViewModel.mobile.value= result.mobile?:""
-        profileViewModel.name.value= result.username?:""
+        profileViewModel.name.value= result.name?:""
         profileViewModel.nationality.value= result.nationality?:""
         profileViewModel.place.value= result.place?:""
         profileViewModel.country.value= result.country?:""

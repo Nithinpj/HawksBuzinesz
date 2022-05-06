@@ -17,7 +17,7 @@ import com.hawks.hawksbuziness.ui.settings.adapter.LanguageAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class LanguageDialogFragment(val click:(Data)->Unit):DialogFragment() {
+class LanguageDialogFragment(val name:String,val click:(Data)->Unit):DialogFragment() {
     private lateinit var binding: FragmentLanguageBinding
     private val viewModel: HomeViemodel by viewModels()
     override fun onCreateView(
@@ -40,7 +40,7 @@ class LanguageDialogFragment(val click:(Data)->Unit):DialogFragment() {
 
     private fun setData(it: List<Data>?) {
 
-        val adapter = LanguageAdapter(it as ArrayList<Data>) { click -> SelectLanguage(click) }
+        val adapter = LanguageAdapter(name,it as ArrayList<Data>) { click -> SelectLanguage(click) }
         binding.languageList.adapter=adapter
     }
 

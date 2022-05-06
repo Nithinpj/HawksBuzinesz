@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/testFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -88,4 +88,14 @@
         android:name="com.hawks.hawksbuziness.AddUpdateFragment"
         android:label="fragment_add_update"
         tools:layout="@layout/fragment_add_update" />
+    <fragment
+        android:id="@+id/termsPrivacyFragment"
+        android:name="com.hawks.hawksbuziness.TermsPrivacyFragment"
+        android:label="fragment_terms_privacy"
+        tools:layout="@layout/fragment_terms_privacy" />
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.hawks.hawksbuziness.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" />
 </navigation>

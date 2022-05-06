@@ -1,6 +1,9 @@
 R_DEF: Internal format may change without notice
 local
+anim fade_in
+anim fade_out
 color app_color
+color app_color_light
 color black
 color ic_launcher_background
 color teal_200
@@ -12,6 +15,7 @@ dimen dp10
 dimen dp100
 dimen dp20
 dimen dp200
+dimen dp24
 dimen dp30
 dimen dp35
 dimen dp40
@@ -34,10 +38,13 @@ drawable forward
 drawable home
 drawable ic_baseline_account_circle_24
 drawable ic_baseline_arrow_back_ios_24
+drawable ic_baseline_home_24
 drawable ic_baseline_settings_24
+drawable ic_location
+drawable ic_person
 drawable ic_whatsapp
 drawable img_white_appname
-drawable location
+drawable insurance
 drawable logo
 drawable logo_
 drawable logout
@@ -45,6 +52,7 @@ drawable mail
 drawable privacy
 drawable round_card
 drawable round_white
+drawable service
 drawable share
 drawable telephone
 drawable translation
@@ -95,6 +103,7 @@ id logout
 id logout_icon
 id main_nav_graph
 id message
+id name_language
 id nav_host_fragment
 id no_shop
 id otp
@@ -104,7 +113,9 @@ id phone_number
 id place
 id place_data
 id place_list
+id privacy
 id privacy_icon
+id profile
 id profileFragment
 id profile_icon
 id profile_image
@@ -124,7 +135,10 @@ id submit
 id supportFragment
 id swipe_refresh
 id terms
+id termsPrivacyFragment
 id terms_icon
+id terms_text
+id testFragment
 id title
 id update_icon
 id webView
@@ -134,6 +148,7 @@ layout activity_main
 layout activity_referal
 layout activity_signup
 layout activity_splash
+layout activity_terms_and_conditions
 layout app_bar
 layout app_bar_back
 layout bottomsheet_login
@@ -145,6 +160,8 @@ layout fragment_profile_fragment
 layout fragment_settings
 layout fragment_sign_up
 layout fragment_support
+layout fragment_terms_privacy
+layout fragment_test
 layout layout_places
 layout layout_shops
 layout place_row
@@ -167,6 +184,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string hello_blank_fragment
 string home
 string language
 string location
@@ -184,6 +202,8 @@ string terms
 string title
 style BottomSheetDialogTheme
 style BottomSheetStyle
+style CustomizedBottomDialogStyle
+style DialogStyle
 style Theme.HawksBuziness
 style outline_button
 style profile_page_theme

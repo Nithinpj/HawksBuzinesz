@@ -1,9 +1,17 @@
 package com.hawks.hawksbuziness.repositarory
 
+import android.annotation.SuppressLint
+import android.content.ContentResolver
+import android.content.Context
+import android.database.Cursor
+import android.provider.ContactsContract
 import android.util.Log
 import com.hawks.hawksbuziness.model.country.Country
 import com.hawks.hawksbuziness.model.SignUp
 import com.hawks.hawksbuziness.model.category.Categories
+import com.hawks.hawksbuziness.model.contacts.ContactResponse
+import com.hawks.hawksbuziness.model.contacts.Contacts
+import com.hawks.hawksbuziness.model.info.Info
 import com.hawks.hawksbuziness.model.languages.Language
 import com.hawks.hawksbuziness.model.otp.send.Sendotp
 import com.hawks.hawksbuziness.model.otp.verify.VerifyOtp
@@ -143,5 +151,16 @@ class BusinessRepository @Inject constructor(private val authApi: AuthApi) : Bas
             emit(safeApi { authApi.updateProfile(hashMap) })
         }.flowOn(Dispatchers.IO)
     }
+
+    suspend fun getInfo():Flow<ResponceState<Info>> = flow<ResponceState<Info>> {
+        emit(ResponceState.Loading("Loading"))
+        emit(safeApi { authApi.getInfo() })
+    }.flowOn(Dispatchers.IO)
+
+    suspend fun uploadContacts(contacts:String,userId:String):Flow<ResponceState<ContactResponse>> =
+        flow {
+            emit(ResponceState.Loading("Loading"))
+            emit(safeApi { authApi.uploadContact(contacts,userId) })
+        }.flowOn(Dispatchers.IO)
 
 }

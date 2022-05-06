@@ -26,10 +26,7 @@ import com.hawks.hawksbuziness.model.shops.Shop
 import com.hawks.hawksbuziness.preferences.PreferenceManger
 import com.hawks.hawksbuziness.ui.activity.MainActivity
 import com.hawks.hawksbuziness.ui.shops.adapter.AllShopAdapter
-import com.hawks.hawksbuziness.utill.ResponceState
-import com.hawks.hawksbuziness.utill.hideKeyboard
-import com.hawks.hawksbuziness.utill.hideKeyboards
-import com.hawks.hawksbuziness.utill.showToast
+import com.hawks.hawksbuziness.utill.*
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
@@ -62,7 +59,12 @@ class ShopFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         if (!preferenceManger.getUserId().isNullOrEmpty()) {
-            viemmodel.getShops()
+            if(RemoteConfigUtils.isAppvisible()){
+                viemmodel.getShops()
+            }else{
+                showToast("App not work")
+            }
+
         } else {
 
             showBottomDialog()
@@ -139,7 +141,7 @@ class ShopFragment : Fragment() {
     }
 
     private fun showBottomDialog() {
-        val dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
+        val dialog = BottomSheetDialog(requireContext(), R.style.CustomizedBottomDialogStyle)
         val binding:BottomsheetLoginBinding = DataBindingUtil.inflate(
             LayoutInflater.from(requireContext()),
             R.layout.bottomsheet_login,container,false)
@@ -211,8 +213,13 @@ class ShopFragment : Fragment() {
                     progressDialog.show()
                 }
                 is ResponceState.Succes -> {
-                    showToast("Send otp Succesfull")
-                    user_id = it.result.data.user_id
+                    if (it.result.status!=0){
+                        showToast("Send otp Succesfull")
+                        user_id = it.result.data.user_id
+                    }else{
+                        showToast(it.result.message)
+                    }
+
                     progressDialog.dismiss()
 //                    bindiShopFragmentBinding.progressCircular.visibility = View.GONE
                 }

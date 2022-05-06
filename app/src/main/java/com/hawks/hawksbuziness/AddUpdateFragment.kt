@@ -181,20 +181,21 @@ class AddUpdateFragment : Fragment() {
         return when{
 
             viemodel.shop_name.value.isNullOrBlank()->{
-                showToast("shop name not empty")
+                showToast("shop name is required")
+
+                false
+            }
+            viemodel.contactNo.value.isNullOrBlank()->{
+                showToast("Contact is required")
+                false
+            }
+            viemodel.branch.value.isNullOrBlank()->{
+                showToast("Branch is required")
                 false
             }
 
             viemodel.address.value.isNullOrBlank()->{
-                showToast("Address not empty")
-                false
-            }
-            viemodel.branch.value.isNullOrBlank()->{
-                showToast("Branch not empty")
-                false
-            }
-            viemodel.contactNo.value.isNullOrBlank()->{
-                showToast("Contact not empty")
+                showToast("Address is required")
                 false
             }
             else -> true

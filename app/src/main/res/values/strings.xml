@@ -15,7 +15,9 @@
     <string name="logout_title">Logout</string>
     <string name="title">Logout</string>
     <string name="exit">Are you sure you want to exit?</string>
-    <string name="logout_description" >Are you sure  you want to logout?</string>
+    <string name="logout_description">Are you sure  you want to logout?</string>
     <string name="select_places">Select place you want</string>
     <string name="selecLanguages">Select your language</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -2,7 +2,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
+
         <variable
             name="click"
             type="com.hawks.hawksbuziness.ui.support.SupportFragment.ClickHandler" />
@@ -13,11 +15,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.activity.ReferalActivity">
+
         <include
             android:id="@+id/appbar"
-            layout="@layout/app_bar"/>
-
-
+            layout="@layout/app_bar" />
 
 
         <LinearLayout
@@ -25,48 +26,50 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@+id/appbar">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp20"
                 android:layout_marginRight="@dimen/dp20"
+                android:background="@drawable/round_card"
                 android:orientation="vertical"
                 android:paddingLeft="@dimen/dp10"
-                android:paddingRight="@dimen/dp10"
-                android:background="@drawable/round_card">
+                android:paddingRight="@dimen/dp10">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hi ! How can i help you ?"
-                    android:textSize="18sp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:text="Hi ! How can i help you ?"
                     android:textColor="@color/app_color"
-                    android:layout_marginTop="@dimen/dp20"/>
+                    android:textSize="20sp" />
+
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/animationView"
                     android:layout_width="@dimen/dp200"
                     android:layout_height="@dimen/dp200"
-                    app:lottie_rawRes="@raw/support"
                     android:layout_gravity="center"
                     app:lottie_autoPlay="true"
-                    app:lottie_loop="true"/>
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/support" />
 
 
                 <!--                <View-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="@dimen/dp20" />-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="@string/raise"-->
-<!--                    android:textColor="@color/app_color"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:textSize="20sp"-->
-<!--                    android:layout_gravity="center"/>-->
-<!--                <View-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="@dimen/dp50" />-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="@dimen/dp20" />-->
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="@string/raise"-->
+                <!--                    android:textColor="@color/app_color"-->
+                <!--                    android:textStyle="bold"-->
+                <!--                    android:textSize="20sp"-->
+                <!--                    android:layout_gravity="center"/>-->
+                <!--                <View-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="@dimen/dp50" />-->
 
 
                 <LinearLayout
@@ -131,9 +134,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/dp20"
                     android:backgroundTint="@color/app_color"
                     android:text="Send"
-                    android:layout_marginTop="@dimen/dp20"
                     android:textColor="@color/white"
                     app:cornerRadius="@dimen/dp10" />
             </LinearLayout>
@@ -141,76 +144,79 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp50">
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp50"
+                android:layout_marginRight="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp10">
 
 
-                <com.google.android.material.button.MaterialButton
+                <androidx.cardview.widget.CardView
                     android:id="@+id/whatsapp"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/dp60"
                     android:layout_weight="1"
+                    app:cardUseCompatPadding="true"
+                    app:cardBackgroundColor="@color/app_color"
                     android:backgroundTint="@color/white"
-                    android:textColor="@color/app_color"
-                    app:cornerRadius="@dimen/dp10"
-                    app:icon="@drawable/ic_whatsapp"
-                    app:iconSize="@dimen/dp10"
-                    app:iconTint="@color/app_color"
-                    android:text="Whatsapp"
                     android:onClick="@{click::whatsapp}"
-                    android:textSize="12sp"
-                    android:textAllCaps="false"
-                    android:layout_margin="5dp"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:cardCornerRadius="@dimen/dp10"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@+id/call"
-                    app:layout_constraintLeft_toLeftOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <com.google.android.material.button.MaterialButton
+                    <ImageView
+                        android:layout_width="@dimen/dp24"
+                        android:layout_height="@dimen/dp24"
+                        android:layout_gravity="center"
+                        app:tint="@color/app_color"
+                        android:src="@drawable/ic_whatsapp"></ImageView>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:id="@+id/call"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/dp60"
                     android:layout_weight="1"
+                    app:cardUseCompatPadding="true"
                     android:backgroundTint="@color/white"
-                    android:textColor="@color/app_color"
-                    app:cornerRadius="@dimen/dp10"
-                    app:icon="@drawable/telephone"
-                    app:iconSize="@dimen/dp10"
-                    app:iconTint="@color/app_color"
-                    android:text="Call"
                     android:onClick="@{click::dial}"
-                    android:textSize="12sp"
-                    android:textAllCaps="false"
-                    android:layout_margin="5dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintRight_toLeftOf="@+id/email"
+                    app:cardCornerRadius="@dimen/dp10"
                     app:layout_constraintLeft_toRightOf="@+id/whatsapp"
-                    />
-                <com.google.android.material.button.MaterialButton
+                    app:layout_constraintRight_toLeftOf="@+id/email"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp24"
+                        android:layout_height="@dimen/dp24"
+                        android:layout_gravity="center"
+                        app:tint="@color/app_color"
+                        android:src="@drawable/telephone"></ImageView>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:id="@+id/email"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/dp60"
                     android:layout_weight="1"
+                    app:cardUseCompatPadding="true"
                     android:backgroundTint="@color/white"
-                    android:textColor="@color/app_color"
-                    app:cornerRadius="@dimen/dp10"
-                    app:iconTint="@color/app_color"
-                    app:icon="@drawable/mail"
-                    app:iconSize="@dimen/dp10"
                     android:onClick="@{click::email}"
-                    android:text="Email"
-                    android:textSize="12sp"
-                    android:textAllCaps="false"
-                    android:layout_margin="5dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
+                    app:cardCornerRadius="@dimen/dp10"
                     app:layout_constraintLeft_toRightOf="@+id/call"
-                    />
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp24"
+                        android:layout_height="@dimen/dp24"
+                        android:layout_gravity="center"
+                        app:tint="@color/app_color"
+                        android:src="@drawable/mail"></ImageView>
+                </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
-
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

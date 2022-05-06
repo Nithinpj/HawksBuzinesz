@@ -17,11 +17,12 @@ public class ActivityReferalBindingImpl extends ActivityReferalBinding  {
         sViewsWithIds.put(R.id.logo, 2);
         sViewsWithIds.put(R.id.language, 3);
         sViewsWithIds.put(R.id.terms, 4);
-        sViewsWithIds.put(R.id.submit, 5);
+        sViewsWithIds.put(R.id.terms_text, 5);
+        sViewsWithIds.put(R.id.submit, 6);
     }
     // views
     @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    private final android.widget.ScrollView mboundView0;
     // variables
     // values
     // listeners
@@ -29,18 +30,19 @@ public class ActivityReferalBindingImpl extends ActivityReferalBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityReferalBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private ActivityReferalBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (android.widget.Spinner) bindings[1]
             , (android.widget.TextView) bindings[3]
             , (android.widget.ImageView) bindings[2]
-            , (com.google.android.material.button.MaterialButton) bindings[5]
+            , (com.google.android.material.button.MaterialButton) bindings[6]
             , (com.google.android.material.checkbox.MaterialCheckBox) bindings[4]
+            , (android.widget.TextView) bindings[5]
             );
         this.country.setTag(null);
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
+        this.mboundView0 = (android.widget.ScrollView) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners

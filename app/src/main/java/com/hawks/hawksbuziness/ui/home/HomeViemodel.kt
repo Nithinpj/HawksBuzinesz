@@ -1,5 +1,12 @@
 package com.hawks.hawksbuziness.ui.home
 
+import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.ContentResolver
+import android.content.Context
+import android.database.Cursor
+import android.icu.text.IDNA
+import android.provider.ContactsContract
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -9,6 +16,9 @@ import com.hawks.hawksbuziness.local.dao.LangugeDao
 import com.hawks.hawksbuziness.local.dao.PlaceDao
 import com.hawks.hawksbuziness.model.category.Categories
 import com.hawks.hawksbuziness.model.category.Data
+import com.hawks.hawksbuziness.model.contacts.ContactResponse
+import com.hawks.hawksbuziness.model.contacts.Contacts
+import com.hawks.hawksbuziness.model.info.Info
 import com.hawks.hawksbuziness.model.languages.Language
 import com.hawks.hawksbuziness.model.places.Places
 import com.hawks.hawksbuziness.model.web.Web
@@ -84,6 +94,30 @@ class HomeViemodel @Inject constructor(
     fun getAllLanguages():LiveData<List<com.hawks.hawksbuziness.model.languages.Data>>{
         return languageDao.getAllLanguges()
     }
+
+    fun getInfo():MutableLiveData<ResponceState<Info>>{
+        val mutableLiveData:MutableLiveData<ResponceState<Info>> = MutableLiveData()
+        viewModelScope.launch {
+            repository.getInfo().collect{
+                mutableLiveData.value=it
+            }
+        }
+        return mutableLiveData
+    }
+
+    fun uploadContacts(contactJson:String,userId:String):MutableLiveData<ResponceState<ContactResponse>>{
+        val mutableLiveData:MutableLiveData<ResponceState<ContactResponse>> = MutableLiveData()
+        viewModelScope.launch {
+            repository.uploadContacts(contactJson,userId).collect{
+                mutableLiveData.value=it
+            }
+        }
+       return mutableLiveData
+    }
+
+
+
+
 
 
 }
