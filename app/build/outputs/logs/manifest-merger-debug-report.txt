@@ -268,7 +268,7 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] /home/nithin/.gradle/caches
 	android:label
 		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:17:9-41
 	android:hardwareAccelerated
-		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:21:9-44
+		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:21:9-43
 	android:roundIcon
 		ADDED from /home/nithin/Nithin/Projects/HawksBuziness/app/src/main/AndroidManifest.xml:18:9-54
 	android:largeHeap

@@ -6,11 +6,9 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
 
 object RemoteConfigUtils {
     private const val TAG = "RemoteConfigUtils"
-    private const val BUSINESSAPP = "business_app"
     private const val ISAPPVISIBLE="visibility"
 
     private val DEFAULTS: HashMap<String, Any> = hashMapOf(
-        BUSINESSAPP to "business_app",
         ISAPPVISIBLE to true
     )
 
@@ -34,7 +32,6 @@ object RemoteConfigUtils {
         return remoteConfig
     }
 
-    fun addNames():String= remoteConfig.getString(BUSINESSAPP)
     fun isAppvisible():Boolean= remoteConfig.getBoolean(ISAPPVISIBLE)
 
 }
